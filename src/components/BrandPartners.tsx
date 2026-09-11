@@ -2,31 +2,35 @@ import { useEffect, useRef } from "react";
 import Reveal from "@/components/motion/Reveal";
 import { animate, stagger } from "animejs";
 import { prefersReducedMotion } from "@/lib/motion";
+import mahindraLogo from "@/assets/brands/mahindra-logo.png";
+import kiaLogo from "@/assets/brands/kia-logo.svg";
 
 const CDN = "https://cdn.jsdelivr.net/gh/vehiclespecs/brand-logos@main";
 
-const brands = [
-  { name: "Maruti Suzuki", file: "suzuki-logo.svg" },
-  { name: "Hyundai", file: "hyundai-logo.svg" },
-  { name: "Tata", file: "tata-logo.png" },
-  { name: "Toyota", file: "toyota-logo.svg" },
-  { name: "Mahindra", file: "mahindra-logo.png" },
-  { name: "Kia", file: "kia-logo.svg" },
-  { name: "Honda", file: "honda-logo.png" },
-  { name: "MG", file: "mg-logo.png" },
-  { name: "Renault", file: "renault-logo.svg" },
-  { name: "Nissan", file: "nissan-logo.svg" },
-  { name: "Volkswagen", file: "volkswagen-logo.svg" },
-  { name: "Skoda", file: "skoda-logo.svg" },
-  { name: "Ford", file: "ford-logo.png" },
-  { name: "Jeep", file: "jeep-logo.svg" },
-  { name: "Citroen", file: "citroen-logo.svg" },
-  { name: "Isuzu", file: "isuzu-logo.svg" },
-  { name: "Volvo", file: "volvo-logo.svg" },
-  { name: "Audi", file: "audi-logo.svg" },
-  { name: "BMW", file: "bmw-logo.svg" },
-  { name: "Mercedes-Benz", file: "mercedes-benz-logo.svg" },
-  { name: "Lexus", file: "lexus-logo.png" },
+type Brand = { name: string; src: string };
+
+const brands: Brand[] = [
+  { name: "Maruti Suzuki", src: `${CDN}/suzuki-logo.svg` },
+  { name: "Hyundai", src: `${CDN}/hyundai-logo.svg` },
+  { name: "Tata", src: `${CDN}/tata-logo.png` },
+  { name: "Toyota", src: `${CDN}/toyota-logo.svg` },
+  { name: "Mahindra", src: mahindraLogo },
+  { name: "Kia", src: kiaLogo },
+  { name: "Honda", src: `${CDN}/honda-logo.png` },
+  { name: "MG", src: `${CDN}/mg-logo.png` },
+  { name: "Renault", src: `${CDN}/renault-logo.svg` },
+  { name: "Nissan", src: `${CDN}/nissan-logo.svg` },
+  { name: "Volkswagen", src: `${CDN}/volkswagen-logo.svg` },
+  { name: "Skoda", src: `${CDN}/skoda-logo.svg` },
+  { name: "Ford", src: `${CDN}/ford-logo.png` },
+  { name: "Jeep", src: `${CDN}/jeep-logo.svg` },
+  { name: "Citroen", src: `${CDN}/citroen-logo.svg` },
+  { name: "Isuzu", src: `${CDN}/isuzu-logo.svg` },
+  { name: "Volvo", src: `${CDN}/volvo-logo.svg` },
+  { name: "Audi", src: `${CDN}/audi-logo.svg` },
+  { name: "BMW", src: `${CDN}/bmw-logo.svg` },
+  { name: "Mercedes-Benz", src: `${CDN}/mercedes-benz-logo.svg` },
+  { name: "Lexus", src: `${CDN}/lexus-logo.png` },
 ];
 
 const BrandPartners = () => {
@@ -101,7 +105,7 @@ const BrandPartners = () => {
               style={{ opacity: 0 } as React.CSSProperties}
             >
               <img
-                src={`${CDN}/${brand.file}`}
+                src={brand.src}
                 alt={`${brand.name} logo`}
                 className="max-h-full max-w-full object-contain"
                 loading="lazy"
