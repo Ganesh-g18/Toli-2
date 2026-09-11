@@ -59,8 +59,6 @@ const AIChatWidget = () => {
     }, 400 + Math.random() * 400);
   };
 
-  const maxZ = 2147483647;
-
   return createPortal(
     <>
       {/* Toggle button */}
@@ -69,7 +67,7 @@ const AIChatWidget = () => {
           ref={btnRef}
           onClick={() => setOpen(true)}
           className="fixed bg-primary hover:bg-primary/90 text-primary-foreground rounded-full w-14 h-14 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
-          style={{ bottom: "80px", right: "12px", zIndex: maxZ }}
+          style={{ bottom: "78px", right: "12px", zIndex: 2147483647 }}
           aria-label="Open AI Chat"
         >
           <Bot className="w-7 h-7" />
@@ -80,7 +78,7 @@ const AIChatWidget = () => {
       {open && (
         <div
           className="fixed w-[calc(100vw-2rem)] sm:w-96 h-[min(28rem,calc(100dvh-6rem))] luxury-glass border border-border rounded-xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300"
-          style={{ bottom: "80px", right: "12px", zIndex: maxZ }}
+          style={{ bottom: "78px", right: "12px", zIndex: 2147483647 }}
         >
           {/* Header */}
           <div className="flex items-center justify-between gap-2 px-3 sm:px-4 py-3 border-b border-border bg-primary text-primary-foreground rounded-t-xl">

@@ -33,7 +33,7 @@ const BackToTop = () => {
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       aria-label="Back to top"
       className="premium-interactive fixed bg-primary text-primary-foreground border border-white/35 rounded-full w-12 h-12 flex items-center justify-center shadow-lg shadow-primary/30 hover:-translate-y-0.5 hover:shadow-xl active:scale-95"
-      style={{ bottom: "152px", right: "14px", zIndex: 2147483647 }}
+      style={{ bottom: "144px", right: "12px", zIndex: 2147483647 }}
     >
       <ArrowUp className="w-5 h-5" />
     </button>,

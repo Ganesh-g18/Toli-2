@@ -6,7 +6,7 @@ import { prefersReducedMotion } from "@/lib/motion";
 
 // Replace with your exact Google Maps embed URL
 const MAP_EMBED_URL = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3871.305!2d77.5855!3d14.6819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDQwJzU0LjgiTiA3N8KwMzUnMDcuOCJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin";
-const DIRECTIONS_URL = "https://www.google.com/maps/dir/?api=1&destination=Toli+Motors+Anantapur+Andhra+Pradesh";
+const DIRECTIONS_URL = "https://www.google.com/maps/dir/?api=1&destination=6-2-806+Ram+Nagar+Kovur+Nagar+Anantapur+Andhra+Pradesh+515004";
 
 const Contact = () => {
   const gridRef = useRef<HTMLDivElement>(null);
@@ -113,16 +113,19 @@ const Contact = () => {
               <span className="text-muted-foreground text-sm">tolimotorsatp@gmail.com</span>
             </a>
 
-            <div
-              className="contact-card flex flex-col items-center gap-3 luxury-panel rounded-xl p-5 min-[360px]:p-6 sm:p-8"
+            <a
+              href={DIRECTIONS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-card flex flex-col items-center gap-3 luxury-panel rounded-xl p-5 min-[360px]:p-6 sm:p-8 hover:bg-primary/5 transition-colors"
               style={{ "--motion-delay": "140ms" } as React.CSSProperties}
             >
               <MapPin className="contact-icon icon-luxury w-11 h-11 rounded-full bg-primary/10 p-2.5 text-primary" />
               <span className="font-display text-xl">VISIT US</span>
               <span className="text-muted-foreground text-sm text-center">
-                Kamalanagar, Anantapur,<br />Andhra Pradesh 515001
+                6-2-806, Ram Nagar, Kovur Nagar,<br />Anantapur, Andhra Pradesh 515004
               </span>
-            </div>
+            </a>
           </div>
         </Reveal>
 
@@ -145,7 +148,7 @@ const Contact = () => {
             <div className="p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-3">
               <div>
                 <p className="font-display text-lg tracking-wider">TOLI MOTORS</p>
-                <p className="text-sm text-muted-foreground">Kamalanagar, Anantapur, Andhra Pradesh 515001</p>
+                <p className="text-sm text-muted-foreground">6-2-806, Ram Nagar, Kovur Nagar, Anantapur, Andhra Pradesh 515004</p>
               </div>
               <a
                 href={DIRECTIONS_URL}

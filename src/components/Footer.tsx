@@ -139,7 +139,7 @@ const Footer = () => {
             </li>
             <li className="flex items-start gap-2">
               <MapPin className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-              <span>Kamalanagar, Anantapur,<br />Andhra Pradesh 515001</span>
+              <span>6-2-806, Ram Nagar, Kovur Nagar,<br />Anantapur, Andhra Pradesh 515004</span>
             </li>
           </ul>
         </div>
