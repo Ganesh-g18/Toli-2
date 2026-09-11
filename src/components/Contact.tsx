@@ -5,7 +5,7 @@ import { animate, stagger } from "animejs";
 import { prefersReducedMotion } from "@/lib/motion";
 
 // Replace with your exact Google Maps embed URL
-const MAP_EMBED_URL = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3871.305!2d77.5855!3d14.6819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDQwJzU0LjgiTiA3N8KwMzUnMDcuOCJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin";
+const MAP_EMBED_URL = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3871.305!2d77.5923!3d14.6842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb1c6fb7d8b0b0b%3A0x0!2s6-2-806+Ram+Nagar+Kovur+Nagar+Anantapur+Andhra+Pradesh+515004!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin";
 const DIRECTIONS_URL = "https://www.google.com/maps/dir/?api=1&destination=6-2-806+Ram+Nagar+Kovur+Nagar+Anantapur+Andhra+Pradesh+515004";
 
 const Contact = () => {
