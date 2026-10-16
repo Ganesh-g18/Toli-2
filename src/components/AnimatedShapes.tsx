@@ -56,7 +56,7 @@ const AnimatedShapes = () => {
         } else {
           // Pause and reset when out of view
           animations.forEach((a) => {
-            try { a.pause(); } catch {}
+            try { a.pause(); } catch { /* Optional browser capability/storage may be unavailable; retain the usable fallback. */ }
           });
           animations = [];
 
@@ -73,7 +73,7 @@ const AnimatedShapes = () => {
     observer.observe(container);
     return () => {
       observer.disconnect();
-      animations.forEach((a) => { try { a.pause(); } catch {} });
+      animations.forEach((a) => { try { a.pause(); } catch { /* Optional browser capability/storage may be unavailable; retain the usable fallback. */ } });
     };
   }, []);
 

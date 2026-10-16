@@ -1,0 +1,62 @@
+/* Red leads the chapter architecture; neutral controls and the gunmetal object retain contrast. */
+html[data-theme=dark] .journey-root .phase9-experience>section.cinematic-hero {
+ background:var(--environment-entry);
+}
+html[data-theme=dark] .cinematic-hero::before {background:var(--studio-vignette);opacity:1;}
+html[data-theme=light] .journey-root .phase9-experience>section.cinematic-hero {
+ background:radial-gradient(ellipse at 88% 60%,hsl(var(--red) / .15),transparent 62%),var(--bg-primary);
+}
+.experience-navigation {border-bottom-color:var(--brand-red-border);}
+/* The header's neutral field and logo halo are intentionally unchanged. */
+html[data-theme=dark] .vehicle-interface {background:var(--environment-technical);}
+html[data-theme=dark] .vehicle-interface[data-focus=true] {background:var(--environment-component);}
+html[data-theme=dark] .journey-booking.experience-chapter {
+ background:var(--environment-request);
+}
+/* Light mode carries the family through pale faded red, keeping charcoal body text. */
+html[data-theme=light] :is(.vehicle-interface,.vehicle-interface[data-focus=true],.journey-booking.experience-chapter) {
+ background:radial-gradient(ellipse at 25% 55%,color-mix(in srgb,var(--brand-red-faded) 12%,transparent),transparent 70%),var(--bg-secondary);
+}
+.service-node {border-left:2px solid var(--brand-red-muted);}
+.service-node:hover {background:var(--brand-red-dark);color:var(--on-brand-warm);}
+.service-node[data-active=true],.service-node[data-active=true]:hover {
+ background:var(--action-surface);color:var(--on-brand);border-color:var(--brand-red-bright);
+ box-shadow:inset 2px 0 var(--brand-red-bright),var(--studio-selected-depth);
+}
+.service-node[data-active=true]:active {background:var(--accent-red-active);}
+.service-node[data-active=true] :is(.node-index,span:last-child) {color:var(--on-brand);}
+html[data-theme=light] .vehicle-interface .service-node {background:var(--bg-primary);color:hsl(var(--silver));border-color:var(--brand-red-border);}
+html[data-theme=light] .vehicle-interface .service-node:hover {background:var(--brand-red-dark);color:var(--on-brand);}
+html[data-theme=light] .vehicle-interface .service-node[data-active=true] {background:var(--action-surface);color:var(--on-brand);border-color:var(--on-brand-border);}
+.selected-service-module {background:var(--surface-red);color:var(--on-brand-warm);border-color:var(--brand-red-bright);}
+html[data-theme=light] .selected-service-module {background:linear-gradient(125deg,var(--brand-red-dark),var(--brand-red-deep));}
+.selected-service-module :is(h3,p,small),.selected-service-module>.system-label {color:var(--on-brand-detail)!important;}
+.selected-service-module .system-button:not(.primary) {background:var(--bg-panel);color:hsl(var(--silver));border-color:hsl(var(--border));}
+.process-selector button[aria-pressed=true] {background:var(--action-surface);color:var(--on-brand);border-color:var(--brand-red-bright);padding-inline:12px;}
+.process-selector button[aria-pressed=true]>span {color:var(--on-brand);}
+.process-description {border-top:3px solid var(--accent-red);}
+.request-console {background:var(--bg-panel);--text-primary:hsl(var(--silver));--text-secondary:hsl(var(--silver-secondary));--text-muted:hsl(var(--silver-muted));--accent-red-text:var(--brand-red-text);color:var(--text-primary);}
+html[data-theme=light] .request-console {--accent-red-text:#a61d23;--border-subtle:hsl(35 15% 74%);}
+.journey-webgl[data-rotate-ready=true]::before {background:var(--accent-red);border-color:var(--brand-red-bright);color:var(--on-brand);}
+.journey-webgl[data-dragging=true]::before {background:var(--brand-red-hover);border-color:var(--brand-red-focus);}
+/* Form data remains on neutral fields, framed by deep-red header/action surfaces. */
+html[data-theme=dark] .request-dialog-header {background:var(--surface-red-edge);}
+html[data-theme=dark] .request-actions {background:var(--surface-red-action);}
+.request-progress button[data-complete=true] {border-color:var(--accent-red);}
+.request-service-options button[aria-pressed=true] {background:var(--action-surface);color:var(--on-brand);border-color:var(--brand-red-bright);box-shadow:inset 3px 0 var(--brand-red-bright);}
+.request-service-options button[aria-pressed=true] svg {color:var(--on-brand);}
+.request-review>div {border-bottom-color:var(--brand-red-border);}
+.request-review dt {border-left-width:3px;}
+.request-confirmation {border-top:3px solid var(--accent-red);}
+html[data-theme=dark] .journey-footer {background:var(--environment-footer)!important;border-top:5px solid var(--accent-red);}
+html[data-theme=light] .journey-footer {border-top:6px solid var(--accent-red);}
+/* Keep technical support controls neutral against a red feature environment. */
+html[data-theme=light] .vehicle-interface .vehicle-zone-actions {--text-primary:hsl(var(--silver));--text-secondary:hsl(var(--silver-secondary));--accent-red-text:#a61d23;--border-subtle:hsl(35 15% 74%);}
+html[data-theme=light] .vehicle-interface .vehicle-zone-actions button {background:var(--bg-panel);}
+@media(prefers-reduced-motion:reduce){.service-node,.process-selector button {transition:none;}}
+/* The fixed rail crosses both ivory and red chapters, so its contrast follows the active chapter. */
+/* Small neutral landings preserve numeral contrast even while crossing section boundaries. */
+.chapter-navigation button {background:var(--bg-panel);border-left-color:var(--brand-red-muted);}
+.chapter-navigation button[aria-current] {background:var(--action-surface);color:var(--on-brand);border-color:var(--brand-red-bright);}
+html[data-theme=light] .vehicle-interface .service-node>span:last-child {color:var(--accent-red);}
+html[data-theme=light] .vehicle-interface .service-node[data-active=true]>span:last-child {color:var(--on-brand);}

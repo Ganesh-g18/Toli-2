@@ -1,0 +1,25 @@
+.toli-ai[hidden]{display:none}
+.toli-ai-launcher{position:fixed;right:20px;bottom:max(20px,env(safe-area-inset-bottom));z-index:40;display:flex;gap:8px;align-items:center;min-height:44px;padding:10px 16px;border:1px solid #a84b52;border-radius:8px;background:linear-gradient(130deg,#3b3e45,#57131a);color:#f4f3f2;font-size:12px;font-weight:600;box-shadow:0 4px 18px #0004}
+.toli-ai-loading{position:fixed;bottom:75px;right:20px;z-index:40;background:#222329;color:#fff;padding:12px}
+.toli-ai-overlay{position:fixed;inset:0;background:#10101466;z-index:65}
+.toli-ai-panel{position:fixed;z-index:66;right:20px;top:calc(var(--ai-top,0px) + var(--ai-height,100dvh) - min(600px,var(--ai-height,100dvh) - 32px) - 16px);width:min(410px,calc(100vw - 32px));height:min(600px,calc(var(--ai-height,100dvh) - 32px));display:flex;flex-direction:column;overflow:hidden;background:linear-gradient(150deg,#303238,#191a1f 70%,#35151d);color:#f4f3f2;border:1px solid #70747c;border-top:2px solid #e52238;border-radius:12px;box-shadow:0 18px 70px #0007;animation:toli-ai-reveal 150ms ease-out}
+.toli-ai-panel header{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid #555860}
+.toli-ai-panel h2{font-size:16px;letter-spacing:.12em;font-weight:600;margin:0}.toli-ai-panel header span{font-size:9px;letter-spacing:.15em;color:#caccd0}
+.toli-ai-panel button{min-height:44px}.toli-ai-panel header button{width:44px;display:grid;place-items:center;border-radius:6px}
+.toli-ai-disclosure{font-size:11px;color:#caccd0;padding:10px 16px;margin:0}
+.toli-ai-history{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:0 16px 12px}
+.toli-ai-message{padding:12px;margin:0 0 12px;background:#222329;border-left:2px solid #e52238;border-radius:4px;font-size:13px;line-height:1.6;overflow-wrap:anywhere}
+.toli-ai-message.user{background:#3b3e45;border-left-color:#96999f;margin-left:24px}.toli-ai-message>span{font-size:9px;letter-spacing:.12em;color:#caccd0}.toli-ai-message p{margin:5px 0 0;white-space:pre-wrap}.toli-ai-message button{margin-top:10px;padding:8px 12px;border:1px solid #a84b52;border-radius:4px;text-align:left;background:#57131a}
+.toli-ai-quick{display:flex;gap:6px;flex-wrap:wrap;padding:8px 12px;border-top:1px solid #555860}.toli-ai-quick button{padding:6px 9px;border:1px solid #555860;border-radius:5px;font-size:11px;background:#292b30}
+.toli-ai-panel form{display:flex;gap:8px;padding:10px 12px max(12px,env(safe-area-inset-bottom));border-top:1px solid #555860}.toli-ai-panel input{min-width:0;flex:1;background:#191a1f;color:#fff;border:1px solid #70747c;border-radius:5px;padding:10px;font-size:16px}.toli-ai-panel input::placeholder{color:#caccd0;font-size:13px}.toli-ai-panel form button{width:44px;display:grid;place-items:center;border-radius:5px;background:#b61b2e}.toli-ai-panel button:disabled{opacity:.5}
+:is(.toli-ai-panel,.toli-ai) :is(input,button):focus-visible{outline:2px solid #f4f3f2;outline-offset:2px}.toli-ai-panel button:hover{background-color:#64131b}
+@keyframes toli-ai-reveal{from{opacity:0;translate:0 5px}to{opacity:1;translate:0 0}}
+@media(max-width:767px){.toli-ai-launcher{right:12px;bottom:max(12px,env(safe-area-inset-bottom));padding:8px 12px}.toli-ai-panel{right:8px;width:calc(100vw - 16px);height:calc(var(--ai-height,100dvh) - 16px);top:calc(var(--ai-top,0px) + 8px)}.toli-ai-quick{gap:4px}.toli-ai-quick button{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.toli-ai-panel{animation:none}}
+/* The assistant intentionally keeps its graphite treatment in either site theme. */
+html[data-theme] .toli-ai-panel{--text-primary:#f4f3f2;--text-secondary:#caccd0;--text-muted:#caccd0;--bg-elevated:#222329;--bg-secondary:#191a1f;--border-subtle:#70747c;background:linear-gradient(150deg,#303238,#191a1f 70%,#35151d);color:#f4f3f2;border-color:#70747c}
+html[data-theme] .toli-ai-panel :is(h2,p,button,input){color:#f4f3f2}
+html[data-theme] .toli-ai-panel :is(.toli-ai-disclosure,header span,.toli-ai-message>span){color:#caccd0}
+.toli-ai-panel[data-compact=true] .toli-ai-quick{display:none}
+.toli-ai-panel[data-compact=true] header{padding-block:4px}
+.toli-ai-panel[data-compact=true] .toli-ai-disclosure{padding-block:5px}

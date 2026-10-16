@@ -1,0 +1,106 @@
+/* Phase 5: neutral product surfaces, meaningful selection, quieter depth. */
+.journey-root {
+ --tech-ink:var(--bg-secondary);--tech-muted:var(--surface-metal);--tech-line:var(--bg-elevated);--tech-surface:var(--bg-panel);
+ --tech-radius:12px;--tech-depth:0 10px 26px -20px color-mix(in srgb, var(--bg-secondary) 33.33%, transparent);
+ --tech-accent:var(--accent-red);--tech-ease:var(--ease-brand);--tech-micro:var(--dur-micro);--tech-ui:var(--dur-ui);
+ --tech-reveal:var(--dur-reveal);--tech-camera:1080ms;
+}
+.tech-label,.module-meta,.service-readout>div{font-family:Inter,sans-serif;font-size:10px;font-weight:600;letter-spacing:.09em;}
+.journey-section {background-image:none;}
+.journey-section .luxury-panel {border-color:var(--tech-line);border-radius:var(--tech-radius);box-shadow:var(--tech-depth);}
+.journey-section .luxury-heading::after {box-shadow:none;height:2px;width:36px;}
+.journey-chapter-mark {font-size:10px;color:var(--text-secondary);letter-spacing:.12em;}
+.journey-trim::after {opacity:.2;height:24px;}
+.journey-ornament {opacity:.035!important;transform:none!important;}
+.journey-quality .reason-card,.journey-about .about-panel,.journey-gallery .gallery-item:nth-child(even),.journey-coverage .primary-pulse {transform:none!important;}
+.journey-work .ba-card,.journey-gallery .gallery-item,.journey-reviews .luxury-panel,.journey-brands .brand-logo-item {box-shadow:var(--tech-depth);}
+.journey-quality .reason-icon,.service-card[data-active="true"] .service-icon {box-shadow:none;}
+.journey-studio {background:linear-gradient(var(--bg-panel),var(--bg-panel));border-top:1px solid var(--border-subtle);}
+.journey-studio .vehicle-studio-heading {padding-bottom:22px;border-bottom:1px solid var(--tech-line);margin-bottom:24px;}
+.journey-studio .vehicle-studio-layout {border:1px solid var(--tech-line);border-radius:16px;overflow:hidden;background:var(--bg-panel);box-shadow:0 22px 40px -32px color-mix(in srgb, var(--shadow-color) 31.37%, transparent);}
+.journey-studio .vehicle-service-panel {border:0;box-shadow:none;border-radius:0;}
+.vehicle-choices button {border-radius:7px;min-height:44px;transition:background-color var(--tech-micro) var(--tech-ease),border-color var(--tech-micro) var(--tech-ease);}
+.vehicle-choices button[aria-pressed="true"] {background:var(--bg-panel);border-color:color-mix(in srgb, var(--accent-red) 33.33%, transparent);box-shadow:inset 3px 0 var(--tech-accent);}
+.vehicle-choices button:hover {transform:none;}
+.vehicle-service-description {padding-top:20px;border-top:1px solid var(--tech-line);margin-top:16px;}
+.vehicle-service-description h3 {font-size:24px;}
+.service-readout {padding:16px 0;color:var(--tech-ink);min-width:0;}
+.service-readout>.tech-label {color:var(--text-secondary);display:block;margin-bottom:9px;}
+.service-readout>strong {display:block;font-size:14px;line-height:1.5;letter-spacing:0;}
+.service-readout>div {display:flex;gap:12px;justify-content:space-between;font-size:10px;letter-spacing:0;margin-top:14px;padding-top:12px;border-top:1px solid var(--tech-line);color:var(--text-secondary);line-height:1.5;}
+.service-readout>div>span:first-child {color:var(--text-secondary);letter-spacing:.08em;}
+.service-readout>div>span:last-child {text-align:right;}
+.journey-dock {background:radial-gradient(ellipse at 46% 34%,var(--bg-secondary),var(--bg-primary) 65%,var(--bg-primary));border-radius:var(--tech-radius);box-shadow:inset 0 1px 0 color-mix(in srgb, var(--edge-highlight) 9.41%, transparent);}
+.journey-dock .vehicle-stage-label {font-size:9px;color:var(--text-primary);top:17px;letter-spacing:.1em;}
+.journey-dock .vehicle-stage-label span:last-child {display:none;}
+.journey-webgl {inset:68px 0 68px;transition:opacity var(--tech-reveal) var(--tech-ease);}
+.journey-static {inset:68px 8px 68px;transform:none;transition:opacity var(--tech-reveal) var(--tech-ease);}
+.journey-static svg {filter:none;}
+.journey-dock .vehicle-stage-bottom {font-size:9px;line-height:1.5;left:16px;right:16px;bottom:15px;gap:10px;align-items:end;}
+.journey-dock .vehicle-stage-bottom>span {max-width:170px;color:var(--text-secondary);}
+.services-scene-rail {border-radius:var(--tech-radius);box-shadow:var(--tech-depth);background:var(--bg-panel);}
+.services-scene-rail .journey-dock {min-height:340px;}
+.parts-service-caption {min-height:0;padding:18px 22px;border-top:1px solid var(--border-subtle);}
+.parts-service-caption .vehicle-kicker {display:none;}
+.parts-service-caption .service-readout {padding:0 0 14px;}
+.parts-service-caption>span {font-size:10px;color:var(--text-secondary);line-height:1.5;}
+.module-meta {display:flex;justify-content:space-between;gap:6px;color:var(--text-secondary);margin-bottom:18px;font-size:9px;}
+.service-card[data-active="true"] .module-meta>span:last-child {color:var(--tech-accent);}
+.journey-services .service-card {border-radius:var(--tech-radius);background:var(--bg-panel);box-shadow:var(--tech-depth)!important;}
+.service-card[data-active="true"] {background:var(--bg-panel)!important;border-color:var(--accent-red);box-shadow:inset 3px 0 var(--tech-accent),var(--tech-depth)!important;}
+.service-component,.journey-services .service-card-accent {display:none;}
+.journey-services .service-icon {background:var(--bg-panel);color:var(--text-secondary);border:1px solid var(--border-subtle);}
+.journey-services .service-card[data-active="true"] .service-icon {color:var(--tech-accent);background:var(--bg-panel);border-color:color-mix(in srgb, var(--accent-red) 16.86%, transparent);}
+.service-explore {min-height:44px;border-top:1px solid var(--tech-line);color:var(--tech-accent);}
+.journey-services .service-card h3 {letter-spacing:.025em;}
+.journey-services .service-card p {color:var(--text-secondary);}
+.service-card,.process-steps .step-card {transition:border-color var(--tech-micro) var(--tech-ease),background-color var(--tech-micro) var(--tech-ease),box-shadow var(--tech-ui) var(--tech-ease);}
+.process-steps .step-card {border-radius:var(--tech-radius);box-shadow:var(--tech-depth);}
+.process-steps .step-card[data-active="true"] {background:var(--bg-panel);border-color:var(--accent-red);}
+.process-step-select {min-height:44px;}
+.process-caption {padding:16px;border:1px solid var(--tech-line);border-top:0;border-radius:0 0 var(--tech-radius) var(--tech-radius);background:var(--bg-panel);}
+.process-scene-rail .journey-dock {border-radius:var(--tech-radius) var(--tech-radius) 0 0;}
+.journey-trust .stat-item {border-radius:var(--tech-radius);box-shadow:none;transform:none;}
+.journey-trust .stat-item>div {transform:none;}.journey-trust .stat-item p {font-size:11px;}
+.booking-experience .cta-depth-plane {background:var(--bg-panel);border:1px solid var(--tech-line);border-top:3px solid var(--tech-accent);box-shadow:var(--tech-depth);border-radius:var(--tech-radius);transform:none!important;}
+.booking-experience .cta-depth-plane::before,.booking-experience .cta-depth-plane::after {opacity:0;}
+.journey-message .wa-panel {box-shadow:var(--tech-depth);border:1px solid var(--tech-line);border-top:2px solid color-mix(in srgb, var(--accent-red) 31.37%, transparent);}
+.journey-contact .contact-card {border-bottom-width:1px;}
+.journey-footer {background:var(--bg-panel)!important;border-top:1px solid var(--tech-line);}
+.journey-section :is(.premium-btn-primary,.luxury-button,.cta-animate button,.cta-animate a) {transition-duration:var(--tech-ui);}
+.journey-section :is(.premium-btn-primary,.luxury-button):hover {box-shadow:0 8px 16px -12px var(--accent-red)!important;}
+@media(max-width:1023px) {
+ .journey-dock .vehicle-stage-label {font-size:9px;left:14px;right:14px;}
+ .parts-service-caption {padding:16px;}
+ .service-readout>div {flex-wrap:wrap;gap:6px;}
+ .service-readout>div>span:last-child {text-align:left;}
+}
+@media(max-width:767px) {
+ .journey-chapter-mark {font-size:9px;letter-spacing:.07em;}
+ .journey-studio .vehicle-studio-layout {border-radius:var(--tech-radius);}
+ .journey-studio .vehicle-service-panel {padding:18px 14px;}
+ .journey-studio .vehicle-studio-heading {padding-bottom:16px;margin-bottom:18px;}
+ .journey-dock,.services-scene-rail .journey-dock,.process-scene-rail .journey-dock,.booking-experience .journey-dock {min-height:270px;}
+ .journey-dock .vehicle-stage-label {font-size:8px;letter-spacing:.04em;top:13px;}
+ .journey-dock .vehicle-stage-bottom {font-size:9px;bottom:12px;left:12px;right:12px;}
+ .journey-dock .vehicle-stage-bottom>span {max-width:100%;}
+ .journey-static {inset:67px 6px 52px;}
+ .journey-services .service-card {padding:16px 12px;gap:10px;}
+ .journey-services .service-card .min-w-0 {width:100%;}
+ .journey-services .service-card .service-icon {display:none;}
+ .module-meta {font-size:9px;letter-spacing:.03em;margin-bottom:12px;flex-wrap:wrap;}
+ .journey-services .service-card p,.parts-service-caption p:not(.vehicle-kicker),.vehicle-service-description p,.process-steps .step-card p {font-size:13px;line-height:1.65;}
+ .service-readout>strong {font-size:14px;}.service-readout>div {font-size:10px;}
+ .parts-service-caption>span {font-size:10px;}
+ .process-caption {font-size:22px;padding:12px;}
+ .journey-section:not(.journey-hero):not(.journey-studio) {padding-top:54px;padding-bottom:40px;}
+ .journey-brands .brand-logo-item {box-shadow:none;}
+ .booking-experience h2 {font-size:32px;}
+}
+@media(prefers-reduced-motion:reduce) {.journey-static,.journey-webgl,.service-card,.process-steps .step-card {transition:none!important;}
+ .journey-static .vehicle-wheel {transform:none!important;}
+}
+
+@media(min-width:1024px) {.journey-root main > .journey-studio {padding-right:80px;}}
+.journey-hero .hero-artwork {box-shadow:0 1px 0 var(--edge-highlight),0 16px 30px -24px color-mix(in srgb, var(--shadow-color) 33.33%, transparent);}
+.journey-hero .hero-frame-light {opacity:.3;}

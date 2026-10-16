@@ -1,18 +1,40 @@
-import { useEffect, useRef } from "react";
-import { Star, ExternalLink } from "lucide-react";
+import JourneyTrim from "@/components/journey/JourneyTrim";
+import { ExternalLink, MessageCircle, Star } from "lucide-react";
 import Reveal from "@/components/motion/Reveal";
-import { animate, stagger } from "animejs";
-import { prefersReducedMotion } from "@/lib/motion";
 
-// Google Reviews URL — uses search to find the business. Replace with your direct Place ID URL for better accuracy.
-const GOOGLE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=ChIJN1t_tDeuEmsRUsoyG83frY4";
+/**
+ * LATEST GOOGLE REVIEWS — placeholder structure.
+ *
+ * Reviews must come from an authorized Google source (the business's Google
+ * Business Profile via the Places API from a backend/keyed call, or an
+ * approved Google reviews widget). The `reviews` array is intentionally EMPTY:
+ * this site does not fabricate, rewrite, or copy reviews, and no authorized
+ * feed is connected yet. Do NOT hand-write entries here.
+ *
+ * To enable live reviews:
+ *   1. Confirm the business's Google Business Profile and its Place ID.
+ *   2. Wire an authorized source (backend Places API call, or approved widget).
+ *   3. Populate `reviews` from that source only.
+ *   4. Replace GOOGLE_PROFILE_URL with the verified profile URL.
+ *
+ * The Place ID previously bundled in this component (ChIJN1t_tDeuEmsRUsoyG83frY4)
+ * resolves to a Google office in Pyrmont, Sydney (Google's API documentation
+ * example) — NOT this business — so it was removed.
+ */
 
-const testimonials = [
-  { name: "Ravi Kumar", location: "Anantapur", text: "Fantastic service! My car runs smoother than ever. Honest pricing and timely delivery.", rating: 5, time: "2 months ago" },
-  { name: "Priya Sharma", location: "Hindupur", text: "Toli Motors handled my Hyundai's denting & painting beautifully. Looks brand new.", rating: 5, time: "1 month ago" },
-  { name: "Mohan Reddy", location: "Tadipatri", text: "Trusted them with my Innova for 3 years. Genuine parts, expert technicians.", rating: 5, time: "3 weeks ago" },
-  { name: "Sunita Iyer", location: "Kadiri", text: "Doorstep pickup made everything effortless. Highly recommended workshop.", rating: 5, time: "1 week ago" },
-];
+type Review = {
+  authorName: string;
+  rating: number;
+  date: string;
+  text: string;
+  url: string;
+};
+
+// Neutral Maps search until the verified Google Business Profile URL is supplied.
+const GOOGLE_PROFILE_URL = "https://www.google.com/maps/search/?api=1&query=Toli%20Motors%20Anantapur";
+
+// Intentionally empty — see the comment at the top of this file.
+const reviews: Review[] = [];
 
 const GoogleIcon = () => (
   <svg viewBox="0 0 24 24" className="w-5 h-5" aria-hidden="true">
@@ -23,132 +45,111 @@ const GoogleIcon = () => (
   </svg>
 );
 
+const Stars = ({ rating }: { rating: number }) => (
+  <>
+    <span className="sr-only">Rated {rating} out of 5 on Google</span>
+    <span className="flex items-center justify-center gap-0.5 text-primary" aria-hidden="true">
+      {Array.from({ length: 5 }).map((_, i) => (
+        <Star key={i} className={`w-4 h-4 ${i < rating ? "fill-current" : "opacity-30"}`} />
+      ))}
+    </span>
+  </>
+);
+
 const Testimonials = () => {
-  const gridRef = useRef<HTMLDivElement>(null);
-
-  // Anime.js scroll-linked reveal for testimonial cards
-  useEffect(() => {
-    if (prefersReducedMotion()) return;
-
-    const grid = gridRef.current;
-    if (!grid) return;
-
-    let raf: number;
-    let cardAnim: ReturnType<typeof animate> | null = null;
-    let starAnim: ReturnType<typeof animate> | null = null;
-
-    const setup = () => {
-      const cards = grid.querySelectorAll<HTMLElement>(".testimonial-card");
-      const stars = grid.querySelectorAll<HTMLElement>(".star-pop");
-      cards.forEach((el) => { el.style.opacity = ""; el.style.transform = ""; });
-      stars.forEach((el) => { el.style.transform = ""; });
-
-      if (cards.length) {
-        cardAnim = animate(cards, {
-          opacity: [0, 1],
-          translateY: [40, 0],
-          scale: [0.95, 1],
-          duration: 1000,
-          ease: "linear",
-          delay: stagger(100, { from: "first" }),
-          autoplay: false,
-        });
-      }
-      if (stars.length) {
-        starAnim = animate(stars, {
-          scale: [0, 1.3, 1],
-          rotate: ["-30deg", "10deg", "0deg"],
-          duration: 1000,
-          ease: "linear",
-          delay: stagger(60, { from: "first" }),
-          autoplay: false,
-        });
-      }
-    };
-
-    setup();
-
-    const onScroll = () => {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        const rect = grid.getBoundingClientRect();
-        const vh = window.innerHeight;
-        const raw = 1 - rect.top / (vh + rect.height);
-        const progress = Math.min(Math.max(raw, 0), 1);
-        if (cardAnim) try { cardAnim.seek(progress * cardAnim.duration); } catch {}
-        if (starAnim) try { starAnim.seek(progress * starAnim.duration); } catch {}
-      });
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-
-    return () => {
-      cancelAnimationFrame(raf);
-      window.removeEventListener("scroll", onScroll);
-      [cardAnim, starAnim].forEach((a) => { if (a) try { a.pause(); } catch {} });
-    };
-  }, []);
-
   return (
-    <section className="section-padding luxury-section bg-card/80">
+    <section className="journey-section journey-reviews section-padding luxury-section bg-card/80" aria-labelledby="latest-google-reviews-heading" data-journey-section="reviews">
+      <JourneyTrim number="11" label="CUSTOMER FEEDBACK" motif="frame" />
       <div className="max-w-7xl mx-auto">
-        <Reveal variant="fade" className="text-center mb-14">
-          <p className="luxury-kicker text-primary font-medium uppercase text-sm mb-3 text-reveal">Testimonials</p>
-          <h2
-            className="luxury-heading font-display text-4xl min-[360px]:text-5xl sm:text-6xl text-reveal"
+        <Reveal variant="fade" className="text-center mb-12">
+          <p className="luxury-kicker text-primary font-medium uppercase text-sm mb-3">Google Reviews</p>
+          <h3
+            id="latest-google-reviews-heading"
+            className="luxury-heading font-display text-4xl min-[360px]:text-5xl sm:text-6xl mb-4"
             style={{ "--motion-delay": "80ms" } as React.CSSProperties}
           >
             WHAT OUR CUSTOMERS SAY
-          </h2>
+          </h3>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
-            Verified reviews from our Google Business Profile
+            Latest reviews from our Google Business Profile
           </p>
-
-          <div className="mt-8">
-            <a
-              href={GOOGLE_REVIEW_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="luxury-button group inline-flex items-center gap-2.5 px-7 py-3 rounded-full border border-border bg-background/80 backdrop-blur font-display text-sm tracking-wider text-foreground hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-300"
-            >
-              <GoogleIcon />
-              WRITE A REVIEW
-              <ExternalLink className="w-3.5 h-3.5 opacity-50 group-hover:opacity-100 transition-opacity" />
-            </a>
-          </div>
         </Reveal>
 
-        <Reveal variant="fade" className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div ref={gridRef} className="contents">
-            {testimonials.map((t, i) => (
-              <div
-                key={t.name}
-                className="testimonial-card cinematic-card relative rounded-2xl p-5 min-[360px]:p-6 luxury-panel bg-background/75 backdrop-blur"
-                style={{ "--motion-delay": `${Math.min(i * 55, 220)}ms` } as React.CSSProperties}
+        {reviews.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+            {reviews.map((review, i) => (
+              <Reveal
+                key={`${review.authorName}-${i}`}
+                variant="fade"
+                delay={Math.min(i * 70, 280)}
+                className="cinematic-card luxury-panel rounded-2xl p-6 flex flex-col h-full"
               >
-                <div className="flex items-center gap-1 mb-1 text-primary">
-                  {Array.from({ length: t.rating }).map((_, j) => (
-                    <Star key={j} className="star-pop w-4 h-4 fill-current" />
-                  ))}
-                </div>
-                <p className="text-foreground/90 leading-relaxed my-4">"{t.text}"</p>
-                <div className="flex items-center gap-3 border-t border-border/60 pt-4">
-                  <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary font-display text-sm">
-                    {t.name.charAt(0)}
+                <figure className="flex flex-col h-full">
+                  <div className="mb-3">
+                    <Stars rating={review.rating} />
                   </div>
-                  <div>
-                    <p className="font-display text-sm tracking-wider">{t.name}</p>
-                    <p className="text-xs text-muted-foreground">{t.location} &middot; {t.time}</p>
-                  </div>
-                </div>
-                <div className="absolute top-4 right-4 opacity-20">
-                  <GoogleIcon />
-                </div>
-              </div>
+                  <blockquote className="flex-1 text-foreground/90 leading-relaxed text-[15px]">
+                    <p>&ldquo;{review.text}&rdquo;</p>
+                  </blockquote>
+                  <figcaption className="mt-5 pt-4 border-t border-border/60 flex items-center justify-between gap-3">
+                    <span className="flex items-center gap-2 text-sm">
+                      <GoogleIcon />
+                      <span className="font-medium text-foreground">{review.authorName}</span>
+                      <span className="text-muted-foreground">{review.date}</span>
+                    </span>
+                    <a
+                      href={review.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Read this Google review from ${review.authorName} on Google`}
+                      className="inline-flex items-center gap-1 text-sm text-primary hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    >
+                      Google
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  </figcaption>
+                </figure>
+              </Reveal>
             ))}
           </div>
-        </Reveal>
+        ) : (
+          <Reveal variant="fade" className="max-w-3xl mx-auto">
+            <div className="cinematic-card luxury-panel rounded-2xl p-6 sm:p-10 text-center">
+              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-4 py-1.5 mb-5">
+                <GoogleIcon />
+                <span className="font-display text-xs tracking-widest text-foreground">GENUINE GOOGLE REVIEWS</span>
+              </div>
+              <p className="text-foreground/90 leading-relaxed mb-6 max-w-xl mx-auto">
+                Review cards appear here only when pulled from our verified Google Business Profile.
+                Until the profile is connected, read and share real customer feedback directly on Google.
+              </p>
+              <div className="flex flex-col min-[360px]:flex-row flex-wrap items-center justify-center gap-3">
+                <a
+                  href={GOOGLE_PROFILE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="luxury-button inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-primary text-primary-foreground font-display text-sm tracking-wider hover:bg-primary/90 transition-all duration-300"
+                >
+                  <GoogleIcon />
+                  VIEW ALL GOOGLE REVIEWS
+                  <ExternalLink className="w-3.5 h-3.5 opacity-70" />
+                </a>
+                <a
+                  href="https://wa.me/918074946335?text=Hi%2C%20I%27d%20like%20to%20share%20feedback%20about%20Toli%20Motors."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="luxury-button inline-flex items-center gap-2.5 px-7 py-3 rounded-full border border-border bg-background/80 backdrop-blur font-display text-sm tracking-wider text-foreground hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-300"
+                >
+                  <MessageCircle />
+                  SHARE FEEDBACK ON WHATSAPP
+                </a>
+              </div>
+              <p className="mt-5 text-xs text-muted-foreground">
+                Ratings and review counts are shown on this site only when they can be verified from Google.
+              </p>
+            </div>
+          </Reveal>
+        )}
       </div>
     </section>
   );

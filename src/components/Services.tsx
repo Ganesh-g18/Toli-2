@@ -1,162 +1,27 @@
-import { useEffect, useRef } from "react";
-import { Wrench, Car, Battery, MessageSquare, PackageCheck, Truck, Shield, Sparkles } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
-import Reveal from "@/components/motion/Reveal";
-import { animate, stagger } from "animejs";
-import { prefersReducedMotion } from "@/lib/motion";
+import { useEffect, useRef } from 'react';
+import { navigateExperience } from '@/lib/experience-navigation';
+import { services, serviceId } from '@/lib/service-catalog';
+import { useJourney } from '@/components/journey/journey-context';
+import VehicleComponentView from '@/components/journey/VehicleComponentView';
+import ServiceRequestLink from '@/components/ServiceRequestLink';
 
-const services = [
-  { icon: Car, title: "Automobile Services", desc: "Comprehensive car servicing with expert diagnostics and reliable repairs for all brands." },
-  { icon: Wrench, title: "Spare Parts & Repairs", desc: "Genuine spare parts and professional repair services tailored to your vehicle's needs." },
-  { icon: Battery, title: "Battery Services", desc: "Amaron battery repair, replacement, and maintenance to keep you on the road." },
-  { icon: Sparkles, title: "Premium Detailing", desc: "Showroom-grade exterior polish and deep interior detailing for a brand-new feel." },
-  { icon: Shield, title: "Vehicle Inspection", desc: "Thorough 30-point inspection to keep every component performing at its best." },
-  { icon: MessageSquare, title: "Consultation", desc: "Expert advice on vehicle maintenance, upgrades, and cost-effective solutions." },
-  { icon: PackageCheck, title: "Installation", desc: "Professional installation of parts and accessories with precision and care." },
-  { icon: Truck, title: "Doorstep Pickup", desc: "Convenient pickup and delivery service — we come to you, on time, every time." },
-  { icon: Shield, title: "AMC Plans", desc: "Annual maintenance contracts customized to your vehicle's requirements and budget." },
-];
+export default function Services({separateVehicle=false}:{separateVehicle?:boolean}){
+ const {selected,choose,componentFocus,setComponentFocus}=useJourney();
+ const selector=useRef<HTMLDivElement>(null);
+ useEffect(()=>{const rail=selector.current,item=rail?.querySelector<HTMLElement>('[aria-pressed=true]');if(!rail||!item||rail.scrollWidth<=rail.clientWidth)return;const r=rail.getBoundingClientRect(),b=item.getBoundingClientRect();const delta=b.left<r.left?b.left-r.left:b.right>r.right?b.right-r.right:0;if(delta)rail.scrollTo?.({left:rail.scrollLeft+delta,behavior:'instant'});},[selected]);
+ const item=services[selected],supported=selected===1||selected===2;
+ return <section id="services" className="journey-section journey-services experience-chapter vehicle-interface" data-journey-section="services" data-experience-chapter="services" data-focus={componentFocus} aria-labelledby="service-matrix-title">
+  <header className="chapter-heading"><p className="system-label">02 / SERVICES</p><h2 id="service-matrix-title">Explore your car’s care.</h2><p>Choose a service, read what it involves and ask our team about your vehicle.</p></header>
+  <div className={`matrix-stage${separateVehicle?' matrix-stage-discovery':''}`}>
+   <div className="matrix-selector">
+    <p className="system-label">CHOOSE A SERVICE</p>
+    <p className="service-scroll-hint">Swipe or scroll to explore all services →</p><div ref={selector} className="service-matrix" role="group" aria-label="Select a service">{services.map((s,i)=><button id={serviceId(s.title)} key={s.title} type="button" className="service-node" data-active={selected===i} aria-pressed={selected===i} aria-controls="selected-service-module" aria-label={`Explore ${s.title}`} onFocus={()=>choose(i)} onClick={()=>choose(i)}><span className="node-index">{String(i+1).padStart(2,'0')}</span><s.icon size={16}/><span>{s.title}</span><span aria-hidden="true">↗</span></button>)}</div>
+   </div>
+    <article className="floating-panel selected-service-module" id="selected-service-module" aria-live="polite" aria-atomic="true"><p className="system-label">SELECTED SERVICE / {String(selected+1).padStart(2,'0')}</p><h3>{item.title}</h3><p>{item.desc}</p><p className="service-question"><strong>When to ask</strong>{item.when}</p><p className="service-question"><strong>What to share</strong>{item.ask}</p><div className="module-actions"><ServiceRequestLink defaultService={item.title}><button type="button" className="system-button primary">Request this service ↗</button></ServiceRequestLink>{supported&&<button type="button" className="system-button" onClick={()=>{setComponentFocus(!componentFocus);if(separateVehicle)navigateExperience('components');else if(innerWidth<768)document.getElementById("vehicle-component-view")?.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});}}>{componentFocus?'Return to vehicle':'Inspect component'}</button>}</div><small>Service availability and scope are confirmed by our team.</small></article>
+   {!separateVehicle&&<VehicleComponentView/>}
 
-const Services = () => {
-  const isMobile = useIsMobile();
-  const sectionRef = useRef<HTMLElement>(null);
-  const gridRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (prefersReducedMotion()) return;
-
-    const section = sectionRef.current;
-    const grid = gridRef.current;
-    if (!section || !grid) return;
-
-    let raf: number;
-    let cardAnim: ReturnType<typeof animate> | null = null;
-    let iconAnim: ReturnType<typeof animate> | null = null;
-
-    const setup = () => {
-      const cards = grid.querySelectorAll<HTMLElement>(".service-card");
-      const icons = grid.querySelectorAll<HTMLElement>(".service-icon");
-      const total = cards.length;
-
-      // Reset inline styles
-      cards.forEach((el) => { el.style.opacity = ""; el.style.transform = ""; });
-      icons.forEach((el) => { el.style.transform = ""; });
-
-      if (cards.length) {
-        cardAnim = animate(cards, {
-          opacity: [0, 1],
-          scale: [0.4, 1],
-          rotateX: [25, 0],
-          rotateY: [(_, i) => ((i % 2 === 0 ? -1 : 1) * 15), 0],
-          translateX: [(_, i) => Math.cos((i / total) * Math.PI * 2) * 180, 0],
-          translateY: [(_, i) => Math.sin((i / total) * Math.PI * 2) * 120, 0],
-          duration: 1000,
-          ease: "linear",
-          autoplay: false,
-        });
-      }
-
-      if (icons.length) {
-        iconAnim = animate(icons, {
-          scale: [0, 1.3, 1],
-          rotate: ["-180deg", "0deg"],
-          duration: 1000,
-          ease: "linear",
-          autoplay: false,
-        });
-      }
-    };
-
-    setup();
-
-    const onScroll = () => {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        const rect = section.getBoundingClientRect();
-        const vh = window.innerHeight;
-        // 0 = section bottom at viewport top, 1 = section top at viewport bottom
-        const raw = 1 - rect.top / (vh + rect.height);
-        const progress = Math.min(Math.max(raw, 0), 1);
-
-        if (cardAnim) {
-          try { cardAnim.seek(progress * cardAnim.duration); } catch {}
-        }
-        if (iconAnim) {
-          try { iconAnim.seek(progress * iconAnim.duration); } catch {}
-        }
-      });
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-
-    return () => {
-      cancelAnimationFrame(raf);
-      window.removeEventListener("scroll", onScroll);
-      if (cardAnim) try { cardAnim.pause(); } catch {}
-      if (iconAnim) try { iconAnim.pause(); } catch {}
-    };
-  }, []);
-
-  return (
-    <section ref={sectionRef} id="services" className="section-padding luxury-section">
-      <div className="max-w-7xl mx-auto">
-        <Reveal variant="fade" className="text-center mb-16">
-          <p className="luxury-kicker text-primary font-medium uppercase text-sm mb-3 text-reveal">What We Do</p>
-          <h2
-            className="luxury-heading font-display text-4xl min-[360px]:text-5xl sm:text-6xl text-reveal"
-            style={{ "--motion-delay": "80ms" } as React.CSSProperties}
-          >
-            OUR SERVICES
-          </h2>
-        </Reveal>
-
-        {isMobile ? (
-          <Reveal variant="fade" className="flex flex-col gap-3">
-            <div ref={gridRef} className="flex flex-col gap-3">
-              {services.map((s, i) => (
-                <article
-                  key={s.title}
-                  className="service-card cinematic-card flex items-start gap-4 luxury-panel rounded-xl p-4"
-                  style={{ "--motion-delay": `${Math.min(i * 45, 220)}ms` } as React.CSSProperties}
-                >
-                  <div className="service-icon flex h-10 w-10 shrink-0 items-center justify-center icon-luxury rounded-lg bg-primary/10 text-primary">
-                    <s.icon className="h-5 w-5" />
-                  </div>
-                  <div className="min-w-0">
-                    <h3 className="font-display text-xl tracking-wider">{s.title}</h3>
-                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </Reveal>
-        ) : (
-          <Reveal variant="fade" className="grid grid-cols-2 lg:grid-cols-3 gap-6" style={{ perspective: "1200px" } as React.CSSProperties}>
-            <div ref={gridRef} className="contents" style={{ transformStyle: "preserve-3d" }}>
-              {services.map((s, i) => (
-                <div
-                  key={s.title}
-                  className="service-card cinematic-card group relative overflow-hidden luxury-panel rounded-2xl p-7 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10"
-                  style={{ "--motion-delay": `${Math.min(i * 55, 220)}ms` } as React.CSSProperties}
-                >
-                  <div className="absolute -top-20 -right-20 w-40 h-40 rounded-full bg-primary/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="relative">
-                    <div className="service-icon inline-flex items-center justify-center w-12 h-12 icon-luxury rounded-xl bg-primary/10 text-primary mb-5 transition-all duration-200 ease-out group-hover:bg-primary/15 group-hover:scale-110 group-hover:-translate-y-0.5">
-                      <s.icon className="w-6 h-6" />
-                    </div>
-                    <h3 className="font-display text-2xl tracking-wider mb-2">{s.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
-                    <span className="mt-4 inline-block h-0.5 w-8 bg-primary transition-[width] duration-300 ease-out group-hover:w-12" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        )}
-      </div>
-    </section>
-  );
-};
-
-export default Services;
+  </div>
+  <a className="services-trust-link" href="#/#trust" onClick={event=>{if(event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;event.preventDefault();document.getElementById('trust')?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}}>Explore our workshop and approach ↗</a>
+ </section>;
+}

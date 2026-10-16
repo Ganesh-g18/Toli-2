@@ -1,0 +1,13 @@
+> RESTORED: the Phase 2 car-removal instruction was cancelled. Original derivatives are restored using the recorded source PNG and exact trim/resize/WebP recipe. Their dimensions, byte sizes and built content hashes match the approved earlier build.
+
+# Solid hero campaign graphic
+
+Original unbranded artwork generated for this project with the built-in OpenAI image generation tool on 2026-10-16. No manufacturer photograph, marketplace asset or downloaded vehicle model was used. Generated artwork is not a representation of a customer vehicle, a branded production model, or evidence of TOLI servicing any particular marque. No exclusive design rights or legal clearance are asserted.
+
+Project assets: `toli-sports-campaign-960.webp` (90,322 bytes) and `toli-sports-campaign-1440.webp` (175,648 bytes). Alpha is retained; transparent padding is trimmed and the result encoded as responsive WebP. The larger derivative is 1440 × 618. This is a single graphic, not a rotatable 3D model. Technical mode retains the independent real Three.js service illustration.
+
+Generation prompt:
+
+Use case: ads-marketing. Asset: transparent cutout for premium automotive website hero. Create one original unbranded realistic sports grand tourer, complete car nose pointing left, camera at FRONT three-quarter approximately 32 degrees from the front toward its visible side, moderately elevated automotive photography perspective, both visible-side wheels clearly readable, full front fascia, long sculpted hood, smoked windshield and low flowing roof. Entire car fits with generous transparent padding. Realistic elegant two-door sports GT, low wide stance, muscular rear haunches, dark metallic gunmetal body with silver broad studio clearcoat highlights, deep graphite shadows and restrained burgundy red reflected light on lower body. Dimensional graphite multi-spoke wheels, real rubber tires, small red brake calipers, original slim white headlights, visible dark cabin through reflective glass, tiny precise panel gaps. Photographic automotive advertising quality, physically plausible production surfaces, no exaggerated hypercar geometry. Fully transparent background and floor, only a soft neutral contact shadow immediately under tires fading into transparency, no red floor patch. No logos, badges, license plate text, words, watermarks, manufacturer grille or recognizable production design. No scenery, no rectangular backdrop, no duplicate car, no rear-facing view.
+
+Source output: `exec-516aabe4-59ae-4504-a8d1-c4fa2071c580.png` from the built-in tool. The optimized derivatives are checked into this project's asset directory; runtime has no dependency on the generation output folder or remote service.

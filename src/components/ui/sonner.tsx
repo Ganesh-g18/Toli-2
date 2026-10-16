@@ -24,4 +24,5 @@ const Toaster = ({ ...props }: ToasterProps) => {
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components -- Generated UI compatibility API; stable helper exports may trigger a development reload.
 export { Toaster, toast };

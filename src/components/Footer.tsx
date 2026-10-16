@@ -1,9 +1,12 @@
-import { useEffect, useRef } from "react";
-import { Phone, Mail, MapPin, Instagram, Facebook, Youtube } from "lucide-react";
-import logo from "@/assets/toli-logo-combined.png";
+import ToliLogoPill from '@/components/ToliLogoPill';
+import JourneyTrim from "@/components/journey/JourneyTrim";
+import { navigateExperience } from "@/lib/experience-navigation";
+import { useSectionEntrance } from "@/hooks/use-section-entrance";
+import { useRef } from "react";
+import { Link } from "react-router-dom";
+import { Phone, Mail, MapPin, Star, Instagram, Facebook, Youtube } from "lucide-react";
 import Reveal from "@/components/motion/Reveal";
-import { animate, stagger } from "animejs";
-import { prefersReducedMotion } from "@/lib/motion";
+import { stagger } from "animejs";
 
 const quickLinks = [
   { label: "Services", href: "#services" },
@@ -21,76 +24,20 @@ const socialLinks = [
   { icon: Youtube, href: "https://www.youtube.com/@tolimotors", label: "Subscribe on YouTube" },
 ];
 
+// Maps search (no hard-coded Place ID) — replace with the verified Google
+// Business Profile URL once confirmed by the business.
+const GOOGLE_REVIEWS_URL = "https://www.google.com/maps/search/?api=1&query=Toli%20Motors%20Anantapur";
+
 const Footer = () => {
   const footerRef = useRef<HTMLElement>(null);
 
   // Anime.js scroll-linked reveal for footer content
-  useEffect(() => {
-    if (prefersReducedMotion()) return;
-
-    const footer = footerRef.current;
-    if (!footer) return;
-
-    let raf: number;
-    let sectionAnim: ReturnType<typeof animate> | null = null;
-    let socialAnim: ReturnType<typeof animate> | null = null;
-
-    const setup = () => {
-      const sections = footer.querySelectorAll<HTMLElement>(".footer-section");
-      const socialIcons = footer.querySelectorAll<HTMLElement>(".social-icon");
-      sections.forEach((el) => { el.style.opacity = ""; el.style.transform = ""; });
-      socialIcons.forEach((el) => { el.style.transform = ""; });
-
-      if (sections.length) {
-        sectionAnim = animate(sections, {
-          opacity: [0, 1],
-          translateY: [30, 0],
-          duration: 1000,
-          ease: "linear",
-          delay: stagger(100, { from: "first" }),
-          autoplay: false,
-        });
-      }
-      if (socialIcons.length) {
-        socialAnim = animate(socialIcons, {
-          scale: [0, 1],
-          rotate: ["-180deg", "0deg"],
-          duration: 1000,
-          ease: "linear",
-          delay: stagger(80, { from: "first" }),
-          autoplay: false,
-        });
-      }
-    };
-
-    setup();
-
-    const onScroll = () => {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        const rect = footer.getBoundingClientRect();
-        const vh = window.innerHeight;
-        const raw = 1 - rect.top / (vh + rect.height);
-        const progress = Math.min(Math.max(raw, 0), 1);
-        if (sectionAnim) try { sectionAnim.seek(progress * sectionAnim.duration); } catch {}
-        if (socialAnim) try { socialAnim.seek(progress * socialAnim.duration); } catch {}
-      });
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-
-    return () => {
-      cancelAnimationFrame(raf);
-      window.removeEventListener("scroll", onScroll);
-      [sectionAnim, socialAnim].forEach((a) => { if (a) try { a.pause(); } catch {} });
-    };
-  }, []);
-  return (
-    <footer ref={footerRef} className="bg-secondary/70 border-t border-border">
+  useSectionEntrance(footerRef, ".footer-section, .social-icon");  return (
+    <footer ref={footerRef} className="journey-section journey-footer bg-secondary/70 border-t border-border" data-journey-section="footer"><h2 className="sr-only">Toli Motors links and contact details</h2>
+      <JourneyTrim number="15" label="SERVICE · REPAIR · CARE" motif="ring" />
       <Reveal as="div" variant="fade-up" stagger={55} className="max-w-7xl mx-auto px-6 py-14 grid gap-10 md:grid-cols-4">
         <div className="footer-section md:col-span-1">
-          <img src={logo} alt="Toli Motors" className="brand-logo h-12 w-auto mb-4 object-contain" />
+          <ToliLogoPill/>
           <p className="text-sm text-muted-foreground leading-relaxed">
             A trusted multi-brand car workshop in Anantapur — premium care, genuine parts, fair pricing.
           </p>
@@ -111,11 +58,17 @@ const Footer = () => {
         </div>
 
         <div className="footer-section">
-          <h4 className="font-display text-lg tracking-wider mb-4">QUICK LINKS</h4>
+          <h3 className="font-display text-lg tracking-wider mb-4">QUICK LINKS</h3>
           <ul className="space-y-2 text-sm">
             {quickLinks.map((l) => (
               <li key={l.label}>
-                <a href={l.href} className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:translate-x-0.5 inline-block">
+                <a href={`#/${l.href}`} onClick={(event) => {
+                  if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+                  const section = document.getElementById(l.href.slice(1));
+                  if (!section) return;
+                  event.preventDefault();
+                  navigateExperience(l.href.slice(1));
+                }} className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:translate-x-0.5 inline-block">
                   {l.label}
                 </a>
               </li>
@@ -124,7 +77,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-section">
-          <h4 className="font-display text-lg tracking-wider mb-4">CONTACT</h4>
+          <h3 className="font-display text-lg tracking-wider mb-4">CONTACT</h3>
           <ul className="space-y-3 text-sm text-muted-foreground">
             <li className="flex items-start gap-2">
               <Phone className="w-4 h-4 text-primary mt-0.5 shrink-0" />
@@ -141,37 +94,50 @@ const Footer = () => {
               <MapPin className="w-4 h-4 text-primary mt-0.5 shrink-0" />
               <span>6-2-806, Ram Nagar, Kovur Nagar,<br />Anantapur, Andhra Pradesh 515004</span>
             </li>
+            <li className="flex items-start gap-2">
+              <Star className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+              <a
+                href={GOOGLE_REVIEWS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary"
+              >
+                Read our reviews on Google
+              </a>
+            </li>
           </ul>
         </div>
 
         <div className="footer-section">
-          <h4 className="font-display text-lg tracking-wider mb-4">NEWSLETTER</h4>
-          <p className="text-sm text-muted-foreground mb-4">
-            Get service tips and seasonal offers in your inbox.
-          </p>
-          <form
-            onSubmit={(e) => e.preventDefault()}
-            className="flex rounded-md overflow-hidden border border-border focus-within:border-primary transition-colors"
-          >
-            <input
-              type="email"
-              required
-              placeholder="your@email.com"
-              className="flex-1 bg-background px-3 py-2 text-sm outline-none"
-            />
-            <button
-              type="submit"
-              className="bg-primary text-primary-foreground px-4 text-sm font-display tracking-wider hover:bg-primary/90 transition-colors"
-            >
-              JOIN
-            </button>
-          </form>
+          <h3 className="font-display text-lg tracking-wider mb-4">LEGAL</h3>
+          <ul className="space-y-2 text-sm">
+            <li>
+              <Link to="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:translate-x-0.5 inline-block">
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link to="/terms-and-conditions" className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:translate-x-0.5 inline-block">
+                Terms &amp; Conditions
+              </Link>
+            </li>
+            <li>
+              <Link to="/cookie-policy" className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:translate-x-0.5 inline-block">
+                Cookie Policy
+              </Link>
+            </li>
+          </ul>
         </div>
       </Reveal>
 
       <div className="border-t border-border">
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-muted-foreground">
-          <span className="font-display text-xl text-foreground tracking-wider">TOLI MOTORS</span>
+          <ToliLogoPill/>
+          <nav className="flex flex-wrap justify-center gap-x-5 gap-y-1" aria-label="Legal">
+            <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy</Link>
+            <Link to="/terms-and-conditions" className="hover:text-primary transition-colors">Terms</Link>
+            <Link to="/cookie-policy" className="hover:text-primary transition-colors">Cookies</Link>
+          </nav>
           <p>&copy; {new Date().getFullYear()} Toli Motors (Multi-brand Car Workshop). All rights reserved.</p>
         </div>
       </div>

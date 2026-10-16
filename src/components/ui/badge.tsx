@@ -26,4 +26,5 @@ function Badge({ className, variant, ...props }: BadgeProps) {
   return <div className={cn(badgeVariants({ variant }), className)} {...props} />;
 }
 
+// eslint-disable-next-line react-refresh/only-export-components -- Generated UI compatibility API; stable helper exports may trigger a development reload.
 export { Badge, badgeVariants };

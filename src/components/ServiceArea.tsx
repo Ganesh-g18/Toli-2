@@ -1,8 +1,8 @@
-import { useEffect, useRef } from "react";
+import JourneyTrim from "@/components/journey/JourneyTrim";
+import { useSectionEntrance } from "@/hooks/use-section-entrance";
+import { useRef } from "react";
 import { MapPin } from "lucide-react";
 import Reveal from "@/components/motion/Reveal";
-import { animate, stagger } from "animejs";
-import { prefersReducedMotion } from "@/lib/motion";
 
 const areas = [
   { name: "Anantapur", primary: true },
@@ -20,82 +20,23 @@ const areas = [
 ];
 
 const ServiceArea = () => {
-  const sectionRef = useRef<HTMLElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (prefersReducedMotion()) return;
-
-    const section = sectionRef.current;
-    if (!section) return;
-
-    let raf: number;
-    let pinAnim: ReturnType<typeof animate> | null = null;
-    let pulseAnim: ReturnType<typeof animate> | null = null;
-
-    const setup = () => {
-      const pins = section.querySelectorAll<HTMLElement>(".area-pin");
-      const primaryPulse = section.querySelectorAll<HTMLElement>(".primary-pulse");
-      pins.forEach((el) => { el.style.opacity = ""; el.style.transform = ""; });
-
-      if (pins.length) {
-        pinAnim = animate(pins, {
-          opacity: [0, 1],
-          translateY: [-20, 0],
-          scale: [0, 1],
-          duration: 1000,
-          ease: "linear",
-          delay: stagger(60, { from: "first" }),
-          autoplay: false,
-        });
-      }
-      if (primaryPulse.length) {
-        pulseAnim = animate(primaryPulse, {
-          scale: [1, 1.8, 1],
-          opacity: [0.6, 0, 0.6],
-          duration: 2000,
-          ease: "inOutSine",
-          loop: true,
-          delay: stagger(400, { from: "first" }),
-        });
-      }
-    };
-
-    setup();
-
-    const onScroll = () => {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        const rect = section.getBoundingClientRect();
-        const vh = window.innerHeight;
-        const raw = 1 - rect.top / (vh + rect.height);
-        const progress = Math.min(Math.max(raw, 0), 1);
-        if (pinAnim) try { pinAnim.seek(progress * pinAnim.duration); } catch {}
-      });
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-
-    return () => {
-      cancelAnimationFrame(raf);
-      window.removeEventListener("scroll", onScroll);
-      [pinAnim, pulseAnim].forEach((a) => { if (a) try { a.pause(); } catch {} });
-    };
-  }, []);
-
+  useSectionEntrance(sectionRef, ".area-pin, .primary-pulse");
   return (
-    <section className="section-padding luxury-section">
+    <section className="journey-section journey-coverage section-padding luxury-section" data-journey-section="coverage">
+      <JourneyTrim number="10" label="PICKUP & DROP" motif="route" />
       <div className="max-w-6xl mx-auto">
         <Reveal variant="fade" className="text-center mb-14">
           <p className="luxury-kicker text-primary font-medium uppercase text-sm mb-3 text-reveal">
             Coverage
           </p>
-          <h2
+          <h3
             className="luxury-heading font-display text-4xl min-[360px]:text-5xl sm:text-6xl text-reveal"
             style={{ "--motion-delay": "80ms" } as React.CSSProperties}
           >
             WE COME TO YOU
-          </h2>
+          </h3>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
             Doorstep pickup and drop across Anantapur district and surrounding areas.
           </p>
@@ -143,7 +84,6 @@ const ServiceArea = () => {
                       left: `${x}%`,
                       top: `${y}%`,
                       transform: "translate(-50%, -50%)",
-                      opacity: 0,
                     } as React.CSSProperties}
                   >
                     <div className="flex items-center gap-1.5 group">
@@ -166,9 +106,9 @@ const ServiceArea = () => {
           {/* Area list */}
           <div>
             <Reveal variant="fade">
-              <h3 className="font-display text-2xl sm:text-3xl tracking-wider mb-2 text-reveal">
+              <h4 className="font-display text-2xl sm:text-3xl tracking-wider mb-2 text-reveal">
                 SERVICE AREAS
-              </h3>
+              </h4>
               <p className="text-muted-foreground mb-8 text-reveal" style={{ "--motion-delay": "60ms" } as React.CSSProperties}>
                 We cover Anantapur and surrounding towns within 100km radius.
               </p>

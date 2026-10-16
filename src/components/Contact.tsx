@@ -1,8 +1,9 @@
-import { useEffect, useRef } from "react";
-import { Phone, Mail, MapPin, Navigation } from "lucide-react";
+import JourneyTrim from "@/components/journey/JourneyTrim";
+import { useSectionEntrance } from "@/hooks/use-section-entrance";
+import { useRef, useState } from "react";
+import { Phone, Mail, MapPin, Navigation, MapPinOff } from "lucide-react";
 import Reveal from "@/components/motion/Reveal";
-import { animate, stagger } from "animejs";
-import { prefersReducedMotion } from "@/lib/motion";
+import { Link } from "react-router-dom";
 
 // Replace with your exact Google Maps embed URL
 const MAP_EMBED_URL = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3871.305!2d77.5923!3d14.6842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb1c6fb7d8b0b0b%3A0x0!2s6-2-806+Ram+Nagar+Kovur+Nagar+Anantapur+Andhra+Pradesh+515004!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin";
@@ -10,73 +11,23 @@ const DIRECTIONS_URL = "https://www.google.com/maps/dir/?api=1&destination=6-2-8
 
 const Contact = () => {
   const gridRef = useRef<HTMLDivElement>(null);
+  const MAP_CONSENT_KEY = "toli:maps-consent";
+  const [mapConsent, setMapConsent] = useState<boolean>(
+    () => typeof window !== "undefined" && window.localStorage.getItem(MAP_CONSENT_KEY) === "1"
+  );
+
+  const loadMap = () => {
+    try {
+      window.localStorage.setItem(MAP_CONSENT_KEY, "1");
+    } catch { /* Optional browser capability/storage may be unavailable; retain the usable fallback. */ }
+    setMapConsent(true);
+  };
 
   // Anime.js scroll-linked reveal for contact cards
-  useEffect(() => {
-    if (prefersReducedMotion()) return;
-
-    const grid = gridRef.current;
-    if (!grid) return;
-
-    let raf: number;
-    let cardAnim: ReturnType<typeof animate> | null = null;
-    let iconAnim: ReturnType<typeof animate> | null = null;
-
-    const setup = () => {
-      const cards = grid.querySelectorAll<HTMLElement>(".contact-card");
-      const icons = grid.querySelectorAll<HTMLElement>(".contact-icon");
-      cards.forEach((el) => { el.style.opacity = ""; el.style.transform = ""; });
-      icons.forEach((el) => { el.style.transform = ""; });
-
-      if (cards.length) {
-        cardAnim = animate(cards, {
-          opacity: [0, 1],
-          translateY: [30, 0],
-          scale: [0.95, 1],
-          duration: 1000,
-          ease: "linear",
-          delay: stagger(120, { from: "first" }),
-          autoplay: false,
-        });
-      }
-      if (icons.length) {
-        iconAnim = animate(icons, {
-          scale: [0, 1],
-          rotate: ["-20deg", "0deg"],
-          duration: 1000,
-          ease: "linear",
-          delay: stagger(120, { from: "first" }),
-          autoplay: false,
-        });
-      }
-    };
-
-    setup();
-
-    const onScroll = () => {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        const rect = grid.getBoundingClientRect();
-        const vh = window.innerHeight;
-        const raw = 1 - rect.top / (vh + rect.height);
-        const progress = Math.min(Math.max(raw, 0), 1);
-        if (cardAnim) try { cardAnim.seek(progress * cardAnim.duration); } catch {}
-        if (iconAnim) try { iconAnim.seek(progress * iconAnim.duration); } catch {}
-      });
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-
-    return () => {
-      cancelAnimationFrame(raf);
-      window.removeEventListener("scroll", onScroll);
-      [cardAnim, iconAnim].forEach((a) => { if (a) try { a.pause(); } catch {} });
-    };
-  }, []);
-
+  useSectionEntrance(gridRef, ".contact-card, .contact-icon");
   return (
-    <section id="contact" className="section-padding luxury-section bg-card/80">
+    <section id="contact" className="journey-section journey-contact section-padding luxury-section bg-card/80" data-journey-section="contact">
+      <JourneyTrim number="14" label="VISIT TOLI" motif="route" />
       <div className="max-w-5xl mx-auto">
         <Reveal variant="fade" className="text-center mb-12">
           <p className="luxury-kicker text-primary font-medium uppercase text-sm mb-3 text-reveal">Get In Touch</p>
@@ -133,17 +84,39 @@ const Contact = () => {
         <Reveal variant="fade-up" className="mb-6">
           <div className="cinematic-card luxury-panel rounded-2xl overflow-hidden">
             <div className="aspect-[16/9] w-full bg-muted">
-              <iframe
-                src={MAP_EMBED_URL}
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Toli Motors location on Google Maps"
-                className="w-full h-full"
-              />
+              {mapConsent ? (
+                <iframe
+                  src={MAP_EMBED_URL}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Toli Motors location on Google Maps"
+                  className="w-full h-full"
+                />
+              ) : (
+                <div className="flex h-full w-full flex-col items-center justify-center gap-4 px-6 text-center">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                    <MapPinOff className="w-7 h-7" />
+                  </div>
+                  <p className="max-w-md text-sm text-muted-foreground">
+                    This map is embedded from Google Maps. Google may set cookies when it loads.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={loadMap}
+                    className="luxury-button inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-display tracking-wider hover:bg-primary/90 transition-colors"
+                  >
+                    LOAD MAP
+                  </button>
+                  <p className="text-xs text-muted-foreground">
+                    Your choice is saved on this device. See our{" "}
+                    <Link to="/cookie-policy" className="text-primary hover:underline">Cookie Policy</Link>.
+                  </p>
+                </div>
+              )}
             </div>
             <div className="p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-3">
               <div>

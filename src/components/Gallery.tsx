@@ -1,9 +1,8 @@
+import { createPortal } from "react-dom";
+import JourneyTrim from "@/components/journey/JourneyTrim";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { X } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
-import Reveal from "@/components/motion/Reveal";
-import { animate, stagger } from "animejs";
-import { prefersReducedMotion } from "@/lib/motion";
 
 const galleryModules = import.meta.glob<string>("/src/assets/gallery/*.{jpg,jpeg,png,webp,avif,gif}", {
   eager: true,
@@ -18,17 +17,11 @@ const images = Object.entries(galleryModules)
       sensitivity: "base",
     }),
   )
-  .filter(([path]) => path.endsWith('.webp'))
-  .map(([path, src]) => {
-    const filename = path.split("/").pop() ?? "Workshop image";
-    const readableName = filename
-      .replace(/\.[^.]+$/, "")
-      .replace(/[-_]+/g, " ")
-      .replace(/\b\w/g, (letter) => letter.toUpperCase());
+  .map(([, src],index) => {
 
     return {
       src,
-      alt: `${readableName} at Toli Motors`,
+      alt: `Toli Motors gallery image ${index+1}`,
     };
   });
 
@@ -36,84 +29,10 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [showAll, setShowAll] = useState(false);
   const isMobile = useIsMobile();
-  const gridRef = useRef<HTMLDivElement>(null);
 
   const INITIAL_COUNT = 5;
   const visibleImages = showAll ? images : images.slice(0, INITIAL_COUNT);
   const hasMore = images.length > INITIAL_COUNT;
-
-  // Anime.js scroll-linked reveal for gallery items
-  useEffect(() => {
-    if (prefersReducedMotion()) return;
-
-    const grid = gridRef.current;
-    if (!grid) return;
-
-    let raf: number;
-    let anim: ReturnType<typeof animate> | null = null;
-
-    const setup = () => {
-      const items = grid.querySelectorAll<HTMLElement>(".gallery-item");
-      items.forEach((el) => { el.style.opacity = ""; el.style.transform = ""; });
-      if (items.length) {
-        anim = animate(items, {
-          opacity: [0, 1],
-          scale: [0.9, 1],
-          translateY: [20, 0],
-          duration: 1000,
-          ease: "linear",
-          delay: stagger(60, { from: "first" }),
-          autoplay: false,
-        });
-      }
-    };
-
-    setup();
-
-    const onScroll = () => {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        const rect = grid.getBoundingClientRect();
-        const vh = window.innerHeight;
-        const raw = 1 - rect.top / (vh + rect.height);
-        const progress = Math.min(Math.max(raw, 0), 1);
-        if (anim) try { anim.seek(progress * anim.duration); } catch {}
-      });
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-
-    return () => {
-      cancelAnimationFrame(raf);
-      window.removeEventListener("scroll", onScroll);
-      if (anim) try { anim.pause(); } catch {}
-    };
-  }, []);
-
-  // Animate newly revealed items when "See More" is clicked
-  useEffect(() => {
-    if (prefersReducedMotion()) return;
-    if (!showAll) return;
-
-    const grid = gridRef.current;
-    if (!grid) return;
-
-    requestAnimationFrame(() => {
-      const items = grid.querySelectorAll<HTMLElement>(".gallery-item");
-      const newItems = Array.from(items).slice(INITIAL_COUNT);
-      if (newItems.length) {
-        animate(newItems, {
-          opacity: [0, 1],
-          scale: [0.85, 1],
-          translateY: [30, 0],
-          duration: 700,
-          ease: "outExpo",
-          delay: stagger(70, { from: "first" }),
-        });
-      }
-    });
-  }, [showAll]);
 
   const closeLightbox = useCallback(() => setSelectedImage(null), []);
   const openLightbox = useCallback((index: number) => setSelectedImage(index), []);
@@ -130,13 +49,22 @@ const Gallery = () => {
     []
   );
 
+  const lightboxOpen=selectedImage!==null;
   useEffect(() => {
-    if (selectedImage === null) return;
+    if (!lightboxOpen) return;
+    const trigger=document.activeElement as HTMLElement|null;
+    const previousOverflow=document.body.style.overflow;
 
     // Focus the close button when lightbox opens
     closeBtnRef.current?.focus();
 
     const onKeyDown = (event: KeyboardEvent) => {
+      if(event.key==='Tab'){
+        const controls=Array.from(document.querySelectorAll<HTMLElement>('#lightbox-dialog button'));
+        const first=controls[0],last=controls.at(-1);
+        if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}
+        else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}
+      }
       if (event.key === "Escape") {
         closeLightbox();
       } else if (event.key === "ArrowLeft") {
@@ -161,36 +89,36 @@ const Gallery = () => {
     window.addEventListener("keydown", onKeyDown);
     document.addEventListener("focusin", onFocusIn, true);
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
+      if(trigger?.isConnected)trigger.focus({preventScroll:true});
       window.removeEventListener("keydown", onKeyDown);
       document.removeEventListener("focusin", onFocusIn, true);
     };
-  }, [closeLightbox, navigateImage, selectedImage]);
+  }, [closeLightbox, navigateImage, lightboxOpen]);
 
   return (
-    <section id="gallery" className="section-padding luxury-section bg-secondary/35">
+    <section id="gallery" className="journey-section journey-gallery section-padding luxury-section bg-secondary/35" data-journey-section="gallery" aria-labelledby="gallery-title">
+      <JourneyTrim number="08" label="INSIDE TOLI" motif="frame" />
       <div className="max-w-7xl mx-auto">
-        <Reveal variant="fade" className="text-center mb-14">
-          <h2 className="luxury-heading text-3xl min-[360px]:text-4xl md:text-5xl lg:text-6xl text-foreground mb-4 text-reveal">
-            OUR <span className="text-primary">WORKSHOP</span>
+        <div className="text-center mb-14">
+          <h2 id="gallery-title" className="luxury-heading text-3xl min-[360px]:text-4xl md:text-5xl lg:text-6xl text-foreground mb-4">
+            WORKSHOP <span className="text-primary">GALLERY</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-base sm:text-lg">
-            Take a look inside our state-of-the-art facility in Anantapur
+            Explore existing workshop and service imagery from Toli Motors.
           </p>
-        </Reveal>
+        </div>
 
-        <Reveal
-          variant="fade"
+        <div
           className={isMobile ? "grid grid-cols-1 gap-3" : "grid grid-cols-3 lg:grid-cols-4 gap-4"}
         >
-          <div ref={gridRef} className={isMobile ? "grid grid-cols-1 gap-3" : "contents"}>
+          <div className={isMobile ? "grid grid-cols-1 gap-3" : "contents"}>
             {visibleImages.map((image, index) => (
               <div
                 key={index}
                 className={`gallery-item cinematic-card premium-interactive media-frame relative overflow-hidden rounded-lg cursor-pointer group focus-visible:ring-offset-4 ${
                   !isMobile && index === 0 ? "col-span-2 row-span-2" : ""
                 }`}
-              style={{ "--motion-delay": `${Math.min(index * 45, 200)}ms` } as React.CSSProperties}
               onClick={() => openLightbox(index)}
               onKeyDown={(event) => {
                 if (event.key === "Enter" || event.key === " ") {
@@ -205,10 +133,9 @@ const Gallery = () => {
               <img
                 src={image.src}
                 alt={image.alt}
-                className={`image-reveal media-zoom w-full object-cover ${isMobile ? "h-52 min-[360px]:h-64" : "h-full aspect-square"}`}
+                className={`media-zoom w-full object-cover ${isMobile ? "h-52 min-[360px]:h-64" : "h-full aspect-square"}`}
                 loading="lazy"
                 decoding="async"
-                onLoad={(event) => event.currentTarget.classList.add("is-loaded")}
                 sizes={isMobile ? "100vw" : "(min-width: 1024px) 25vw, 33vw"}
               />
               <div className="absolute inset-0 bg-background/0 group-hover:bg-background/35 transition-colors duration-200 flex items-center justify-center">
@@ -219,7 +146,7 @@ const Gallery = () => {
               </div>
             ))}
           </div>
-        </Reveal>
+        </div>
 
         {hasMore && (
           <div className="flex justify-center mt-10">
@@ -243,10 +170,10 @@ const Gallery = () => {
       </div>
 
       {/* Lightbox */}
-        {selectedImage !== null && (
+        {selectedImage !== null && createPortal(
           <div
             id="lightbox-dialog"
-            className="fixed inset-0 z-50 animate-in fade-in duration-200 bg-background/90 backdrop-blur-sm flex items-center justify-center p-4"
+            className="fixed inset-0 z-[2147483647] animate-in fade-in duration-200 bg-background/90 backdrop-blur-sm flex items-center justify-center p-4"
             onClick={closeLightbox}
             role="dialog"
             aria-modal="true"
@@ -300,7 +227,7 @@ const Gallery = () => {
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-background/80 backdrop-blur border border-border text-sm font-display tracking-wider">
               {selectedImage + 1} / {images.length}
             </div>
-          </div>
+          </div>, document.body
         )}
     </section>
   );

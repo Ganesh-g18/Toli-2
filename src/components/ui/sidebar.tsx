@@ -633,5 +633,6 @@ export {
   SidebarRail,
   SidebarSeparator,
   SidebarTrigger,
+  // eslint-disable-next-line react-refresh/only-export-components -- Preserve generated UI helper API; production behavior is unaffected.
   useSidebar,
 };

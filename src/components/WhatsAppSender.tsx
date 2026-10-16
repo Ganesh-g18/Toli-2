@@ -1,12 +1,13 @@
-import { useState, useEffect, useRef } from "react";
+import JourneyTrim from "@/components/journey/JourneyTrim";
+import { useSectionEntrance } from "@/hooks/use-section-entrance";
+import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { Send, MessageCircle } from "lucide-react";
-import { animate, stagger } from "animejs";
-import { prefersReducedMotion } from "@/lib/motion";
 
 const PRESET_MESSAGES = [
   "I'm interested in your car service.",
@@ -20,108 +21,7 @@ const WhatsAppSender = () => {
   const [message, setMessage] = useState("");
   const sectionRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    if (prefersReducedMotion()) return;
-    const el = sectionRef.current;
-    if (!el) return;
-
-    let raf: number;
-    let kickerAnim: ReturnType<typeof animate> | null = null;
-    let headingAnim: ReturnType<typeof animate> | null = null;
-    let subtitleAnim: ReturnType<typeof animate> | null = null;
-    let panelAnim: ReturnType<typeof animate> | null = null;
-    let presetAnim: ReturnType<typeof animate> | null = null;
-
-    const setup = () => {
-      const kicker = el.querySelector<HTMLElement>(".wa-kicker");
-      const heading = el.querySelector<HTMLElement>(".wa-heading");
-      const subtitle = el.querySelector<HTMLElement>(".wa-subtitle");
-      const panel = el.querySelector<HTMLElement>(".wa-panel");
-      const presets = el.querySelectorAll<HTMLElement>(".wa-preset");
-
-      if (kicker) { kicker.style.opacity = ""; kicker.style.transform = ""; }
-      if (heading) { heading.style.opacity = ""; heading.style.transform = ""; }
-      if (subtitle) subtitle.style.opacity = "";
-      if (panel) { panel.style.opacity = ""; panel.style.transform = ""; }
-      presets.forEach((p) => { p.style.opacity = ""; p.style.transform = ""; });
-
-      if (kicker) {
-        kickerAnim = animate(kicker, {
-          opacity: [0, 1],
-          translateY: [-20, 0],
-          duration: 1000,
-          ease: "linear",
-          autoplay: false,
-        });
-      }
-      if (heading) {
-        headingAnim = animate(heading, {
-          opacity: [0, 1],
-          translateY: [30, 0],
-          scale: [0.95, 1],
-          duration: 1000,
-          ease: "linear",
-          autoplay: false,
-        });
-      }
-      if (subtitle) {
-        subtitleAnim = animate(subtitle, {
-          opacity: [0, 1],
-          duration: 1000,
-          ease: "linear",
-          autoplay: false,
-        });
-      }
-      if (panel) {
-        panelAnim = animate(panel, {
-          opacity: [0, 1],
-          scale: [0.92, 1],
-          translateY: [40, 0],
-          duration: 1000,
-          ease: "linear",
-          autoplay: false,
-        });
-      }
-      if (presets.length) {
-        presetAnim = animate(presets, {
-          opacity: [0, 1],
-          scale: [0.8, 1],
-          translateY: [10, 0],
-          duration: 1000,
-          ease: "linear",
-          delay: stagger(40, { start: 300 }),
-          autoplay: false,
-        });
-      }
-    };
-
-    setup();
-
-    const onScroll = () => {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        const rect = el.getBoundingClientRect();
-        const vh = window.innerHeight;
-        const raw = 1 - rect.top / (vh + rect.height);
-        const progress = Math.min(Math.max(raw, 0), 1);
-        if (kickerAnim) try { kickerAnim.seek(progress * kickerAnim.duration); } catch {}
-        if (headingAnim) try { headingAnim.seek(progress * headingAnim.duration); } catch {}
-        if (subtitleAnim) try { subtitleAnim.seek(progress * subtitleAnim.duration); } catch {}
-        if (panelAnim) try { panelAnim.seek(progress * panelAnim.duration); } catch {}
-        if (presetAnim) try { presetAnim.seek(progress * presetAnim.duration); } catch {}
-      });
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-
-    return () => {
-      cancelAnimationFrame(raf);
-      window.removeEventListener("scroll", onScroll);
-      [kickerAnim, headingAnim, subtitleAnim, panelAnim, presetAnim].forEach((a) => { if (a) try { a.pause(); } catch {} });
-    };
-  }, []);
-
+  useSectionEntrance(sectionRef, ".wa-kicker, .wa-heading, .wa-subtitle, .wa-panel, .wa-preset");
   const handlePhoneChange = (value: string) => {
     setPhone(value.replace(/[^0-9+]/g, ""));
   };
@@ -155,7 +55,8 @@ const WhatsAppSender = () => {
   };
 
   return (
-    <section ref={sectionRef} id="whatsapp" className="section-padding luxury-section bg-background">
+    <section ref={sectionRef} id="whatsapp" className="journey-section journey-message section-padding luxury-section bg-background" data-journey-section="message">
+      <JourneyTrim number="13" label="LET’S TALK" motif="frame" />
       <div className="max-w-xl mx-auto">
         <div className="text-center mb-10">
           <p className="wa-kicker text-primary font-medium tracking-widest uppercase text-sm mb-3">
@@ -223,6 +124,11 @@ const WhatsAppSender = () => {
             <MessageCircle className="w-5 h-5" />
             SEND VIA WHATSAPP
           </Button>
+          <p className="text-xs leading-relaxed text-muted-foreground">
+            Messages are sent through WhatsApp, which is operated by Meta and is subject to WhatsApp's own
+            terms and privacy policy. Please do not include sensitive personal information. See our{" "}
+            <Link to="/privacy-policy" className="text-primary hover:underline">Privacy Policy</Link>.
+          </p>
         </div>
       </div>
     </section>

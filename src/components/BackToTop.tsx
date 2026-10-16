@@ -32,10 +32,11 @@ const BackToTop = () => {
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       aria-label="Back to top"
-      className="premium-interactive fixed bg-primary text-primary-foreground border border-white/35 rounded-full w-12 h-12 flex items-center justify-center shadow-lg shadow-primary/30 hover:-translate-y-0.5 hover:shadow-xl active:scale-95"
-      style={{ bottom: "144px", right: "12px", zIndex: 2147483647 }}
+      /* Top of the floating column: 44px on phones, 48px from md up, always
+         10px clear of the button below it. */
+      className="premium-interactive fixed right-3 bottom-[118px] md:bottom-[144px] z-[2147483647] bg-primary text-primary-foreground border border-white/35 rounded-full w-11 h-11 md:w-12 md:h-12 flex items-center justify-center shadow-lg shadow-primary/30 hover:-translate-y-0.5 hover:shadow-xl active:scale-95"
     >
-      <ArrowUp className="w-5 h-5" />
+      <ArrowUp className="w-4 h-4 md:w-5 md:h-5" />
     </button>,
     document.body
   );

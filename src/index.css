@@ -261,7 +261,7 @@
     position: absolute;
     inset: -1px;
     z-index: -1;
-    background: linear-gradient(105deg, transparent 40%, hsl(0 0% 100% / 0.14), transparent 60%);
+    background: linear-gradient(105deg, transparent 40%, var(--edge-highlight), transparent 60%);
     transform: translateX(-120%);
     transition: transform 520ms var(--ease-soft);
   }
@@ -421,7 +421,6 @@
   .hero-gradient-motion,
   .hero-float,
   .scroll-cue,
-  .brand-logo,
   .page-enter,
   .route-transition {
     animation: none !important;
@@ -463,21 +462,22 @@ select:focus {
 /* Toli Motors premium light red + white surface system */
 @layer base {
   :root {
-    --premium-white: 0 0% 100%;
-    --soft-white: 210 20% 98%;
-    --luxury-gray: 210 17% 96%;
-    --luxury-gray-deep: 210 14% 92%;
-    --ink: 0 0% 11%;
-    --ink-soft: 215 14% 34%;
-    --muted-ink: 215 14% 45%;
-    --performance-red: 355 83% 41%;
-    --performance-red-deep: 351 100% 34%;
+    --premium-white: var(--panel);
+    --soft-white: var(--graphite);
+    --luxury-gray: var(--raised);
+    --luxury-gray-deep: 220 8% 20%;
+    --ink: var(--silver);
+    --ink-soft: var(--silver-secondary);
+    --muted-ink: var(--silver-muted);
+    --performance-red: var(--red);
+    --performance-red-deep: 358.45 70% 37%;
+    --performance-red-dark: 358.45 70% 30%;
 
-    --background: var(--premium-white);
+    --background: var(--charcoal);
     --foreground: var(--ink);
-    --card: 0 0% 100%;
+    --card: var(--panel);
     --card-foreground: var(--ink);
-    --popover: 0 0% 100%;
+    --popover: var(--raised);
     --popover-foreground: var(--ink);
     --primary: var(--performance-red);
     --primary-foreground: 0 0% 100%;
@@ -485,27 +485,27 @@ select:focus {
     --secondary-foreground: var(--ink);
     --muted: var(--luxury-gray);
     --muted-foreground: var(--muted-ink);
-    --accent: var(--performance-red);
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 220 13% 90%;
-    --input: 220 13% 88%;
-    --ring: var(--performance-red);
+    --accent: var(--raised);
+    --accent-foreground: var(--silver);
+    --destructive: 28 95% 76%;
+    --destructive-foreground: 220 10% 8%;
+    --border: 220 7% 30%;
+    --input: 220 7% 40%;
+    --ring: 358.45 80% 80%;
 
-    --sidebar-background: 0 0% 99%;
+    --sidebar-background: var(--graphite);
     --sidebar-foreground: var(--ink);
     --sidebar-primary: var(--performance-red);
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: var(--luxury-gray);
     --sidebar-accent-foreground: var(--ink);
-    --sidebar-border: 220 13% 90%;
+    --sidebar-border: var(--border);
     --sidebar-ring: var(--performance-red);
     --radius: 0.75rem;
   }
 
   html {
-    color-scheme: light;
+    color-scheme: dark;
     scroll-behavior: smooth;
   }
 
@@ -559,7 +559,7 @@ select:focus {
     background:
       linear-gradient(
         180deg,
-        hsl(var(--premium-white) / 0.7),
+        hsl(var(--premium-var(--bg-panel)) / 0.7),
         transparent 24%,
         transparent 80%,
         hsl(var(--luxury-gray) / 0.55)
@@ -586,7 +586,7 @@ select:focus {
 
   .luxury-panel {
     border: 1px solid hsl(var(--border));
-    background: linear-gradient(145deg, hsl(var(--premium-white)), hsl(var(--soft-white) / 0.72));
+    background: linear-gradient(145deg, hsl(var(--premium-var(--bg-panel))), hsl(var(--soft-var(--bg-panel)) / 0.72));
     box-shadow:
       inset 0 1px 0 hsl(0 0% 100%),
       0 28px 70px -48px hsl(220 16% 20% / 0.3),
@@ -621,7 +621,7 @@ select:focus {
 
   .icon-luxury {
     border: 1px solid hsl(var(--primary) / 0.14);
-    background: linear-gradient(145deg, hsl(var(--premium-white)), hsl(var(--luxury-gray)));
+    background: linear-gradient(145deg, hsl(var(--premium-var(--bg-panel))), hsl(var(--luxury-gray)));
     box-shadow:
       inset 0 1px 0 hsl(0 0% 100%),
       0 12px 28px -20px hsl(var(--primary) / 0.28);
@@ -636,31 +636,14 @@ select:focus {
   .cinematic-card::after {
     box-shadow: inset 0 0 0 1px hsl(0 0% 100% / 0.32);
   }
-
-  .brand-logo {
-    display: block;
-    object-fit: contain;
-    background: transparent;
-    filter: drop-shadow(0 7px 14px hsl(220 15% 20% / 0.14));
-    animation: brand-logo-enter var(--dur-reveal) var(--ease-brand) both;
-    transform-origin: center;
-    transition:
-      transform var(--dur-ui) var(--ease-soft),
-      filter var(--dur-ui) var(--ease-soft),
-      opacity var(--dur-ui) var(--ease-soft);
-  }
   @media (hover: hover) and (pointer: fine) {
-    .brand-logo:hover {
-      transform: scale(1.02);
-      filter: drop-shadow(0 9px 18px hsl(var(--primary) / 0.13));
-    }
   }
 
   .luxury-cta {
     border: 1px solid hsl(var(--primary) / 0.16);
     background:
       radial-gradient(circle at 88% 18%, hsl(var(--primary) / 0.08), transparent 25rem),
-      linear-gradient(120deg, hsl(var(--premium-white)), hsl(var(--soft-white)) 58%, hsl(var(--luxury-gray)));
+      linear-gradient(120deg, hsl(var(--premium-var(--bg-panel))), hsl(var(--soft-var(--bg-panel))) 58%, hsl(var(--luxury-gray)));
     color: hsl(var(--foreground));
     box-shadow:
       inset 0 1px 0 hsl(0 0% 100%),
@@ -670,7 +653,7 @@ select:focus {
 
   .luxury-glass {
     border: 1px solid hsl(var(--border) / 0.9);
-    background: hsl(var(--premium-white) / 0.82);
+    background: hsl(var(--premium-var(--bg-panel)) / 0.82);
     backdrop-filter: blur(22px) saturate(120%);
     -webkit-backdrop-filter: blur(22px) saturate(120%);
     box-shadow:
@@ -679,7 +662,7 @@ select:focus {
   }
 
   .field-premium {
-    background: hsl(var(--premium-white));
+    background: hsl(var(--premium-var(--bg-panel)));
     border-color: hsl(var(--border));
   }
   .field-premium:focus {
@@ -703,16 +686,7 @@ select:focus {
   }
 }
 
-@keyframes brand-logo-enter {
-  from {
-    opacity: 0;
-    transform: translateY(5px) scale(0.985);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
+
 
 /* Light red + white interaction polish */
 .luxury-button {
@@ -722,7 +696,7 @@ select:focus {
     0 14px 30px -22px hsl(var(--primary) / 0.36);
 }
 .luxury-button::after {
-  background: linear-gradient(105deg, transparent 35%, hsl(0 0% 100% / 0.34), transparent 65%);
+  background: linear-gradient(105deg, transparent 35%, var(--edge-highlight), transparent 65%);
 }
 .luxury-button:hover {
   box-shadow:
@@ -730,10 +704,686 @@ select:focus {
     0 18px 40px -22px hsl(var(--primary) / 0.42);
 }
 
+/* ---- Premium automotive hero frame --------------------------------------
+   Layered, engineered treatment wrapped AROUND the approved artwork (the
+   image itself is never touched):
+     · outer thin translucent gray border + clean white outer ring
+     · very soft outer shadow + extremely subtle red edge (plus the ambient
+       .hero-ambient-glow halo behind the frame)
+     · inner double hairline: secondary white + red accent (brighter at the
+       four corners, softly stronger on top where Quick Actions floats)
+     · angular HUD corner cuts + sparse technical dash marks
+     · a slow, almost imperceptible highlight travelling part of the border
+   Every measurement scales fluidly with the viewport (1920 → 320px) through
+   the --hero-frame-* custom properties, so no breakpoint hard-coding. ---- */
+.hero-frame-wrap {
+  --hero-frame-radius: clamp(14px, 1.9vw, 28px);
+  --hero-frame-gap: clamp(4px, 0.5vw, 7px);
+  --hero-frame-accent: clamp(26px, 3vw, 46px);
+  --hero-panel-radius: clamp(12px, 1.5vw, 20px);
+}
+
+/* Hero media frame. The thin outer border is painted as a 1px box-shadow ring
+   instead of a CSS `border`, so the frame never steals a single pixel from the
+   artwork: the picture below fills the frame box exactly (width: 100%,
+   height: auto) and nothing is ever cropped. Ring order mirrors the previous
+   `border` + rings exactly — widest first, so it still reads as
+   1px gray hairline, 1px white, 1px restrained red.
+
+   The two outer drop shadows are deliberately tight — they fade out ~12px
+   below the frame — so the hero does not need a tall band of empty padding
+   underneath it. At ~16:9 and full width the artwork is already the tallest
+   element on the page, so vertical space is the scarce resource here. */
+.hero-video-frame {
+  overflow: hidden;
+  border-radius: var(--hero-frame-radius);
+  box-shadow:
+    0 0 0 3px hsl(var(--performance-red-deep) / 0.1),
+    0 0 0 2px hsl(0 0% 100% / 0.6),
+    0 0 0 1px hsl(var(--border) / 0.85),
+    0 22px 48px -32px hsl(220 25% 8% / 0.42),
+    0 12px 30px -20px hsl(var(--performance-red-deep) / 0.26);
+  isolation: isolate;
+}
+
+/* Secondary white hairline + red accent hairline (conic gradient keeps the
+   red slightly brighter at the four corners, softer along the edges). */
+.hero-frame-inner {
+  position: absolute;
+  inset: var(--hero-frame-gap);
+  z-index: 5;
+  padding: 1px;
+  border: 1px solid hsl(0 0% 100% / 0.5);
+  border-radius: calc(var(--hero-frame-radius) - var(--hero-frame-gap));
+  background: conic-gradient(
+    from 45deg,
+    hsl(var(--performance-red) / 0.6) 0deg,
+    hsl(var(--performance-red) / 0.2) 20deg,
+    hsl(var(--performance-red) / 0.2) 70deg,
+    hsl(var(--performance-red) / 0.6) 90deg,
+    hsl(var(--performance-red) / 0.2) 110deg,
+    hsl(var(--performance-red) / 0.2) 160deg,
+    hsl(var(--performance-red) / 0.6) 180deg,
+    hsl(var(--performance-red) / 0.2) 200deg,
+    hsl(var(--performance-red) / 0.2) 250deg,
+    hsl(var(--performance-red) / 0.6) 270deg,
+    hsl(var(--performance-red) / 0.2) 290deg,
+    hsl(var(--performance-red) / 0.2) 340deg,
+    hsl(var(--performance-red) / 0.6) 360deg
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Angular HUD corner accents (diagonal cuts, not decorative curves) plus
+   deliberately soft red corner highlights — brighter on the top corners
+   where Quick Actions sits, never a heavy glow. */
+.hero-frame-hud {
+  position: absolute;
+  inset: var(--hero-frame-gap);
+  z-index: 6;
+  border-radius: calc(var(--hero-frame-radius) - var(--hero-frame-gap));
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent calc(50% - 1px),
+      hsl(var(--performance-red) / 0.8) calc(50% - 1px),
+      hsl(var(--performance-red) / 0.8) calc(50% + 0.5px),
+      transparent calc(50% + 0.5px)
+    ),
+    linear-gradient(
+      135deg,
+      transparent calc(50% - 1px),
+      hsl(var(--performance-red) / 0.8) calc(50% - 1px),
+      hsl(var(--performance-red) / 0.8) calc(50% + 0.5px),
+      transparent calc(50% + 0.5px)
+    ),
+    linear-gradient(
+      135deg,
+      transparent calc(50% - 1px),
+      hsl(var(--performance-red) / 0.8) calc(50% - 1px),
+      hsl(var(--performance-red) / 0.8) calc(50% + 0.5px),
+      transparent calc(50% + 0.5px)
+    ),
+    linear-gradient(
+      45deg,
+      transparent calc(50% - 1px),
+      hsl(var(--performance-red) / 0.8) calc(50% - 1px),
+      hsl(var(--performance-red) / 0.8) calc(50% + 0.5px),
+      transparent calc(50% + 0.5px)
+    ),
+    radial-gradient(circle at 0 0, hsl(var(--performance-red) / 0.17), transparent 64%),
+    radial-gradient(circle at 100% 0, hsl(var(--performance-red) / 0.17), transparent 64%),
+    radial-gradient(circle at 0 100%, hsl(var(--performance-red) / 0.13), transparent 64%),
+    radial-gradient(circle at 100% 100%, hsl(var(--performance-red) / 0.13), transparent 64%);
+  background-size:
+    var(--hero-frame-accent) var(--hero-frame-accent),
+    var(--hero-frame-accent) var(--hero-frame-accent),
+    var(--hero-frame-accent) var(--hero-frame-accent),
+    var(--hero-frame-accent) var(--hero-frame-accent),
+    clamp(96px, 10vw, 168px) clamp(96px, 10vw, 168px),
+    clamp(96px, 10vw, 168px) clamp(96px, 10vw, 168px),
+    clamp(96px, 10vw, 168px) clamp(96px, 10vw, 168px),
+    clamp(96px, 10vw, 168px) clamp(96px, 10vw, 168px);
+  background-position:
+    left top,
+    right top,
+    left bottom,
+    right bottom,
+    left top,
+    right top,
+    left bottom,
+    right bottom;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+/* Sparse HUD-style technical marks: short red dashes centred on the top and
+   bottom edges and tiny segmented ticks on the sides. Desktop/tablet only —
+   hidden below md so the border never crowds a small screen. */
+.hero-frame-detail {
+  position: absolute;
+  inset: var(--hero-frame-gap);
+  z-index: 6;
+  border-radius: calc(var(--hero-frame-radius) - var(--hero-frame-gap));
+  background-image:
+    repeating-linear-gradient(to right, hsl(var(--performance-red) / 0.6) 0 5px, transparent 5px 13px),
+    repeating-linear-gradient(to right, hsl(var(--performance-red) / 0.5) 0 5px, transparent 5px 13px),
+    repeating-linear-gradient(to bottom, hsl(var(--performance-red) / 0.45) 0 4px, transparent 4px 12px),
+    repeating-linear-gradient(to bottom, hsl(var(--performance-red) / 0.45) 0 4px, transparent 4px 12px);
+  background-size: 132px 1px, 132px 1px, 1px 72px, 1px 72px;
+  background-position:
+    center 4px,
+    center calc(100% - 4px),
+    4px center,
+    calc(100% - 4px) center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+@media (max-width: 767px) {
+  .hero-frame-detail {
+    display: none;
+  }
+}
+
+/* Almost imperceptible highlight that travels a small portion of the red
+   inner border (16s loop). Disabled under prefers-reduced-motion. */
+.hero-frame-sweep {
+  position: absolute;
+  inset: calc(var(--hero-frame-gap) + 1px);
+  z-index: 7;
+  padding: 1px;
+  border-radius: calc(var(--hero-frame-radius) - var(--hero-frame-gap) - 1px);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    hsl(var(--performance-red) / 0.55) 50%,
+    transparent 100%
+  );
+  background-size: 240% 100%;
+  background-position: 140% 0;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  opacity: 0.55;
+  pointer-events: none;
+  animation: hero-frame-sweep 16s linear infinite;
+}
+@keyframes hero-frame-sweep {
+  from {
+    background-position: 140% 0;
+  }
+  to {
+    background-position: -140% 0;
+  }
+}
+
+/* ── Mobile frame: deliberately simpler than desktop ────────────────────────
+   Desktop gets the full engineered treatment (triple hairline rings, HUD
+   corner cuts, technical dash marks, a travelling highlight, an animated
+   ambient halo). On a phone the artwork is the hero, so the border is reduced
+   to what reads as "premium" at that size:
+     · one thin outer hairline + a whisper of the white ring
+     · a much quieter inner red accent line
+     · the corner accents kept, but barely there
+     · no technical marks, no travelling highlight, no animated glow
+   Nothing here changes the artwork itself or its aspect ratio. */
+@media (max-width: 767px) {
+  .hero-frame-wrap {
+    --hero-frame-radius: 10px;
+    --hero-frame-gap: 4px;
+    --hero-frame-accent: 20px;
+    --hero-panel-radius: 14px;
+  }
+  .hero-video-frame {
+    box-shadow:
+      0 0 0 1px hsl(0 0% 100% / 0.5),
+      0 0 0 2px hsl(var(--border) / 0.85),
+      0 16px 34px -24px hsl(220 25% 8% / 0.34),
+      0 8px 18px -14px hsl(var(--performance-red-deep) / 0.22);
+  }
+  .hero-frame-inner {
+    opacity: 0.45;
+  }
+  .hero-frame-hud {
+    opacity: 0.3;
+  }
+  .hero-frame-detail,
+  .hero-frame-sweep {
+    display: none;
+  }
+  .hero-ambient-glow {
+    opacity: 0.26;
+    filter: blur(18px);
+    animation: none;
+  }
+  /* a soft floor under the artwork so the floating dock always has contrast */
+  .hero-video-shade {
+    background: radial-gradient(70% 46% at 50% 100%, hsl(220 25% 6% / 0.26), transparent 74%);
+  }
+}
+
+/* Slow ambient red gradient hugging the artwork boundary — a decorative halo
+   that sits BEHIND the frame, never painted over the artwork itself.
+   Its bleed (-6px top / -8px sides / -12px bottom) is matched to the hero
+   shell's padding (8px / 10-20px / 14-16px) and the drift animates opacity
+   only — no scale — so the halo is always fully visible instead of being cut
+   off by the section's overflow at the edges of the animation. */
+.hero-ambient-glow {
+  position: absolute;
+  inset: -6px -8px -12px;
+  background:
+    radial-gradient(55% 60% at 6% 4%, hsl(var(--performance-red) / 0.42), transparent 62%),
+    radial-gradient(55% 60% at 96% 96%, hsl(var(--performance-red-dark) / 0.42), transparent 62%),
+    radial-gradient(60% 45% at 50% 100%, hsl(var(--performance-red) / 0.24), transparent 65%);
+  filter: blur(26px);
+  opacity: 0.5;
+  pointer-events: none;
+  border-radius: calc(var(--hero-frame-radius, 26px) + 10px);
+  animation: hero-ambient-drift 10s ease-in-out infinite;
+}
+@keyframes hero-ambient-drift {
+  0%,
+  100% {
+    opacity: 0.32;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Decorative hero video: sits above the poster artwork and cross-fades in
+   once playback has actually started, so the poster never flashes away. */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 700ms var(--ease-soft, ease-out);
+  pointer-events: none;
+}
+.hero-video--on {
+  opacity: 1;
+}
+
+/* Very subtle corner gradients that seat the Quick Actions layer (upper-right
+   panel on md+, bottom action bar on mobile). Never a full overlay — the
+   artwork stays bright and untouched. */
+.hero-video-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    radial-gradient(60% 70% at 100% 0%, hsl(220 25% 6% / 0.32), transparent 58%),
+    radial-gradient(40% 45% at 97% 3%, hsl(var(--performance-red-dark) / 0.18), transparent 65%),
+    radial-gradient(75% 38% at 50% 100%, hsl(220 25% 6% / 0.22), transparent 72%);
+}
+
+/* Compact accessible pause/play toggle for the decorative loop. Anchored
+   bottom-left so it never collides with the Quick Actions layer (upper-right
+   panel on md+, bottom bar below md — video playback is desktop-only). */
+.hero-video-toggle {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 999px;
+  border: 1px solid hsl(0 0% 100% / 0.65);
+  background: var(--edge-highlight);
+  color: hsl(0 0% 100%);
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  box-shadow:
+    inset 0 1px 0 hsl(0 0% 100% / 0.35),
+    0 12px 28px -18px hsl(220 25% 8% / 0.6);
+  transition:
+    background-color var(--dur-ui, 200ms) var(--ease-soft, ease-out),
+    transform var(--dur-ui, 200ms) var(--ease-soft, ease-out),
+    box-shadow var(--dur-ui, 200ms) var(--ease-soft, ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .hero-video-toggle:hover {
+    background: var(--edge-highlight);
+    transform: translateY(-1px);
+  }
+}
+.hero-video-toggle:focus-visible {
+  outline: 2px solid hsl(0 0% 100%);
+  outline-offset: 3px;
+}
+
+.premium-btn-primary {
+  border: 1px solid hsl(0 0% 100% / 0.35);
+  background:
+    linear-gradient(135deg, hsl(var(--performance-red-deep)), hsl(var(--performance-red)) 58%, hsl(var(--performance-red-dark)));
+  color: hsl(0 0% 100%);
+  box-shadow:
+    inset 0 1px 0 hsl(0 0% 100% / 0.28),
+    0 14px 30px -22px hsl(var(--performance-red-deep) / 0.55);
+  transition:
+    transform var(--dur-ui) var(--ease-soft),
+    box-shadow var(--dur-ui) var(--ease-soft),
+    filter var(--dur-ui) var(--ease-soft);
+}
+.premium-btn-primary:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+  box-shadow:
+    inset 0 1px 0 hsl(0 0% 100% / 0.3),
+    0 20px 44px -24px hsl(var(--performance-red-deep) / 0.62);
+}
+.premium-btn-primary:focus-visible {
+  outline: 2px solid hsl(0 0% 100%);
+  outline-offset: 3px;
+}
+
+.hero-action-arrow {
+  transition: transform var(--dur-micro) var(--ease-soft);
+}
+@media (hover: hover) and (pointer: fine) {
+  button:hover .hero-action-arrow,
+  a:hover .hero-action-arrow {
+    transform: translateX(3px);
+  }
+}
+
+/* ---- Quick Actions layer --------------------------------------------------
+   Two purpose-built compositions, not one stretched layout:
+
+   · MOBILE (< 768px) — a compact 2×2 "dock" of glass buttons that floats over
+     the lower part of the artwork and overhangs its bottom edge, so it reads
+     as a designed element instead of a row of shrunken desktop buttons. It
+     covers only the bottom band of the image and never the branding, the
+     mechanic or the vehicle.
+   · DESKTOP (≥ 768px) — a glass panel docked to the top-right of the hero.
+
+   Both are absolutely positioned, so the artwork always keeps the full hero. */
+.hero-qa-overlay {
+  --hero-qa-inset: clamp(10px, 1.7vw, 24px);
+  --hero-dock-lift: 44px;
+  position: absolute;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 5px;
+  border-radius: var(--hero-panel-radius, 14px);
+  border: 1px solid hsl(0 0% 100% / 0.7);
+  background: linear-gradient(
+    150deg,
+    var(--bg-panel),
+    var(--bg-panel) 58%,
+    hsl(var(--performance-red) / 0.12)
+  );
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  box-shadow:
+    0 0 0 1px hsl(0 0% 100% / 0.45),
+    inset 0 0 0 1px hsl(var(--performance-red) / 0.14),
+    inset 0 1px 0 hsl(0 0% 100% / 0.9),
+    0 18px 40px -22px hsl(220 25% 8% / 0.42),
+    0 10px 24px -14px hsl(var(--performance-red) / 0.3);
+  /* mobile: 2×2 dock, centred, overhanging the bottom edge of the artwork */
+  left: var(--hero-qa-inset);
+  right: var(--hero-qa-inset);
+  bottom: calc(-1 * var(--hero-dock-lift));
+  max-width: 420px;
+  margin-inline: auto;
+}
+
+/* soft glass highlight behind the panel */
+.hero-qa-overlay::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border-radius: 28px;
+  background: radial-gradient(70% 70% at 72% 18%, var(--bg-panel), transparent 70%);
+  filter: blur(12px);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* subtle red highlight sweeping the panel border — same cadence as the hero
+   frame sweep, kept almost imperceptible */
+.hero-qa-overlay::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    hsl(var(--performance-red) / 0.6) 50%,
+    transparent 70%
+  );
+  background-size: 260% 100%;
+  background-position: 130% 0;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  opacity: 0.55;
+  pointer-events: none;
+  animation: hero-qa-border-sweep 16s linear infinite;
+}
+@keyframes hero-qa-border-sweep {
+  from {
+    background-position: 130% 0;
+  }
+  to {
+    background-position: -130% 0;
+  }
+}
+
+.hero-qa-title {
+  display: none;
+}
+
+.hero-qa-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+/* Mobile dock cell: icon + short label on one line, comfortable touch target
+   (42px tall × ~150px wide) without the desktop panel's chrome. */
+.hero-qa-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  width: 100%;
+  height: auto;
+  min-height: 42px;
+  padding: 0 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.hero-qa-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.hero-qa-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hero-qa-label-short {
+  display: inline;
+}
+.hero-qa-label-long {
+  display: none;
+}
+.hero-qa-arrow {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  /* Upper-right glass panel floating over the artwork. Explicitly resets the
+     mobile dock geometry so the desktop composition is byte-for-byte the
+     approved one (no max-width centring, no overhang, no label ellipsis). */
+  .hero-qa-overlay {
+    left: auto;
+    right: var(--hero-qa-inset);
+    top: var(--hero-qa-inset);
+    bottom: auto;
+    width: clamp(236px, 24vw, 300px);
+    max-width: none;
+    margin-inline: 0;
+    gap: 8px;
+    padding: clamp(8px, 0.9vw, 12px);
+  }
+  .hero-qa-title {
+    display: block;
+    padding: 2px 6px 0;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: hsl(var(--performance-red-dark));
+  }
+  .hero-qa-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .hero-qa-btn {
+    justify-content: space-between;
+    gap: 10px;
+    height: 40px;
+    min-height: 0;
+    padding: 0 12px;
+    font-size: 13px;
+    text-align: left;
+  }
+  .hero-qa-main {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .hero-qa-label {
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+    text-align: left;
+  }
+  .hero-qa-label-short {
+    display: none;
+  }
+  .hero-qa-label-long {
+    display: inline;
+  }
+  .hero-qa-arrow {
+    display: block;
+  }
+}
+
+.hero-qa-primary {
+  border: 1px solid hsl(0 0% 100% / 0.45);
+  background: linear-gradient(
+    150deg,
+    hsl(var(--performance-red-deep)),
+    hsl(var(--performance-red)) 55%,
+    hsl(var(--performance-red-dark))
+  );
+  color: hsl(0 0% 100%);
+  box-shadow:
+    inset 0 1px 0 hsl(0 0% 100% / 0.28),
+    0 12px 26px -18px hsl(var(--performance-red-dark) / 0.7);
+  transition:
+    transform var(--dur-ui) var(--ease-soft),
+    box-shadow var(--dur-ui) var(--ease-soft),
+    filter var(--dur-ui) var(--ease-soft);
+}
+@media (hover: hover) and (pointer: fine) {
+  .hero-qa-primary:hover {
+    transform: translateY(-1.5px);
+    filter: brightness(1.06);
+    box-shadow:
+      inset 0 1px 0 hsl(0 0% 100% / 0.32),
+      0 18px 34px -18px hsl(var(--performance-red-dark) / 0.75);
+  }
+}
+.hero-qa-overlay .hero-qa-primary:focus-visible {
+  outline: 2px solid hsl(var(--performance-red-deep));
+  outline-offset: 3px;
+}
+
+.hero-qa-ghost {
+  border: 1px solid hsl(var(--performance-red-deep) / 0.3);
+  background: var(--bg-panel);
+  color: hsl(var(--ink));
+  box-shadow: inset 0 1px 0 hsl(0 0% 100% / 0.75);
+  transition:
+    transform var(--dur-ui) var(--ease-soft),
+    box-shadow var(--dur-ui) var(--ease-soft),
+    background-color var(--dur-ui) var(--ease-soft),
+    border-color var(--dur-ui) var(--ease-soft);
+}
+@media (hover: hover) and (pointer: fine) {
+  .hero-qa-ghost:hover {
+    background: var(--bg-panel);
+    border-color: hsl(var(--performance-red-deep) / 0.55);
+    transform: translateY(-1.5px);
+    box-shadow:
+      inset 0 1px 0 hsl(0 0% 100% / 0.9),
+      0 14px 28px -18px hsl(var(--performance-red-deep) / 0.45);
+  }
+}
+.hero-qa-overlay .hero-qa-ghost:focus-visible {
+  outline: 2px solid hsl(var(--performance-red-deep));
+  outline-offset: 2px;
+}
+
+/* press feedback for the Quick Actions controls */
+.hero-qa-primary:active,
+.hero-qa-ghost:active {
+  transform: translateY(0) scale(0.985);
+  filter: brightness(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .premium-btn-primary,
+  .hero-qa-primary,
+  .hero-qa-ghost,
+  .hero-action-arrow,
+  .hero-video,
+  .hero-video-toggle {
+    transition: none;
+  }
+  .premium-btn-primary:hover,
+  .hero-qa-primary:hover,
+  .hero-qa-ghost:hover,
+  .hero-video-toggle:hover {
+    transform: none;
+    filter: none;
+  }
+  .hero-ambient-glow,
+  .hero-frame-sweep,
+  .hero-qa-overlay::after {
+    animation: none;
+  }
+  .hero-ambient-glow {
+    opacity: 0.45;
+  }
+}
+
 input,
 textarea,
 select {
-  background-color: hsl(var(--premium-white));
+  background-color: hsl(var(--premium-var(--bg-panel)));
   color: hsl(var(--foreground));
   border-color: hsl(var(--border));
 }
@@ -760,8 +1410,265 @@ select:focus {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .brand-logo {
-    animation: none !important;
-    transition: none !important;
-  }
 }
+
+/* Precision depth upgrade: bounded desktop perspective, finite lighting. */
+.cinematic-hero { perspective: 1800px; }
+.hero-depth-plane {
+  transform: rotateX(var(--depth-x, 0deg)) rotateY(var(--depth-y, 0deg));
+  transition: transform 420ms cubic-bezier(.2,.65,.3,1);
+}
+.hero-qa-overlay { animation: precision-entrance 560ms cubic-bezier(.2,.65,.3,1); }
+.hero-ambient-glow { animation: hero-ambient-drift 3s ease-in-out 1; }
+.hero-frame-sweep, .hero-qa-overlay::after { animation-iteration-count: 1; animation-duration: 3s; }
+@keyframes precision-entrance {
+  from { opacity: .65; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+@media (hover: hover) and (pointer: fine) and (min-width: 1024px) {
+  .depth-surface:hover {
+    transform: perspective(1200px) translateY(-3px) rotateX(var(--depth-x, 0deg)) rotateY(var(--depth-y, 0deg));
+    box-shadow: 0 24px 44px -30px hsl(var(--primary) / .28), 0 8px 18px -14px hsl(var(--ink) / .18);
+  }
+  .hero-qa-btn:hover { transform: perspective(800px) translateY(-2px) rotateX(2deg); }
+}
+.luxury-heading::after {
+  content: ""; display: block; height: 2px; width: 40px; margin: 14px auto 0;
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--primary) / .15));
+  transform-origin: left; transform: scaleX(.45); transition: transform 560ms ease-out;
+}
+.motion-visible .luxury-heading::after { transform: scaleX(1); }
+[data-motion]:focus-within { opacity: 1; transform: none; clip-path: none; }
+:where(button, a, input, textarea, select):focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 4px; }
+@media (max-width: 767px) {
+  /* Keep the complete approved artwork visible above a separate action dock. */
+  .hero-qa-overlay { position: relative; left: auto; right: auto; bottom: auto; margin: 10px auto 0; max-width: 420px; backdrop-filter: none; }
+  .hero-qa-overlay::before, .hero-qa-overlay::after { display: none; }
+  .hero-qa-btn { min-height: 44px; }
+  .cinematic-hero { margin-bottom: -32px; }
+  .hero-qa-overlay { animation-duration: 320ms; }
+  .hero-depth-plane { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-motion], .stagger-child, .text-reveal, .cinematic-card, .hero-depth-plane,
+  .hero-qa-btn, .hero-qa-overlay, .luxury-heading::after {
+    opacity: 1 !important; transform: none !important; clip-path: none !important;
+    animation: none !important; transition: none !important;
+  }
+  .hero-frame-sweep, .hero-ambient-glow, .hero-qa-overlay::after { animation: none !important; }
+}
+/* Release route transforms after entrance so fixed navigation stays viewport-bound. */
+.page-enter, .route-transition { animation-fill-mode: backwards; }
+
+/* Phase 2 — the display is a stack of DOM planes, not separate objects in the artwork. */
+.cinematic-hero { perspective: 2600px; perspective-origin: 50% 45%; }
+.hero-display-stack, .hero-media-volume { position: relative; transform-style: preserve-3d; }
+.hero-display-stack {
+  transform: rotateX(var(--depth-x, 0deg)) rotateY(var(--depth-y, 0deg));
+}
+.cinematic-hero.depth-tracking .hero-display-stack,
+.depth-surface.depth-tracking, .cta-depth-stage.depth-tracking .cta-depth-plane { will-change: transform; }
+.hero-chassis {
+  position: absolute; inset: -4px -4px -8px; border-radius: calc(var(--hero-frame-radius) + 4px);
+  background: linear-gradient(145deg, var(--bg-panel), hsl(220 10% 80%) 42%, hsl(220 15% 27%) 100%);
+  border: 1px solid hsl(220 15% 35% / .25);
+  box-shadow: 0 22px 38px -26px hsl(220 20% 8% / .4), inset 0 1px 0 white;
+  transform: translateZ(-18px); pointer-events: none;
+}
+.hero-media-volume > .hero-ambient-glow { transform: translateZ(-50px); animation: hero-ambient-drift 2400ms ease-out 1; }
+.hero-depth-plane {
+  transform: translateZ(5px); transition: none;
+  animation: display-resolve 700ms cubic-bezier(.16,.7,.25,1) backwards;
+}
+.hero-artwork { animation: artwork-seat 800ms 100ms cubic-bezier(.16,.7,.25,1) backwards; }
+.hero-optics {
+  position: absolute; inset: 0; border-radius: var(--hero-frame-radius); overflow: hidden;
+  transform: translateZ(13px); pointer-events: none;
+}
+.hero-reflection {
+  position: absolute; inset: 0 20% 0 25%;
+  background: linear-gradient(112deg, transparent 15%, var(--edge-highlight) 40%, var(--edge-highlight) 55%, transparent 75%);
+  opacity: .32;
+  transform: translate3d(calc((var(--light-x, 50%) - 50%) * .8), calc((var(--light-y, 50%) - 50%) * .08), 0);
+  transition: opacity 360ms ease-out;
+  animation: reflection-pass 1250ms 200ms cubic-bezier(.16,.7,.25,1) backwards;
+}
+.depth-active .hero-reflection { opacity: .65; }
+.hero-edge-light {
+  position: absolute; inset: 0; border-radius: inherit;
+  box-shadow: inset 0 1px 0 hsl(0 0% 100% / .8), inset 0 -1px 0 hsl(var(--primary) / .2);
+  background: radial-gradient(ellipse at 50% 0, var(--edge-highlight), transparent 55%);
+  animation: edge-resolve 900ms 180ms ease-out backwards;
+}
+.hero-technical-plane {
+  position: absolute; inset: 0; transform: translateZ(24px); pointer-events: none;
+  animation: edge-resolve 600ms 260ms ease-out backwards;
+}
+.hero-technical-plane .hero-frame-sweep { animation-duration: 1800ms; animation-delay: 280ms; }
+.hero-foreground-corners {
+  position: absolute; inset: 8px; border-radius: calc(var(--hero-frame-radius) - 8px); pointer-events: none;
+  background:
+    linear-gradient(var(--bg-panel), var(--bg-panel)) left top / 32px 1px,
+    linear-gradient(hsl(var(--primary) / .65), hsl(var(--primary) / .65)) left top / 1px 32px,
+    linear-gradient(var(--bg-panel), var(--bg-panel)) right bottom / 32px 1px,
+    linear-gradient(hsl(var(--primary) / .65), hsl(var(--primary) / .65)) right bottom / 1px 32px;
+  background-repeat: no-repeat;
+  transform: translateZ(32px);
+  animation: edge-resolve 550ms 400ms ease-out backwards;
+}
+.hero-qa-overlay {
+  transform: translateZ(48px);
+  animation: actions-seat 680ms 300ms cubic-bezier(.16,.7,.25,1) backwards;
+}
+@keyframes display-resolve {
+  from { opacity: .55; transform: translateZ(-12px) translateY(8px); }
+  to { opacity: 1; transform: translateZ(5px); }
+}
+@keyframes artwork-seat { from { opacity: .7; transform: scale(.985); } to { opacity: 1; transform: scale(1); } }
+@keyframes edge-resolve { from { opacity: .25; } to { opacity: 1; } }
+@keyframes reflection-pass {
+  from { opacity: 0; transform: translate3d(-30%, 0, 0); }
+  to { opacity: .32; transform: translate3d(0, 0, 0); }
+}
+@keyframes actions-seat {
+  from { opacity: .65; transform: translateZ(28px) translateY(10px); }
+  to { opacity: 1; transform: translateZ(48px); }
+}
+
+/* Card layers keep text at modest depth, above a metallic surface highlight. */
+.card-edge-light { display: none; }
+@media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+  .service-card.depth-surface {
+    overflow: visible; transform-style: preserve-3d;
+    transform: perspective(1300px) rotateX(var(--depth-x, 0deg)) rotateY(var(--depth-y, 0deg));
+    transition: box-shadow 300ms ease-out, border-color 300ms ease-out;
+  }
+  .service-card.depth-active {
+    transform: perspective(1300px) translateY(-5px) rotateX(var(--depth-x, 0deg)) rotateY(var(--depth-y, 0deg));
+    box-shadow: 0 26px 46px -26px hsl(220 20% 12% / .22), 0 10px 24px -18px hsl(var(--primary) / .2);
+  }
+  .service-card::after {
+    background: radial-gradient(240px circle at var(--light-x, 50%) var(--light-y, 50%), var(--bg-panel), transparent 75%);
+    box-shadow: none; opacity: 0; transform: translateZ(1px); transition: opacity 300ms ease-out;
+  }
+  .service-card.depth-active::after { opacity: .3; box-shadow: none; }
+  .service-card-content { transform-style: preserve-3d; }
+  .service-card .service-icon {
+    transform: translateZ(30px); transition: transform 350ms cubic-bezier(.16,.7,.25,1), box-shadow 350ms ease-out;
+    box-shadow: 0 10px 18px -14px hsl(var(--primary) / .28);
+  }
+  .service-card.depth-active .service-icon { transform: translateZ(38px) translateY(-2px); }
+  .service-card h3 { transform: translateZ(18px); }
+  .service-card p { transform: translateZ(8px); }
+  .service-card .service-card-accent {
+    transform: translateZ(22px) scaleX(1); transform-origin: left;
+    transition: transform 350ms ease-out;
+  }
+  .service-card.depth-active .service-card-accent { transform: translateZ(28px) scaleX(1.35); }
+  .card-edge-light {
+    display: block; position: absolute; inset: -1px; padding: 1px; border-radius: inherit; pointer-events: none;
+    background: radial-gradient(220px circle at var(--light-x, 50%) var(--light-y, 50%), hsl(var(--primary) / .65), var(--bg-panel) 35%, transparent 70%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite: exclude;
+    transform: translateZ(2px); opacity: 0; transition: opacity 300ms ease-out;
+  }
+  .depth-active .card-edge-light { opacity: .8; }
+  .cta-depth-stage { perspective: 1800px; }
+  .cta-depth-stage .cta-depth-plane.motion-visible { transform: rotateX(var(--depth-x, 0deg)) rotateY(var(--depth-y, 0deg)); transition: box-shadow 320ms ease-out; }
+  .cta-depth-stage.depth-active .cta-depth-plane { box-shadow: 0 32px 55px -32px hsl(220 20% 12% / .28); }
+}
+.cta-reflected-light {
+  position: absolute; inset: 0; pointer-events: none; opacity: 0;
+  background: radial-gradient(ellipse at var(--light-x, 50%) var(--light-y, 50%), var(--edge-highlight), transparent 60%);
+  transition: opacity 300ms ease-out;
+}
+.cta-depth-stage.depth-active .cta-reflected-light { opacity: .4; }
+
+/* Section boundaries illuminate once; nothing follows or controls the scroll position. */
+.luxury-section::after { transform: scaleX(.68); opacity: .45; transition: transform 800ms cubic-bezier(.16,.7,.25,1), opacity 800ms ease-out; }
+.luxury-section.section-illuminated::after { transform: scaleX(1); opacity: 1; }
+.luxury-section::before { opacity: .7; transition: opacity 800ms ease-out; }
+.luxury-section.section-illuminated::before { opacity: 1; }
+.cinematic-navigation { background-color: var(--bg-panel); box-shadow: inset 0 1px 0 hsl(0 0% 100% / .8); transition-property: background-color, border-color, box-shadow; }
+.cinematic-navigation[data-scrolled="true"] { background-color: var(--bg-panel); border-bottom-color: hsl(var(--primary) / .16); box-shadow: 0 14px 30px -26px hsl(220 20% 12% / .35), inset 0 1px 0 hsl(0 0% 100% / .85); }
+.nav-active-line { transform-origin: left; }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .hero-qa-btn, .premium-btn-primary { transform-style: preserve-3d; transition: transform 220ms ease-out, box-shadow 220ms ease-out, filter 220ms ease-out; }
+  .hero-qa-btn:hover, .premium-btn-primary:hover { transform: perspective(900px) translateY(-3px) rotateX(3deg); box-shadow: 0 16px 26px -18px hsl(var(--primary) / .55); }
+  .hero-qa-btn:active, .premium-btn-primary:active { transform: perspective(900px) translateY(0) scale(.98); }
+  .hero-qa-main { transform: translateZ(5px); }
+}
+
+@media (max-width: 1023px) {
+  .hero-display-stack, .hero-depth-plane, .hero-optics, .hero-technical-plane, .hero-foreground-corners, .hero-qa-overlay, .hero-chassis { transform: none; }
+  .hero-display-stack, .hero-media-volume { transform-style: flat; }
+  .hero-optics { opacity: .35; }
+  .hero-reflection { animation: none; transform: none; }
+  .hero-depth-plane { animation: edge-resolve 380ms ease-out backwards; }
+  .hero-artwork { animation: edge-resolve 400ms 60ms ease-out backwards; }
+  .hero-technical-plane { animation: edge-resolve 400ms 90ms ease-out backwards; }
+  .hero-foreground-corners { display: none; }
+  .hero-qa-overlay { animation: precision-entrance 400ms 100ms ease-out backwards; }
+  .hero-chassis { inset: -2px -2px -4px; }
+  .cta-reflected-light { display: none; }
+  .luxury-section::after { transition-duration: 400ms; }
+}
+@media (max-width: 767px) {
+  .hero-optics { display: none; }
+  .hero-media-volume > .hero-ambient-glow { animation: none; filter: blur(14px); }
+  .hero-technical-plane .hero-frame-hud { opacity: .35; }
+  .hero-technical-plane .hero-frame-sweep { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-display-stack, .hero-chassis, .hero-depth-plane, .hero-artwork, .hero-optics,
+  .hero-technical-plane, .hero-foreground-corners, .hero-reflection, .hero-edge-light,
+  .hero-qa-overlay, .service-card *, .cta-depth-plane {
+    animation: none !important; transition: none !important; transform: none !important;
+  }
+  .hero-reflection, .card-edge-light, .cta-reflected-light { display: none !important; }
+  .hero-display-stack, .hero-media-volume { transform-style: flat; }
+  .luxury-section::before, .luxury-section::after { opacity: 1; transform: none; transition: none; }
+}
+/* Release reveal clipping so the raised card planes can extend beyond their surface. */
+[data-motion].motion-visible:not([data-motion="mask"]) { clip-path: none; }
+/* Keep ghost-action contrast intact on touch browsers that retain a hover state. */
+.hero-qa-ghost:hover { background-color: var(--bg-panel); color: hsl(var(--ink)); }
+
+/* Phase 3: hero-adjacent service studio; the approved picture remains primary. */
+.vehicle-studio { position:relative; padding:54px 24px 32px; background:linear-gradient(180deg,var(--bg-panel),var(--bg-panel)); }
+.vehicle-studio-inner { max-width:1280px; margin:auto; }
+.vehicle-studio-heading { display:flex; justify-content:space-between; align-items:end; gap:32px; margin-bottom:24px; }
+.vehicle-kicker { color:var(--accent-red-text); font-size:10px; font-weight:700; letter-spacing:.19em; margin-bottom:10px; }
+.vehicle-studio-heading h2 { font-family:"Bebas Neue",sans-serif; letter-spacing:.025em; font-size:clamp(32px,3.4vw,48px); line-height:1.1; }
+.vehicle-studio-heading > p { max-width:300px; font-size:13px; color:var(--text-secondary); line-height:1.7; }
+.vehicle-studio-layout { display:grid; grid-template-columns:minmax(0,1.7fr) minmax(290px,1fr); border:1px solid var(--border-subtle); border-radius:20px; overflow:hidden; box-shadow:0 20px 45px color-mix(in srgb, var(--shadow-color) 4.31%, transparent); background:var(--bg-panel); }
+.vehicle-stage { position:relative; min-width:0; min-height:430px; overflow:hidden; color:var(--text-primary); background:radial-gradient(ellipse at var(--light-x,50%) var(--light-y,40%),var(--bg-secondary) 0%,var(--bg-primary) 55%,var(--bg-primary) 100%); }
+.vehicle-stage::after { content:""; position:absolute; inset:0; border:1px solid color-mix(in srgb, var(--border-subtle) 7.06%, transparent); border-radius:18px 0 0 18px; pointer-events:none; }
+.vehicle-stage-label { position:absolute; top:24px; left:24px; right:24px; display:flex; justify-content:space-between; z-index:2; font-size:9px; letter-spacing:.15em; color:var(--text-secondary); }
+.vehicle-static { position:absolute; inset:25px 14px 35px; display:flex; align-items:center; opacity:1; transition:opacity .6s; }
+.vehicle-static svg { width:100%; height:100%; }
+.vehicle-canvas { position:absolute; inset:30px 0 40px; opacity:0; transition:opacity .7s; pointer-events:none; }
+.vehicle-canvas canvas { display:block; width:100%; height:100%; pointer-events:none; }
+.vehicle-studio[data-scene-state="ready"] .vehicle-canvas { opacity:1; }
+.vehicle-studio[data-scene-state="ready"] .vehicle-static { opacity:0; }
+.vehicle-stage-bottom { position:absolute; z-index:2; bottom:17px; left:24px; right:24px; display:flex; align-items:center; justify-content:space-between; gap:16px; font-size:9px; line-height:1.5; color:var(--text-secondary); }
+.vehicle-stage-bottom > span { max-width:300px; }
+.vehicle-service-panel { padding:30px; min-width:0; }
+.vehicle-choices { display:grid; gap:7px; }
+.vehicle-choices button { display:flex; align-items:center; gap:12px; text-align:left; min-height:48px; padding:10px 12px; border:1px solid var(--border-subtle); border-radius:9px; color:var(--text-secondary); font-size:12px; transition:background .2s,border-color .2s,color .2s; }
+.vehicle-choices button[aria-pressed="true"] { background:var(--bg-panel); border-color:var(--accent-red); color:var(--accent-red-text); }
+.vehicle-choice-number { font-size:9px; color:var(--text-secondary); }
+.vehicle-choice-dot { width:5px; height:5px; border-radius:50%; background:currentColor; margin-left:auto; opacity:.35; }
+.vehicle-choices button[aria-pressed="true"] .vehicle-choice-dot { opacity:1; }
+.vehicle-service-description { margin-top:20px; padding-top:18px; border-top:1px solid var(--border-subtle); }
+.vehicle-service-description h3 { font-family:"Bebas Neue",sans-serif; font-size:23px; letter-spacing:.025em; }
+.vehicle-service-description p { font-size:12px; color:var(--text-secondary); line-height:1.7; min-height:62px; margin:7px 0 12px; }
+.vehicle-service-description a { display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:600; color:var(--accent-red-text); min-height:32px; }
+.vehicle-studio button:focus-visible,.vehicle-studio a:focus-visible { outline:2px solid var(--focus-ring); outline-offset:3px; }
+@media(max-width:1023px) { .vehicle-studio-layout { grid-template-columns:minmax(0,1.25fr) minmax(280px,1fr); }.vehicle-service-panel {padding:24px;} .vehicle-stage {min-height:450px;} }
+@media(max-width:767px) { .vehicle-studio {padding:30px 16px 12px;} .vehicle-studio-heading {display:block;}.vehicle-studio-heading > p {margin-top:10px;max-width:none;}.vehicle-studio-layout {grid-template-columns:1fr;border-radius:14px;}.vehicle-stage {height:260px;min-height:0;}.vehicle-stage-label {top:16px;left:16px;right:16px;font-size:8px;}.vehicle-stage-bottom {left:16px;right:16px;bottom:8px;font-size:8px;}.vehicle-service-panel {padding:22px 18px;}.vehicle-choices {grid-template-columns:1fr 1fr;gap:8px;}.vehicle-choices button {font-size:11px;gap:7px;padding:10px 8px;min-height:58px;}.vehicle-choice-number,.vehicle-choice-dot {display:none;}.vehicle-choices svg {flex-shrink:0;width:16px;}.vehicle-service-description p {min-height:0;}.vehicle-stage::after {border-radius:13px 13px 0 0;} }
+@media(prefers-reduced-motion:reduce) { .vehicle-canvas,.vehicle-static,.vehicle-choices button {transition:none;} }
+
+
+@media(max-width:359px) { .vehicle-studio-heading h2 {max-width:calc(100% - 56px);} }
+.service-card[id] { scroll-margin-top:96px; }

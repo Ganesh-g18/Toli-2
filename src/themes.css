@@ -1,0 +1,67 @@
+/* Shared semantic palette. Brand red remains unchanged in both studio environments. */
+:root {
+ --request-border:#686d75;--modal-backdrop:#090b0db3;--modal-shadow:#0008;
+ --luxury-accent:#b5a68f;
+ --control-surface:var(--bg-elevated);
+}
+:root[data-theme=dark] {color-scheme:dark;}
+:root[data-theme=light] {
+ color-scheme:light;
+ --charcoal:40 29% 94%;--graphite:355 38% 94%;--panel:40 33% 97%;--raised:40 38% 98%;--panel-hover:38 24% 89%;
+ --silver:220 12% 13%;--silver-secondary:30 7% 31%;--silver-muted:30 6% 37%;
+ --luxury-gray-deep:36 15% 82%;--surface-metal:hsl(36 13% 77%);
+ --border:35 15% 74%;--input:32 9% 52%;--ring:358 68% 35%;--destructive:358 68% 35%;
+ --border-subtle:hsl(35 15% 74%);--edge-highlight:#fff9;
+ --accent-red-text:#a61d23;--focus-ring:#9c2024;--error-text:#9b3419;
+ --accent-red-soft:hsl(var(--red) / .08);
+ --header-surface:#f4f1eb;--request-surface:#f8f5ef;--request-input:#fdfbf7;--request-border:#8c8579;
+ --shadow-color:#716657;--shadow-dark:0 10px 25px -18px #71665755;
+ --panel-depth:inset 0 1px 0 #fff9,var(--shadow-dark);
+ --modal-backdrop:#29241b66;--modal-shadow:#51443130;
+ --luxury-accent:#756449;
+ --vehicle-body:hsl(220 7% 28%);--vehicle-highlight:hsl(220 9% 70%);
+}
+html[data-theme] {background:var(--bg-primary)!important;}
+html[data-theme=light] .phase9-experience .cinematic-hero {background:radial-gradient(ellipse at 65% 40%,#fffaf1,var(--bg-primary) 70%);}
+html[data-theme=light] .cinematic-hero::before {background:radial-gradient(ellipse at 72% 42%,#b8ad99,transparent 65%);opacity:.16;}
+html[data-theme=light] .experience-navigation {box-shadow:0 2px 10px #5144310a;}
+html[data-theme=light] .experience-menu {box-shadow:0 15px 40px #51443126;}
+html[data-theme=light] .journey-footer {background:var(--bg-secondary)!important;}
+html[data-theme=light] :is(.system-button.primary,.request-submit,.premium-btn-primary,.experience-navigation .nav-book,button.bg-primary,a.bg-primary) {color:#fff;box-shadow:inset 0 1px 0 #ffffff24,0 3px 8px #71171c20;}
+html[data-theme=light] .journey-brands img:is([alt="Hyundai logo"],[alt="Toyota logo"],[alt="Kia logo"],[alt="Renault logo"],[alt="Nissan logo"],[alt="Volkswagen logo"],[alt="Jeep logo"],[alt="Citroen logo"],[alt="Isuzu logo"],[alt="Volvo logo"],[alt="Audi logo"],[alt="Mercedes-Benz logo"]) {filter:brightness(0) opacity(.8);}
+.experience-navigation .nav-system-label {color:var(--luxury-accent);}
+.theme-toggle {display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:44px;height:44px;min-width:44px;border:1px solid var(--border-subtle);border-radius:5px;background:var(--control-surface);color:var(--text-primary);position:relative;}
+.theme-toggle::after {content:'';position:absolute;bottom:5px;left:19px;width:4px;height:2px;background:var(--accent-red);}
+.theme-toggle:hover {border-color:var(--accent-red);}
+.theme-toggle:focus-visible {outline:2px solid var(--focus-ring);outline-offset:3px;}
+.request-header-tools {display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.request-page-header .theme-toggle {margin-left:auto;}
+/* Transition only semantic surfaces while changing; never vehicle transforms or form layout. */
+.theme-changing :is(body,.experience-navigation,.experience-menu,.journey-section,.experience-chapter,.service-node,.request-dialog,.request-actions,.request-brand-results,.request-form input,.request-form textarea,.request-service-options button,.theme-toggle) {transition:background-color .25s,color .25s,border-color .25s,box-shadow .25s;}
+@media(max-width:767px){
+ .experience-navigation>div:not(.experience-menu) {gap:8px;}
+ .experience-navigation {padding-inline:12px;gap:8px;}
+ .experience-navigation .theme-toggle {width:44px;}
+ .request-header-tools {gap:6px;}
+}
+@media(max-width:359px){
+ .experience-navigation>div:not(.experience-menu) {gap:6px;}
+ .experience-navigation>div>button[aria-label$="support tools"] {font-size:9px;letter-spacing:0;}
+ .experience-navigation button[aria-controls=experience-menu] {letter-spacing:0;}
+ .request-dialog-header {gap:10px;}
+}
+@media(prefers-reduced-motion:reduce){.theme-changing * {transition:none!important;}}
+
+.chapter-navigation button[aria-current] {color:#fff;}
+
+.nav-support {display:contents;}.menu-support,.nav-book-icon {display:none;}
+@media(max-width:767px){
+ .nav-support {display:none;}.experience-menu .menu-support {display:block;margin:12px 0;}
+ .experience-navigation .nav-book {padding:0;width:44px;min-width:44px;max-width:44px;flex-shrink:0;}
+ .nav-book-label {display:none;}.nav-book-icon {display:block;}
+}
+
+@media(max-width:767px){.request-page-header {flex-wrap:wrap;padding-block:12px;gap:8px 12px;}.request-page-header>button:last-child {flex-basis:100%;justify-content:flex-end;min-height:32px;}}
+/* Keep the rotation hint above the technical caption on narrow scenes. */
+@media(max-width:767px){.journey-webgl[data-rotate-ready=true]::before {bottom:29px;}.journey-webgl[data-rotate-ready=true]::after {bottom:30px;}}
+

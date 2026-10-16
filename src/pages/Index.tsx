@@ -1,23 +1,21 @@
-import { lazy, Suspense } from "react";
-import Navbar from "@/components/Navbar";
+import AIChatWidget from '@/components/AIChatWidget';
+import SkipToMainContent from '@/components/SkipToMainContent';
+import { takeRequestReturn } from '@/lib/service-request';
+import { JourneyProvider } from "@/components/journey/JourneyProvider";
+import { lazy, Suspense, useEffect, useState } from "react";
+
+import SectionStack from "@/components/journey/SectionStack";
+import Gallery from "@/components/Gallery";
 import Hero from "@/components/Hero";
-import OffersStrip from "@/components/OffersStrip";
-import WhatsAppButton from "@/components/WhatsAppButton";
-import AIChatWidget from "@/components/AIChatWidget";
+import TrustChapter from "@/components/journey/TrustChapter";
+import ExperienceNavigation from "@/components/journey/ExperienceNavigation";
+
 import ScrollProgress from "@/components/ScrollProgress";
-import BackToTop from "@/components/BackToTop";
 
 // Lazy load below-fold components for faster initial load
 const Services = lazy(() => import("@/components/Services"));
+const ComponentExperience = lazy(() => import("@/components/journey/ComponentExperience"));
 const HowItWorks = lazy(() => import("@/components/HowItWorks"));
-const BrandPartners = lazy(() => import("@/components/BrandPartners"));
-const About = lazy(() => import("@/components/About"));
-const Stats = lazy(() => import("@/components/Stats"));
-const BeforeAfter = lazy(() => import("@/components/BeforeAfter"));
-const Gallery = lazy(() => import("@/components/Gallery"));
-const WhyUs = lazy(() => import("@/components/WhyUs"));
-const ServiceArea = lazy(() => import("@/components/ServiceArea"));
-const Testimonials = lazy(() => import("@/components/Testimonials"));
 const CtaBanner = lazy(() => import("@/components/CtaBanner"));
 const WhatsAppSender = lazy(() => import("@/components/WhatsAppSender"));
 const Contact = lazy(() => import("@/components/Contact"));
@@ -30,34 +28,37 @@ const LoadingFallback = () => (
 );
 
 const Index = () => {
+  const [requestReturn]=useState(takeRequestReturn);
+  useEffect(()=>{
+    if(!requestReturn)return;
+    const restore=()=>{const link=document.querySelectorAll<HTMLElement>('[data-service-request]')[requestReturn.index];if(!link)return;window.scrollTo(0,requestReturn.scrollY);link.focus({preventScroll:true});observer.disconnect();};
+    const observer=new MutationObserver(restore);observer.observe(document.body,{childList:true,subtree:true});const frame=requestAnimationFrame(restore);
+    return()=>{observer.disconnect();cancelAnimationFrame(frame);};
+  },[requestReturn]);
   return (
-    <>
-      <main className="min-h-screen overflow-x-clip page-enter">
+    <JourneyProvider skipHeroIntro={!!requestReturn} restoreState={requestReturn?.state}>
+      <SkipToMainContent/>
+      <ExperienceNavigation/>
+      <AIChatWidget/>
+      <main id="main-content" tabIndex={-1} className="min-h-screen overflow-x-clip phase9-experience">
         <ScrollProgress />
-        <Navbar />
-        <OffersStrip />
         <Hero />
         <Suspense fallback={<LoadingFallback />}>
-          <Services />
-          <HowItWorks />
-          <BrandPartners />
-          <About />
-          <Stats />
-          <BeforeAfter />
-          <Gallery />
-          <WhyUs />
-          <ServiceArea />
-          <Testimonials />
+          <SectionStack>
+            <Services separateVehicle />
+            <ComponentExperience />
+            <HowItWorks />
+            <TrustChapter />
+          </SectionStack>
+        </Suspense>
+        <Gallery />
+        <Suspense fallback={<LoadingFallback />}>
           <CtaBanner />
-          <WhatsAppSender />
-          <Contact />
+          <div className="experience-connect" id="connect" data-experience-chapter="connect"><p className="system-label">06 / CONNECT WITH TOLI</p><Contact /><details className="direct-message"><summary>Send a direct WhatsApp message ↗</summary><WhatsAppSender /></details></div>
           <Footer />
         </Suspense>
       </main>
-      <WhatsAppButton />
-      <BackToTop />
-      <AIChatWidget />
-    </>
+    </JourneyProvider>
   );
 };
 

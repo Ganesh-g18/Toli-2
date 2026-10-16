@@ -1,3 +1,4 @@
+import {services} from './service-catalog';
 export interface KBEntry {
   keywords: string[];
   response: string;
@@ -7,27 +8,27 @@ export const knowledgeBase: KBEntry[] = [
   // Services
   {
     keywords: ["service", "services", "what do you do", "offer", "offers", "provide"],
-    response: "We offer comprehensive multi-brand car services including:\n\n- **Automobile Services** — Expert diagnostics and repairs for all brands\n- **Spare Parts & Repairs** — Genuine parts and professional repairs\n- **Battery Services** — Amaron battery repair, replacement, and maintenance\n- **Premium Detailing** — Showroom-grade exterior polish and deep interior detailing\n- **Vehicle Inspection** — Thorough 30-point inspection\n- **Consultation** — Expert advice on maintenance and upgrades\n- **Installation** — Professional installation of parts and accessories\n- **Doorstep Pickup** — Convenient pickup and delivery service\n- **AMC Plans** — Annual maintenance contracts\n\nWould you like details on any specific service?",
+    response: "Explore our existing services:\n\n" + services.map(service=>`**${service.title}** — ${service.desc}`).join("\n\n") + "\n\nService availability is confirmed by our team.",
   },
   {
     keywords: ["amc", "annual maintenance", "maintenance contract", "maintenance plan"],
-    response: "We offer **Annual Maintenance Contracts (AMC)** customized to your vehicle's requirements and budget. This includes scheduled servicing, priority booking, and discounted rates throughout the year.\n\nContact us at **+91-8074946335** for AMC pricing and details.",
+    response: "Discuss an Annual Maintenance Contract for your vehicle. Ask our team about included work, eligibility, terms and pricing at +91-8074946335.",
   },
   {
     keywords: ["battery", "batteries", "amaron", "battery replacement", "battery repair"],
-    response: "We specialize in **Amaron battery services** including:\n- Battery health check\n- Battery repair\n- Battery replacement\n- Battery maintenance\n\nAll batteries come with manufacturer warranty. Call us at **+91-8074946335** for battery-related queries.",
+    response: "We provide **Amaron battery services** including:\n- Battery health check\n- Battery repair\n- Battery replacement\n- Battery maintenance\n\nBatteries generally carry the manufacturer's warranty — please confirm the exact warranty terms when booking. Call us at **+91-8074946335** for battery-related queries.",
   },
   {
     keywords: ["detailing", "polish", "interior", "exterior", "wash", "cleaning", "spa"],
-    response: "Our **Premium Detailing** service includes:\n- Showroom-grade exterior polish\n- Deep interior cleaning and conditioning\n- Dashboard and trim restoration\n- Window and glass cleaning\n- Tyre dressing\n\nYour car will feel brand new! Call **+91-8074946335** for pricing.",
+    response: "Ask about exterior polishing and interior detailing. Describe the areas you want treated, and confirm inclusions, availability and pricing with our team at +91-8074946335.",
   },
   {
     keywords: ["inspection", "checkup", "check-up", "diagnostic", "diagnosis", "health check"],
-    response: "Our **30-Point Vehicle Inspection** covers:\n- Engine and transmission check\n- Brake system inspection\n- Battery health check\n- Tire condition and alignment\n- Fluid levels check\n- Electrical systems check\n- AC performance test\n\nGet a detailed report of your car's condition. Book now at **+91-8074946335**.",
+    response: "Ask our team about Vehicle Inspection and the checks relevant to your concern. Confirm inspection scope and pricing directly with the workshop at +91-8074946335.",
   },
   {
     keywords: ["pickup", "drop", "doorstep", "home service", "pickup and drop", "delivery"],
-    response: "Yes! We offer **Doorstep Pickup & Delivery** service. Our team will:\n1. Arrive at your location at the scheduled time\n2. Pick up your car\n3. Take it to our workshop for service\n4. Deliver it back to you — clean, serviced, and road-ready\n\nYou only pay when you're satisfied! Call **+91-8074946335** to book.",
+    response: "Ask our team about pickup and delivery options for a workshop visit. Confirm coverage, availability, arrangements and any charges before proceeding. Call +91-8074946335.",
   },
 
   // Pricing
@@ -39,13 +40,13 @@ export const knowledgeBase: KBEntry[] = [
   // Booking
   {
     keywords: ["book", "booking", "appointment", "schedule", "slot", "reserve", "enquiry", "enquire", "enquire now"],
-    response: "You can book a service in 3 easy ways:\n\n1. **Call us** — +91-8074946335 or +91-9908303888\n2. **WhatsApp** — Send a message to +91-9908303888\n3. **Online** — Fill the enquiry form on our website\n\nPick a date that works for you, and we'll handle the rest!",
+    response: "Request service using the website form, call +91-8074946335 or +91-9908303888, or contact us on WhatsApp. The form opens a draft for you to send; appointments are confirmed directly with the workshop.",
   },
 
   // Process
   {
     keywords: ["process", "how", "work", "works", "step", "steps", "procedure"],
-    response: "Our service process is simple — **4 easy steps**:\n\n1. **Book a Service** — Call, WhatsApp, or fill the enquiry form\n2. **We Pick Up** — Our team arrives at your doorstep\n3. **Expert Service** — Certified care with genuine parts\n4. **Delivered Ready** — Clean, serviced, and road-ready. Pay only when satisfied!\n\nWant to start? Call **+91-8074946335**.",
+    response: "Choose a service, enter your contact details and review your request. The form opens a WhatsApp draft: review and send it in WhatsApp. Discuss availability, scope, pricing and arrangements with our team. Opening the draft does not confirm a booking.",
   },
 
   // Working Hours
@@ -57,13 +58,19 @@ export const knowledgeBase: KBEntry[] = [
   // Location
   {
     keywords: ["location", "address", "where", "find", "map", "direction", "reach", "situated", "anantapur", "shop", "workshop"],
-    response: "We're located at:\n\n**Toli Motors**\nKamalanagar, Anantapur,\nAndhra Pradesh 515001\n\n📞 Call: +91-8074946335\n📧 Email: tolimotorsatp@gmail.com\n\nYou can find us on Google Maps — just search \"Toli Motors Anantapur\"!",
+    response: "We're located at:\n\n**Toli Motors**\n6-2-806, Ram Nagar, Kovur Nagar, Anantapur, Andhra Pradesh 515004\n\n📞 Call: +91-8074946335\n📧 Email: tolimotorsatp@gmail.com\n\nYou can find us on Google Maps — just search \"Toli Motors Anantapur\"!",
   },
 
   // Contact
   {
     keywords: ["contact", "phone", "call", "number", "mobile", "email", "mail", "whatsapp", "reach you"],
     response: "Here are our contact details:\n\n📞 **Phone:** +91-8074946335\n📱 **WhatsApp:** +91-9908303888\n📧 **Email:** tolimotorsatp@gmail.com\n\n**Working Hours:** Mon–Sat, 9:00 AM – 8:00 PM\n\nFeel free to reach out anytime!",
+  },
+
+  // Reviews
+  {
+    keywords: ["review", "reviews", "feedback", "rating", "testimonial", "testimonials", "google review", "google reviews"],
+    response: "We welcome genuine feedback! You can read and share reviews on our **Google Business Profile** — just search **\"Toli Motors Anantapur\"** on Google Maps.\n\nOr share your feedback with us directly on WhatsApp at **+91-9908303888**.",
   },
 
   // Brands
@@ -73,7 +80,7 @@ export const knowledgeBase: KBEntry[] = [
   },
   {
     keywords: ["toyota", "hyundai", "maruti", "suzuki", "tata", "mahindra", "kia", "honda", "ford", "volkswagen", "vw", "skoda", "nissan", "renault", "mg", "jeep", "bmw", "audi", "mercedes", "volvo", "lexus"],
-    response: "Yes, we service **Toyota, Hyundai, Maruti Suzuki, and all other major brands**! Our certified technicians have deep multi-brand expertise.\n\nWhich car do you need serviced? Call **+91-8074946335** for a quick quote.",
+    response: "Share your vehicle make, model and the service you need. Our team will confirm availability for your vehicle. Call +91-8074946335.",
   },
 
   // Insurance
@@ -95,7 +102,7 @@ export const knowledgeBase: KBEntry[] = [
   // About
   {
     keywords: ["about", "who", "about toli", "tell me about", "company", "workshop"],
-    response: "**Toli Motors** is a trusted multi-brand car workshop situated in Anantapur, Andhra Pradesh.\n\nWe have **25+ years of experience** and have served **12,000+ happy customers**. Our strengths:\n- Expert technicians with multi-brand expertise\n- Genuine parts and premium quality\n- Affordable, transparent pricing\n- Doorstep pickup and delivery\n- 98% customer satisfaction rate\n\nVisit us at Kamalanagar, Anantapur, Andhra Pradesh 515001.",
+    response: "**Toli Motors** is a multi-brand car workshop with **20+ years of hands-on automotive experience**, situated in Anantapur, Andhra Pradesh.\n\nWe focus on:\n- Multi-brand service expertise across major car brands\n- Genuine parts and attention to quality\n- Affordable, transparent pricing\n- Doorstep pickup and delivery\n\nVisit us at 6-2-806, Ram Nagar, Kovur Nagar, Anantapur, Andhra Pradesh 515004.",
   },
 
   // Spare parts

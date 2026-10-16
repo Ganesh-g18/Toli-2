@@ -1,0 +1,114 @@
+/* Phase 7: semantic automotive theme. HSL channels feed existing Tailwind APIs. */
+:root {
+ --charcoal:220 10% 8%; --graphite:220 9% 11%; --raised:220 8% 16%; --panel:220 8% 13%; --panel-hover:220 8% 19%;
+ --silver:220 15% 95%; --silver-secondary:220 10% 77%; --silver-muted:220 8% 66%; --red:353.2308 78.9474% 51.5686%;
+ --bg-primary:hsl(var(--charcoal)); --bg-secondary:hsl(var(--graphite)); --bg-elevated:hsl(var(--raised)); --bg-panel:hsl(var(--panel)); --bg-panel-hover:hsl(var(--panel-hover));
+ --surface-dark:var(--bg-primary); --surface-gray:var(--bg-elevated); --surface-metal:hsl(220 7% 30%);
+ --border-subtle:hsl(220 7% 30%); --border-active:hsl(var(--red)); --edge-highlight:hsl(220 15% 95% / .08);
+ --text-primary:hsl(var(--silver)); --text-secondary:hsl(var(--silver-secondary)); --text-muted:hsl(var(--silver-muted));
+ --accent-red:var(--brand-red,hsl(var(--red))); --accent-red-hover:var(--brand-red-hover); --accent-red-active:var(--brand-red-active); --accent-red-text:var(--brand-red-text); --accent-red-soft:hsl(var(--red) / .1);
+ --focus-ring:var(--brand-red-focus); --error-text:var(--brand-red-error); --shadow-color:hsl(220 10% 3%); --shadow-dark:0 16px 32px -20px hsl(220 10% 3% / .8); --glow-red:0 8px 22px -16px hsl(var(--red) / .5);
+ --header-surface:#303237;
+ --request-surface:#1b1d21; --request-input:#121418; --request-border:#464b52;
+ --on-brand:#fff; --on-brand-warm:#fff7f0; --on-brand-secondary:#f4e2df; --on-brand-muted:#ead1cd; --on-brand-label:#fff0e8; --on-brand-detail:#fff1e9; --on-brand-focus:#fff2ea; --on-brand-border:#f3b6b8; --border-on-brand:hsl(358 35% 63%); --panel-highlight:#ffffff20; --panel-shadow:#0002;
+ --panel-depth:inset 0 1px 0 var(--edge-highlight),var(--shadow-dark);
+ --vehicle-body:hsl(220 7% 28%); --vehicle-highlight:hsl(220 9% 70%); --vehicle-technical:hsl(220 7% 20%); --vehicle-glass:hsl(220 8% 10%); --vehicle-rubber:hsl(220 8% 5%);
+ /* Compatibility aliases preserve the existing component and motion APIs. */
+ --premium-white:var(--panel); --soft-white:var(--graphite); --luxury-gray:var(--raised); --luxury-gray-deep:220 8% 20%; --ink:var(--silver); --ink-soft:var(--silver-secondary); --muted-ink:var(--silver-muted);
+ --performance-red:var(--red); --performance-red-deep:358.45 70% 37%; --performance-red-dark:358.45 70% 30%;
+ --background:var(--charcoal); --foreground:var(--silver); --card:var(--panel); --card-foreground:var(--silver); --popover:var(--raised); --popover-foreground:var(--silver);
+ --primary:var(--red); --primary-foreground:220 15% 98%; --secondary:var(--raised); --secondary-foreground:var(--silver); --muted:var(--raised); --muted-foreground:var(--silver-muted); --accent:var(--raised); --accent-foreground:var(--silver);
+ --border:220 7% 30%; --input:220 7% 40%; --ring:358.45 80% 80%; --destructive:358.45 80% 80%; --destructive-foreground:220 10% 8%;
+ --sidebar-background:var(--graphite); --sidebar-foreground:var(--silver); --sidebar-accent:var(--raised); --sidebar-accent-foreground:var(--silver); --sidebar-border:var(--border); --sidebar-ring:var(--ring);
+}
+html {color-scheme:dark;scrollbar-color:var(--surface-metal) var(--bg-primary);scrollbar-width:thin;}
+body {background:var(--bg-primary);color:var(--text-primary);}
+::selection {background:var(--accent-red);color:var(--text-primary);}
+::-webkit-scrollbar {width:10px;height:10px;} ::-webkit-scrollbar-track {background:var(--bg-primary);} ::-webkit-scrollbar-thumb {background:var(--surface-metal);border:2px solid var(--bg-primary);border-radius:6px;} ::-webkit-scrollbar-thumb:hover {background:var(--accent-red);}
+.journey-root {--journey-red:var(--accent-red);--tech-ink:var(--text-primary);--tech-muted:var(--text-muted);--tech-line:var(--border-subtle);--tech-surface:var(--bg-panel);--tech-accent:var(--accent-red);--tech-depth:var(--panel-depth);--tech-radius:10px;color:var(--text-primary);background:var(--bg-primary);}
+.journey-section {background-color:var(--bg-primary);}
+.journey-section:is(.journey-studio,.journey-about,.journey-process,.journey-quality,.journey-message) {background:var(--bg-secondary);}
+.journey-section:is(.journey-services,.journey-work,.journey-gallery,.journey-coverage,.journey-reviews,.journey-contact) {background:var(--bg-primary);}
+.journey-section::before {background:linear-gradient(180deg,var(--edge-highlight),transparent 15%);opacity:.35;}
+.journey-section :is(.luxury-panel,.service-card,.step-card,.reason-card,.contact-card,.about-panel,.wa-panel,.brand-logo-item) {background:var(--bg-panel);border-color:var(--border-subtle);box-shadow:var(--panel-depth);border-radius:10px;}
+.journey-section :is(h1,h2,h3,h4,h5,h6) {color:var(--text-primary);}
+.text-gradient {background-image:linear-gradient(115deg,var(--text-primary),var(--text-secondary));}
+.luxury-kicker,.vehicle-kicker,.text-primary {color:var(--accent-red-text);}
+.journey-section .luxury-heading::after {background:var(--accent-red);}
+.journey-chapter-mark,.journey-section.journey-current .journey-chapter-mark {color:var(--text-muted);}
+.journey-chapter-mark b {color:var(--accent-red-text);}
+.journey-section .icon-luxury,.journey-section .reason-icon,.journey-services .service-icon {background:var(--bg-elevated);color:var(--text-primary);border:1px solid var(--border-subtle);box-shadow:inset 0 1px 0 var(--edge-highlight);}
+.journey-section .brand-logo-item {background:var(--bg-elevated);}
+/* Approved raster logos retain their brand colors. */
+
+.cinematic-navigation,.cinematic-navigation[data-scrolled=true] {background:color-mix(in srgb,var(--bg-primary) 94%,transparent);border-bottom:1px solid var(--border-subtle);box-shadow:inset 0 1px var(--edge-highlight);color:var(--text-primary);}
+.cinematic-navigation button {color:var(--text-primary);} #mobile-navigation>div>div {background:var(--bg-secondary);}
+.cinematic-navigation .luxury-button {box-shadow:none;border:1px solid var(--border-subtle);}
+.journey-root main>.journey-section.cinematic-hero {background:var(--bg-primary);}
+.cinematic-hero::before {background:radial-gradient(ellipse at 76% 42%,var(--surface-metal),transparent 65%);opacity:.28;}
+.hero-description,.hero-brand span,.hero-contact-actions a,.hero-enquiry {color:var(--text-secondary);}
+.cinematic-hero h1 span {color:var(--text-secondary);}
+.journey-dock {background:radial-gradient(ellipse at 48% 28%,var(--surface-metal),var(--bg-secondary) 65%,var(--bg-primary));border:1px solid var(--border-subtle);box-shadow:inset 0 1px 0 var(--edge-highlight);}
+
+.hero-journey-link,.journey-dock .vehicle-stage-label,.journey-dock .vehicle-stage-bottom>span {color:var(--text-muted);}
+.journey-studio .vehicle-studio-layout,.journey-studio .vehicle-service-panel,.services-scene-rail,.process-caption {background:var(--bg-panel);border-color:var(--border-subtle);}
+.vehicle-choices button {background:var(--bg-secondary);color:var(--text-secondary);border-color:var(--border-subtle);}
+.vehicle-choices button[aria-pressed=true] {background:var(--bg-elevated);border-color:var(--border-subtle);color:var(--text-primary);box-shadow:inset 3px 0 var(--accent-red);}
+.service-readout>.tech-label,.service-readout>div,.service-readout>div>span:first-child,.module-meta,.parts-service-caption>span,.parts-service-caption p:not(.vehicle-kicker),.journey-services .service-card p,.process-caption span,.vehicle-service-description p {color:var(--text-secondary);}
+.service-readout>strong,.process-caption {color:var(--text-primary);}
+.journey-services .service-card[data-active=true],.process-steps .step-card[data-active=true] {background:var(--bg-elevated)!important;border-color:var(--border-subtle);box-shadow:inset 3px 0 var(--accent-red),var(--panel-depth)!important;}
+.service-card[data-active=true] .module-meta>span:last-child,.service-explore,.vehicle-service-description a {color:var(--accent-red-text);}
+.service-card[data-active=true] .module-meta>span:last-child::before {content:"● ";color:var(--accent-red);}
+.journey-services .service-card[data-active=true] .service-icon {background:var(--bg-panel);color:var(--text-primary);border-color:var(--border-subtle);}
+.process-step-select[aria-pressed=true] {color:var(--text-primary);}.process-step-select span {color:var(--accent-red-text);}
+.journey-trust {background:var(--bg-secondary)!important;}.journey-trust .stat-item {background:var(--bg-panel);border-color:var(--border-subtle);}.journey-trust .stat-item p {color:var(--text-secondary);}
+.journey-gallery .gallery-item,.journey-work .ba-card {border-color:var(--border-subtle);box-shadow:var(--panel-depth);}.journey-gallery .gallery-item:hover {border-color:var(--accent-red);}
+.booking-experience .cta-depth-plane {background:linear-gradient(135deg,var(--bg-elevated),var(--bg-panel));border:1px solid var(--border-subtle);border-top:2px solid var(--accent-red);box-shadow:var(--panel-depth);}
+.journey-footer {background:var(--bg-primary)!important;border-top:1px solid var(--border-subtle);}.journey-footer h4 {color:var(--text-primary);}
+:is(.premium-btn-primary,button.bg-primary,a.bg-primary) {background:var(--accent-red);border-color:var(--accent-red);color:var(--text-primary);box-shadow:var(--shadow-dark);}
+:is(.premium-btn-primary,button.bg-primary,a.bg-primary):hover {background:var(--accent-red-hover);box-shadow:var(--glow-red);}
+:is(.premium-btn-primary):active {background:var(--accent-red-active);}
+:is(.premium-btn-outline,.hero-explore,.hero-qa-ghost,.hero-qa-call) {background:var(--bg-panel);border:1px solid var(--border-subtle);color:var(--text-primary);box-shadow:var(--panel-depth);}
+:is(.premium-btn-outline,.hero-explore,.hero-qa-ghost,.hero-qa-call):hover {background:var(--bg-panel-hover);border-color:var(--accent-red);color:var(--text-primary);}
+:is(input,textarea,select,.field-premium) {background:var(--bg-secondary);color:var(--text-primary);border-color:hsl(var(--input));}
+:is(input,textarea)::placeholder {color:var(--text-muted);opacity:1;}
+:is(input,textarea,select):focus {border-color:var(--accent-red);box-shadow:0 0 0 2px var(--focus-ring);}
+:where(button,a,input,textarea,select):focus-visible {outline:2px solid var(--focus-ring);outline-offset:4px;}
+:is(.cinematic-hero,.vehicle-studio,.journey-dock) :is(button,a):focus-visible {outline-color:var(--focus-ring);}
+.text-destructive,[role=alert] {color:var(--error-text);}
+[aria-invalid=true] {border-color:var(--error-text);}
+/* Underlines and error copy distinguish errors from normal red selection. */
+[role=dialog] {background:var(--bg-elevated);color:var(--text-primary);border-color:var(--border-subtle);box-shadow:var(--shadow-dark);}
+[role=dialog] label {color:var(--text-secondary);}
+[disabled] {opacity:.65;}
+@media(hover:hover) {.journey-section :is(.service-card,.reason-card,.contact-card):hover {background:var(--bg-panel-hover);border-color:var(--border-subtle);box-shadow:inset 0 2px var(--accent-red),var(--panel-depth)!important;}}
+@media(prefers-reduced-motion:reduce) { .journey-section {transition:none;}}
+
+.journey-root .text-muted-foreground\/70,.journey-root .text-muted-foreground\/80,.journey-root .text-foreground\/60,.journey-root .text-foreground\/70 {color:var(--text-muted);}
+.journey-section .premium-btn-outline {color:var(--text-primary);}
+.journey-section .cinematic-card::after {box-shadow:inset 0 0 0 1px var(--edge-highlight);}
+.journey-section .luxury-panel {box-shadow:var(--panel-depth);}
+/* Neutral brand presentation; source files and the existing brand list stay intact. */
+.journey-brands .brand-logo-item {position:relative;padding-bottom:18px;}
+.journey-brands .brand-logo-item::after {content:attr(data-brand);position:absolute;bottom:5px;left:4px;right:4px;text-align:center;color:var(--text-secondary);font:9px/1.2 Inter,sans-serif;}
+.journey-brands img:is([alt="Hyundai logo"],[alt="Toyota logo"],[alt="Kia logo"],[alt="Renault logo"],[alt="Nissan logo"],[alt="Volkswagen logo"],[alt="Jeep logo"],[alt="Citroen logo"],[alt="Isuzu logo"],[alt="Volvo logo"],[alt="Audi logo"],[alt="Mercedes-Benz logo"]) {filter:brightness(0) invert(.88);}
+:is(a[aria-label="Chat on WhatsApp"],button[aria-label="Open AI Chat"],button[aria-label="Back to top"]) {background:var(--bg-elevated);color:var(--text-primary);border:1px solid var(--border-subtle);box-shadow:var(--shadow-dark);}
+:is(a[aria-label="Chat on WhatsApp"],button[aria-label="Open AI Chat"],button[aria-label="Back to top"]):hover {background:var(--bg-panel-hover);border-color:var(--accent-red);}
+
+[class~="hover:text-primary"]:hover {color:var(--accent-red-text);}
+.cinematic-navigation button:hover {color:var(--text-primary);}
+/* Support shortcuts yield to modal forms, including short phone viewports. */
+body:has([role="dialog"][data-state="open"]) :is(a[aria-label="Chat on WhatsApp"],button[aria-label="Open AI Chat"],button[aria-label="Back to top"]) {display:none;}
+.theme-secondary {background:var(--bg-panel);border-color:var(--border-subtle);color:var(--text-primary);box-shadow:var(--panel-depth);}
+.theme-secondary:hover {background:var(--bg-panel-hover);border-color:var(--accent-red);color:var(--text-primary);box-shadow:var(--panel-depth);}
+
+
+:is(.system-button.primary,.request-submit,.premium-btn-primary,.experience-navigation .nav-book) {background:var(--action-surface);color:#fff;border:1px solid var(--accent-red);box-shadow:inset 0 1px 0 #ffffff24,0 4px 12px #0005,0 5px 18px -10px var(--brand-red-glow);transition:background .15s,transform .15s,box-shadow .15s;}
+:is(.system-button.primary,.request-submit,.premium-btn-primary,.experience-navigation .nav-book):hover:not(:disabled) {background:var(--action-surface-hover);box-shadow:inset 0 1px 0 #ffffff24,0 5px 16px #0005,0 6px 20px -9px var(--brand-red-glow);}
+:is(.system-button.primary,.request-submit,.premium-btn-primary,.experience-navigation .nav-book):active:not(:disabled) {background:var(--accent-red-active);transform:translateY(1px);box-shadow:inset 0 2px 4px #0003;}
+@media(prefers-reduced-motion:reduce){.system-button.primary,.request-submit,.premium-btn-primary,.experience-navigation .nav-book {transition:none;transform:none!important;}}
+
+/* Logo-only refinement: stable graphite contrast and a raised automotive mount. */
+
+
+

@@ -1,0 +1,31 @@
+/* Isolate only the cinematic middle; navbar (50), rail (30) and portals stay above it. */
+.section-stack {position:relative;isolation:isolate;z-index:0;overflow:visible;--stack-nav-height:64px;}
+.journey-root .phase9-experience .section-stack>section {
+ position:relative;margin:0;padding:40px clamp(40px,8vw,150px);min-height:0;
+ border:1px solid var(--border-subtle);border-radius:20px 20px 0 0;
+ overflow:visible;scroll-margin-top:calc(var(--stack-nav-height) + 44px);
+ z-index:var(--stack-layer,1);transform-origin:50% 0;
+ box-shadow:0 -8px 22px -16px var(--studio-wine-shadow,#20151c88),0 -1px 0 var(--brand-red-muted);
+}
+.section-stack>section[data-stack-sticky=true] {position:sticky!important;top:var(--stack-top);}
+.section-stack>section[data-stack-covered=true] {transform:scale(.985);box-shadow:0 -10px 24px -14px var(--studio-wine-shadow,#20151c88);}
+.section-stack[data-measuring=true]>section {position:relative!important;top:auto;transform:none;}
+.section-stack .matrix-stage-discovery {grid-template-columns:1fr 1fr;grid-template-areas:"selector module";gap:32px;}
+.section-stack .component-chapter .matrix-vehicle {position:relative;top:auto;display:grid;grid-template-columns:1.3fr 1fr;column-gap:36px;align-items:center;}
+.journey-root .section-stack .component-chapter .matrix-vehicle .journey-dock {grid-row:1/3;min-height:440px;}
+.section-stack .component-chapter .vehicle-zone-actions {position:static;display:flex;flex-wrap:wrap;gap:8px;align-self:end;}
+.section-stack .component-chapter .vehicle-zone-actions button {position:static;min-height:44px;padding:10px;background:var(--bg-panel);border:1px solid var(--border-subtle);}
+.section-stack .component-chapter .vehicle-zone-actions button::after {display:none;}
+.section-stack .component-chapter .component-explainer {align-self:start;}
+html[data-theme=dark] .section-stack .component-chapter {background:var(--environment-component);}
+html[data-theme=light] .section-stack>section {box-shadow:0 -7px 20px -16px #51443155;}
+@media(max-width:1100px){.journey-root .phase9-experience .section-stack>section {padding:32px 70px;}}
+@media(max-width:900px){.journey-root .phase9-experience .section-stack>section {padding:32px 30px;}.section-stack .matrix-stage-discovery {grid-template-columns:1fr;grid-template-areas:"selector" "module";}}
+@media(max-width:767px){
+ .journey-root .phase9-experience .section-stack>section {position:relative!important;top:auto;padding:36px 20px;border-radius:10px 10px 0 0;transform:none;box-shadow:0 -3px 10px -8px var(--studio-wine-shadow,#20151c88);}
+ .section-stack .component-chapter .matrix-vehicle {display:block;}
+ .journey-root .section-stack .component-chapter .matrix-vehicle .journey-dock {min-height:300px;}
+}
+@media(prefers-reduced-motion:reduce){.section-stack>section[data-stack-covered=true] {transform:none;}.section-stack>section {transition:none!important;}}
+
+.section-stack .selected-service-module .service-question strong {color:var(--on-brand-detail);}

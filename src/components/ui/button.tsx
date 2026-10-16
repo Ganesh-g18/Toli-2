@@ -11,8 +11,8 @@ const buttonVariants = cva(
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-primary/45 bg-white text-primary hover:bg-primary hover:text-primary-foreground",
-        secondary: "border border-border bg-secondary text-secondary-foreground hover:border-primary/35 hover:bg-white",
+        outline: "theme-secondary border border-border bg-card text-foreground hover:border-primary hover:bg-secondary hover:text-foreground",
+        secondary: "theme-secondary border border-border bg-secondary text-secondary-foreground hover:border-primary hover:bg-card",
         ghost: "hover:bg-primary/10 hover:text-primary",
         link: "text-primary underline-offset-4 hover:underline",
       },
@@ -43,4 +43,5 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 Button.displayName = "Button";
 
+// eslint-disable-next-line react-refresh/only-export-components -- Generated UI compatibility API; stable helper exports may trigger a development reload.
 export { Button, buttonVariants };

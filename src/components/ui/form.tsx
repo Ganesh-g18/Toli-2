@@ -126,4 +126,5 @@ const FormMessage = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<
 );
 FormMessage.displayName = "FormMessage";
 
+// eslint-disable-next-line react-refresh/only-export-components -- Generated UI compatibility API; stable helper exports may trigger a development reload.
 export { useFormField, Form, FormItem, FormLabel, FormControl, FormDescription, FormMessage, FormField };

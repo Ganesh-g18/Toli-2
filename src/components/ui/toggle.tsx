@@ -34,4 +34,5 @@ const Toggle = React.forwardRef<
 
 Toggle.displayName = TogglePrimitive.Root.displayName;
 
+// eslint-disable-next-line react-refresh/only-export-components -- Generated UI compatibility API; stable helper exports may trigger a development reload.
 export { Toggle, toggleVariants };
