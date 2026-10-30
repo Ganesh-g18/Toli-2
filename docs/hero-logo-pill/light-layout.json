@@ -1,0 +1,38 @@
+[
+  {
+    "border": true,
+    "gradient": true,
+    "overflow": false,
+    "radius": true,
+    "shadow": true,
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "border": true,
+    "gradient": true,
+    "overflow": false,
+    "radius": true,
+    "shadow": true,
+    "theme": "light",
+    "width": 390
+  },
+  {
+    "border": true,
+    "gradient": true,
+    "overflow": false,
+    "radius": true,
+    "shadow": true,
+    "theme": "light",
+    "width": 768
+  },
+  {
+    "border": true,
+    "gradient": true,
+    "overflow": false,
+    "radius": true,
+    "shadow": true,
+    "theme": "light",
+    "width": 1672
+  }
+]

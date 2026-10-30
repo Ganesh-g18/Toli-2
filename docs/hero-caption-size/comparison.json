@@ -1,0 +1,79 @@
+[
+  {
+    "width": 320,
+    "beforeFont": "17px",
+    "afterFont": "20.4px",
+    "headingFont": "24px",
+    "headingUnchanged": true,
+    "carUnchanged": false,
+    "heroUnchanged": false,
+    "gap": 12,
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "beforeFont": "17.94px",
+    "afterFont": "21.528px",
+    "headingFont": "24.18px",
+    "headingUnchanged": true,
+    "carUnchanged": false,
+    "heroUnchanged": false,
+    "gap": 12,
+    "overflow": false
+  },
+  {
+    "width": 430,
+    "beforeFont": "19.78px",
+    "afterFont": "23.736px",
+    "headingFont": "26.66px",
+    "headingUnchanged": true,
+    "carUnchanged": false,
+    "heroUnchanged": false,
+    "gap": 12,
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "beforeFont": "19.2px",
+    "afterFont": "23.04px",
+    "headingFont": "25px",
+    "headingUnchanged": true,
+    "carUnchanged": true,
+    "heroUnchanged": true,
+    "gap": 10,
+    "overflow": false
+  },
+  {
+    "width": 900,
+    "beforeFont": "22px",
+    "afterFont": "24px",
+    "headingFont": "25px",
+    "headingUnchanged": true,
+    "carUnchanged": false,
+    "heroUnchanged": false,
+    "gap": 10,
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "beforeFont": "19.44px",
+    "afterFont": "23.328px",
+    "headingFont": "32.256px",
+    "headingUnchanged": true,
+    "carUnchanged": true,
+    "heroUnchanged": true,
+    "gap": 10,
+    "overflow": false
+  },
+  {
+    "width": 1920,
+    "beforeFont": "24px",
+    "afterFont": "28.8px",
+    "headingFont": "34px",
+    "headingUnchanged": true,
+    "carUnchanged": true,
+    "heroUnchanged": true,
+    "gap": 10,
+    "overflow": false
+  }
+]

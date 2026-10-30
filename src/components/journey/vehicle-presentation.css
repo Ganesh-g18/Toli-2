@@ -1,0 +1,7 @@
+/* Imported vehicle framing only; no Hero/Navbar selectors or shared theme overrides. */
+@media (min-width: 1024px) {
+  .component-chapter .matrix-vehicle .journey-dock-services {
+    height: clamp(350px, 32vw, 490px);
+    min-height: clamp(350px, 32vw, 490px);
+  }
+}

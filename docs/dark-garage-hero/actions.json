@@ -1,0 +1,45 @@
+{
+  "keyboardRequest": true,
+  "serviceAfterThemeSwitch": "Automobile Services",
+  "selectedAfterThemeSwitch": "true",
+  "cards": [
+    {
+      "label": "Insurance claim enquiries",
+      "dialog": true
+    },
+    {
+      "label": "Denting & Painting",
+      "dialog": true
+    },
+    {
+      "label": "Complete Vehicle Inspection",
+      "dialog": true
+    }
+  ],
+  "chapters": [
+    {
+      "label": "02 Services",
+      "selected": "02 Services"
+    },
+    {
+      "label": "03 Journey",
+      "selected": "03 Journey"
+    },
+    {
+      "label": "04 Toli Motors",
+      "selected": "04 Toli Motors"
+    },
+    {
+      "label": "05 Request",
+      "selected": "05 Request"
+    },
+    {
+      "label": "06 Contact",
+      "selected": "06 Contact"
+    },
+    {
+      "label": "01 Entry",
+      "selected": "01 Entry"
+    }
+  ]
+}

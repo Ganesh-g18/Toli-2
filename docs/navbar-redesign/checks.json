@@ -1,0 +1,22 @@
+{
+  "types": {
+    "exitCode": 0,
+    "seconds": 30.88
+  },
+  "lint": {
+    "exitCode": 0,
+    "seconds": 16.05
+  },
+  "tests": {
+    "exitCode": 0,
+    "passed": 382,
+    "files": 53,
+    "seconds": 114.03,
+    "log": "tests-final.log"
+  },
+  "build": {
+    "exitCode": 0,
+    "seconds": 16.64,
+    "log": "build.log"
+  }
+}

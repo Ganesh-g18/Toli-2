@@ -1,0 +1,16 @@
+{
+  "workshop-depth.svg": {
+    "rawBytes": 16010,
+    "gzipEstimateBytes": 1921
+  },
+  "workshop-depth-mobile.svg": {
+    "rawBytes": 10290,
+    "gzipEstimateBytes": 1484
+  },
+  "notes": [
+    "One matching CSS environment image on initial load; resizing across the breakpoint can load the other variant.",
+    "Original genuine photo and all car images unchanged.",
+    "No new renderer, model, animation, library or filter.",
+    "Gzip is a local estimate; no measured LCP/FPS claim."
+  ]
+}

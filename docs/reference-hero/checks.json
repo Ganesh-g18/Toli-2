@@ -1,0 +1,35 @@
+{
+  "build": "PASS",
+  "typescript": "PASS",
+  "lint": "PASS",
+  "tests": {
+    "passed": 385,
+    "files": 54
+  },
+  "responsiveWidths": [
+    320,
+    360,
+    390,
+    412,
+    430,
+    768,
+    1024,
+    1280,
+    1440,
+    1920
+  ],
+  "themes": [
+    "dark",
+    "light"
+  ],
+  "overflow": false,
+  "desktopServiceCards": "PASS",
+  "mobileServiceCard": "PASS",
+  "keyboardEnter": "PASS",
+  "mobileMenuRequest": "PASS",
+  "allSixChapters": "PASS",
+  "productionHeaderBooking": "PASS",
+  "productionConsoleWarningsErrors": [],
+  "threeDProtectedFiles": 1573,
+  "deployed": false
+}

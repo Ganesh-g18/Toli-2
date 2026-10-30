@@ -1,0 +1,31 @@
+{
+  "toli-static-website": {
+    "changed": [
+      "src/main.tsx",
+      "src/components/Hero.tsx",
+      "src/components/journey/navbar-performance-car.css",
+      "src/components/journey/NavbarPerformanceCar.tsx",
+      "src/components/journey/experience.css",
+      "src/components/journey/ExperienceNavigation.tsx",
+      "src/test/navbar-motion.test.tsx",
+      "src/test/fixtures/separation-protected.json"
+    ],
+    "added": [
+      "docs/navbar-redesign/build.log",
+      "docs/navbar-redesign/checks.json",
+      "docs/navbar-redesign/lint.log",
+      "docs/navbar-redesign/tests-final.log",
+      "docs/navbar-redesign/tests.log",
+      "docs/navbar-redesign/types.log",
+      "src/assets/navigation/toli-performance-silver-420.webp",
+      "src/assets/navigation/toli-performance-silver-840.webp",
+      "src/components/journey/navbar-brand.css"
+    ],
+    "removed": []
+  },
+  "toli-3d-website": {
+    "changed": [],
+    "added": [],
+    "removed": []
+  }
+}

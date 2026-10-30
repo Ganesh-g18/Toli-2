@@ -1,0 +1,290 @@
+[
+  {
+    "theme": "dark",
+    "width": 1440,
+    "verticalGeometryUnchanged": {
+      "hero": true,
+      "heading": true,
+      "vehicle": true,
+      "picture": true,
+      "actions": true,
+      "nav": true
+    },
+    "contentWidthDelta": -10,
+    "overflow": false,
+    "captionAfterHeading": true,
+    "captionClearOfActions": true
+  },
+  {
+    "theme": "dark",
+    "width": 1280,
+    "verticalGeometryUnchanged": {
+      "hero": true,
+      "heading": true,
+      "vehicle": true,
+      "picture": true,
+      "actions": true,
+      "nav": true
+    },
+    "contentWidthDelta": 0,
+    "overflow": false,
+    "captionAfterHeading": true,
+    "captionClearOfActions": true
+  },
+  {
+    "theme": "dark",
+    "width": 1024,
+    "verticalGeometryUnchanged": {
+      "hero": true,
+      "heading": true,
+      "vehicle": true,
+      "picture": true,
+      "actions": true,
+      "nav": true
+    },
+    "contentWidthDelta": 0,
+    "overflow": false,
+    "captionAfterHeading": true,
+    "captionClearOfActions": true
+  },
+  {
+    "theme": "dark",
+    "width": 768,
+    "verticalGeometryUnchanged": {
+      "hero": true,
+      "heading": true,
+      "vehicle": true,
+      "picture": true,
+      "actions": true,
+      "nav": true
+    },
+    "contentWidthDelta": 0,
+    "overflow": false,
+    "captionAfterHeading": true,
+    "captionClearOfActions": true
+  },
+  {
+    "theme": "dark",
+    "width": 430,
+    "verticalGeometryUnchanged": {
+      "hero": true,
+      "heading": true,
+      "vehicle": true,
+      "picture": true,
+      "actions": true,
+      "nav": true
+    },
+    "contentWidthDelta": 0,
+    "overflow": false,
+    "captionAfterHeading": true,
+    "captionClearOfActions": true
+  },
+  {
+    "theme": "dark",
+    "width": 412,
+    "verticalGeometryUnchanged": {
+      "hero": true,
+      "heading": true,
+      "vehicle": true,
+      "picture": true,
+      "actions": true,
+      "nav": true
+    },
+    "contentWidthDelta": 0,
+    "overflow": false,
+    "captionAfterHeading": true,
+    "captionClearOfActions": true
+  },
+  {
+    "theme": "dark",
+    "width": 390,
+    "verticalGeometryUnchanged": {
+      "hero": true,
+      "heading": true,
+      "vehicle": true,
+      "picture": true,
+      "actions": true,
+      "nav": true
+    },
+    "contentWidthDelta": 0,
+    "overflow": false,
+    "captionAfterHeading": true,
+    "captionClearOfActions": true
+  },
+  {
+    "theme": "dark",
+    "width": 360,
+    "verticalGeometryUnchanged": {
+      "hero": true,
+      "heading": true,
+      "vehicle": true,
+      "picture": true,
+      "actions": true,
+      "nav": true
+    },
+    "contentWidthDelta": 0,
+    "overflow": false,
+    "captionAfterHeading": true,
+    "captionClearOfActions": true
+  },
+  {
+    "theme": "dark",
+    "width": 320,
+    "verticalGeometryUnchanged": {
+      "hero": true,
+      "heading": true,
+      "vehicle": true,
+      "picture": true,
+      "actions": true,
+      "nav": true
+    },
+    "contentWidthDelta": 0,
+    "overflow": false,
+    "captionAfterHeading": true,
+    "captionClearOfActions": true
+  },
+  {
+    "theme": "light",
+    "width": 320,
+    "verticalGeometryUnchanged": {
+      "hero": true,
+      "heading": true,
+      "vehicle": true,
+      "picture": true,
+      "actions": true,
+      "nav": true
+    },
+    "contentWidthDelta": 0,
+    "overflow": false,
+    "captionAfterHeading": true,
+    "captionClearOfActions": true
+  },
+  {
+    "theme": "light",
+    "width": 360,
+    "verticalGeometryUnchanged": {
+      "hero": true,
+      "heading": true,
+      "vehicle": true,
+      "picture": true,
+      "actions": true,
+      "nav": true
+    },
+    "contentWidthDelta": 0,
+    "overflow": false,
+    "captionAfterHeading": true,
+    "captionClearOfActions": true
+  },
+  {
+    "theme": "light",
+    "width": 390,
+    "verticalGeometryUnchanged": {
+      "hero": true,
+      "heading": true,
+      "vehicle": true,
+      "picture": true,
+      "actions": true,
+      "nav": true
+    },
+    "contentWidthDelta": 0,
+    "overflow": false,
+    "captionAfterHeading": true,
+    "captionClearOfActions": true
+  },
+  {
+    "theme": "light",
+    "width": 412,
+    "verticalGeometryUnchanged": {
+      "hero": true,
+      "heading": true,
+      "vehicle": true,
+      "picture": true,
+      "actions": true,
+      "nav": true
+    },
+    "contentWidthDelta": 0,
+    "overflow": false,
+    "captionAfterHeading": true,
+    "captionClearOfActions": true
+  },
+  {
+    "theme": "light",
+    "width": 430,
+    "verticalGeometryUnchanged": {
+      "hero": true,
+      "heading": true,
+      "vehicle": true,
+      "picture": true,
+      "actions": true,
+      "nav": true
+    },
+    "contentWidthDelta": 0,
+    "overflow": false,
+    "captionAfterHeading": true,
+    "captionClearOfActions": true
+  },
+  {
+    "theme": "light",
+    "width": 768,
+    "verticalGeometryUnchanged": {
+      "hero": true,
+      "heading": true,
+      "vehicle": true,
+      "picture": true,
+      "actions": true,
+      "nav": true
+    },
+    "contentWidthDelta": 0,
+    "overflow": false,
+    "captionAfterHeading": true,
+    "captionClearOfActions": true
+  },
+  {
+    "theme": "light",
+    "width": 1024,
+    "verticalGeometryUnchanged": {
+      "hero": true,
+      "heading": true,
+      "vehicle": true,
+      "picture": true,
+      "actions": true,
+      "nav": true
+    },
+    "contentWidthDelta": 0,
+    "overflow": false,
+    "captionAfterHeading": true,
+    "captionClearOfActions": true
+  },
+  {
+    "theme": "light",
+    "width": 1280,
+    "verticalGeometryUnchanged": {
+      "hero": true,
+      "heading": true,
+      "vehicle": true,
+      "picture": true,
+      "actions": true,
+      "nav": true
+    },
+    "contentWidthDelta": 0,
+    "overflow": false,
+    "captionAfterHeading": true,
+    "captionClearOfActions": true
+  },
+  {
+    "theme": "light",
+    "width": 1440,
+    "verticalGeometryUnchanged": {
+      "hero": true,
+      "heading": true,
+      "vehicle": true,
+      "picture": true,
+      "actions": true,
+      "nav": true
+    },
+    "contentWidthDelta": 0,
+    "overflow": false,
+    "captionAfterHeading": true,
+    "captionClearOfActions": true
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "path": "src/assets/hero/toli-luxury-gt-1600.webp",
+    "width": 1600,
+    "height": 800,
+    "bytes": 200956,
+    "format": "webp"
+  },
+  {
+    "path": "src/assets/hero/toli-luxury-gt-960.webp",
+    "width": 960,
+    "height": 480,
+    "bytes": 83804,
+    "format": "webp"
+  },
+  {
+    "path": "src/assets/hero/toli-sports-campaign-1440.webp",
+    "width": 1440,
+    "height": 618,
+    "bytes": 175648,
+    "format": "webp"
+  },
+  {
+    "path": "src/assets/hero/toli-sports-campaign-960.webp",
+    "width": 960,
+    "height": 412,
+    "bytes": 90322,
+    "format": "webp"
+  },
+  {
+    "path": "src/assets/navigation/toli-campaign-rim-front.webp",
+    "width": 192,
+    "height": 192,
+    "bytes": 10160,
+    "format": "webp"
+  },
+  {
+    "path": "src/assets/navigation/toli-campaign-rim-rear.webp",
+    "width": 192,
+    "height": 192,
+    "bytes": 8040,
+    "format": "webp"
+  },
+  {
+    "path": "src/assets/navigation/toli-performance-campaign-420.webp",
+    "width": 420,
+    "height": 147,
+    "bytes": 24008,
+    "format": "webp"
+  },
+  {
+    "path": "src/assets/navigation/toli-performance-campaign-840.webp",
+    "width": 840,
+    "height": 293,
+    "bytes": 67184,
+    "format": "webp"
+  }
+]

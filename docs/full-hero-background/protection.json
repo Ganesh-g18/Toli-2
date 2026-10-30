@@ -1,0 +1,22 @@
+{
+  "toli-static-website": {
+    "baselineFiles": 767,
+    "changed": [
+      "src/assets/hero/workshop-depth.svg",
+      "src/components/Hero.tsx",
+      "src/components/journey/hero-caption.css",
+      "src/test/hero-reference.test.tsx",
+      "src/test/fixtures/separation-protected.json"
+    ],
+    "addedImplementation": [
+      "src/assets/hero/workshop-depth-mobile.svg"
+    ],
+    "removed": []
+  },
+  "toli-3d-website": {
+    "baselineFiles": 1573,
+    "changed": [],
+    "addedImplementation": [],
+    "removed": []
+  }
+}

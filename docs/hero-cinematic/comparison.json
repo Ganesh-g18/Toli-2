@@ -1,0 +1,135 @@
+[
+  {
+    "width": 320,
+    "carBefore": 558.171875,
+    "carAfter": 530.265625,
+    "carRatio": 0.95000419897545,
+    "logoBefore": {
+      "width": 284,
+      "height": 67.40625
+    },
+    "logoAfter": {
+      "width": 261.265625,
+      "height": 62
+    },
+    "heroBefore": 1320.484375,
+    "heroAfter": 1275.078125,
+    "headingFontBefore": "24px",
+    "headingFontAfter": "24px",
+    "overflow": false
+  },
+  {
+    "width": 360,
+    "carBefore": 636.84375,
+    "carAfter": 605,
+    "carRatio": 0.9499975464939399,
+    "logoBefore": {
+      "width": 324,
+      "height": 76.890625
+    },
+    "logoAfter": {
+      "width": 298.078125,
+      "height": 70.75
+    },
+    "heroBefore": 1346.28125,
+    "heroAfter": 1300.140625,
+    "headingFontBefore": "24px",
+    "headingFontAfter": "24px",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "carBefore": 695.796875,
+    "carAfter": 661.015625,
+    "carRatio": 0.9500123509465316,
+    "logoBefore": {
+      "width": 354,
+      "height": 84.015625
+    },
+    "logoAfter": {
+      "width": 325.671875,
+      "height": 77.296875
+    },
+    "heroBefore": 1370.21875,
+    "heroAfter": 1323.5,
+    "headingFontBefore": "24.18px",
+    "headingFontAfter": "24.18px",
+    "overflow": false
+  },
+  {
+    "width": 430,
+    "carBefore": 774.421875,
+    "carAfter": 735.703125,
+    "carRatio": 0.9500030264511834,
+    "logoBefore": {
+      "width": 394,
+      "height": 93.515625
+    },
+    "logoAfter": {
+      "width": 362.46875,
+      "height": 86.03125
+    },
+    "heroBefore": 1410.34375,
+    "heroAfter": 1362.859375,
+    "headingFontBefore": "26.66px",
+    "headingFontAfter": "26.66px",
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "carBefore": 619.5,
+    "carAfter": 495.625,
+    "carRatio": 0.8000403551251009,
+    "logoBefore": {
+      "width": 520,
+      "height": 123.421875
+    },
+    "logoAfter": {
+      "width": 416,
+      "height": 98.734375
+    },
+    "heroBefore": 1123.390625,
+    "heroAfter": 1030.703125,
+    "headingFontBefore": "25px",
+    "headingFontAfter": "25px",
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "carBefore": 1083.625,
+    "carAfter": 866.90625,
+    "carRatio": 0.8000057676779329,
+    "logoBefore": {
+      "width": 560,
+      "height": 132.90625
+    },
+    "logoAfter": {
+      "width": 420,
+      "height": 99.6875
+    },
+    "heroBefore": 1272.265625,
+    "heroAfter": 1147.109375,
+    "headingFontBefore": "40.32px",
+    "headingFontAfter": "32.256px",
+    "overflow": false
+  },
+  {
+    "width": 1920,
+    "carBefore": 1295,
+    "carAfter": 1036,
+    "carRatio": 0.8,
+    "logoBefore": {
+      "width": 560,
+      "height": 132.90625
+    },
+    "logoAfter": {
+      "width": 420,
+      "height": 99.6875
+    },
+    "heroBefore": 1422.640625,
+    "heroAfter": 1288.171875,
+    "headingFontBefore": "42px",
+    "headingFontAfter": "34px",
+    "overflow": false
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "name": "TOLI Atelier Sportback",
+  "bytes": 4268888,
+  "triangles": 192105,
+  "vertices": 125334,
+  "meshes": 58,
+  "materials": 12,
+  "textures": 0,
+  "bounds": {
+    "min": [
+      -2.453274726867676,
+      5.960464455334602e-9,
+      -1.1048223972320557
+    ],
+    "max": [
+      2.4170455932617188,
+      1.5053999423980713,
+      1.1048223972320557
+    ],
+    "size": [
+      4.8703203201293945,
+      1.5053999364376067,
+      2.2096447944641113
+    ]
+  },
+  "axes": "metres; +X forward, +Y up; tire ground Y=0",
+  "nodes": [
+    "Body",
+    "Glass",
+    "Interior",
+    "Hood",
+    "Door_L",
+    "Door_R",
+    "Mirror_R",
+    "Mirror_L",
+    "Taillight_-1",
+    "Taillight_1",
+    "Headlight_-1",
+    "Headlight_1",
+    "Wheel_FL",
+    "Brake_FL",
+    "Wheel_FR",
+    "Brake_FR",
+    "Wheel_RL",
+    "Brake_RL",
+    "Wheel_RR",
+    "Brake_RR",
+    "Underhood"
+  ]
+}

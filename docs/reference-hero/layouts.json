@@ -1,0 +1,1102 @@
+[
+  {
+    "caption": {
+      "bottom": 964.125,
+      "height": 57.75,
+      "right": 292,
+      "width": 274,
+      "x": 18,
+      "y": 906.375
+    },
+    "car": {
+      "bottom": 536.40625,
+      "height": 185,
+      "right": 293.09375,
+      "width": 276.1875,
+      "x": 16.90625,
+      "y": 351.40625
+    },
+    "carLoaded": true,
+    "cards": {
+      "bottom": 888.375,
+      "height": 317.96875,
+      "right": 292,
+      "width": 274,
+      "x": 18,
+      "y": 570.40625
+    },
+    "hero": {
+      "bottom": 1367.890625,
+      "height": 1311.890625,
+      "right": 310,
+      "width": 310,
+      "x": 0,
+      "y": 56
+    },
+    "location": {
+      "bottom": 1284.5,
+      "height": 132.78125,
+      "right": 292,
+      "width": 274,
+      "x": 18,
+      "y": 1151.71875
+    },
+    "logo": {
+      "bottom": 209.625,
+      "height": 129.625,
+      "right": 292,
+      "width": 274,
+      "x": 18,
+      "y": 80
+    },
+    "scrollWidth": 310,
+    "serviceCount": 4,
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "caption": {
+      "bottom": 958.015625,
+      "height": 57.75,
+      "right": 332,
+      "width": 314,
+      "x": 18,
+      "y": 900.265625
+    },
+    "car": {
+      "bottom": 545.890625,
+      "height": 185,
+      "right": 333.25,
+      "width": 316.5,
+      "x": 16.75,
+      "y": 360.890625
+    },
+    "carLoaded": true,
+    "cards": {
+      "bottom": 882.265625,
+      "height": 302.375,
+      "right": 332,
+      "width": 314,
+      "x": 18,
+      "y": 579.890625
+    },
+    "hero": {
+      "bottom": 1365.78125,
+      "height": 1309.78125,
+      "right": 350,
+      "width": 350,
+      "x": 0,
+      "y": 56
+    },
+    "location": {
+      "bottom": 1282.390625,
+      "height": 132.78125,
+      "right": 332,
+      "width": 314,
+      "x": 18,
+      "y": 1149.609375
+    },
+    "logo": {
+      "bottom": 219.109375,
+      "height": 139.109375,
+      "right": 332,
+      "width": 314,
+      "x": 18,
+      "y": 80
+    },
+    "scrollWidth": 350,
+    "serviceCount": 4,
+    "theme": "dark",
+    "width": 360
+  },
+  {
+    "caption": {
+      "bottom": 965.953125,
+      "height": 58.15625,
+      "right": 362,
+      "width": 344,
+      "x": 18,
+      "y": 907.796875
+    },
+    "car": {
+      "bottom": 553.421875,
+      "height": 185,
+      "right": 363.359375,
+      "width": 346.734375,
+      "x": 16.625,
+      "y": 368.421875
+    },
+    "carLoaded": true,
+    "cards": {
+      "bottom": 889.796875,
+      "height": 302.375,
+      "right": 362,
+      "width": 344,
+      "x": 18,
+      "y": 587.421875
+    },
+    "hero": {
+      "bottom": 1373.71875,
+      "height": 1317.71875,
+      "right": 380,
+      "width": 380,
+      "x": 0,
+      "y": 56
+    },
+    "location": {
+      "bottom": 1290.328125,
+      "height": 132.78125,
+      "right": 362,
+      "width": 344,
+      "x": 18,
+      "y": 1157.546875
+    },
+    "logo": {
+      "bottom": 226.234375,
+      "height": 146.234375,
+      "right": 362,
+      "width": 344,
+      "x": 18,
+      "y": 80
+    },
+    "scrollWidth": 380,
+    "serviceCount": 4,
+    "theme": "dark",
+    "width": 390
+  },
+  {
+    "caption": {
+      "bottom": 963.234375,
+      "height": 61.21875,
+      "right": 384,
+      "width": 366,
+      "x": 18,
+      "y": 902.015625
+    },
+    "car": {
+      "bottom": 561.640625,
+      "height": 185,
+      "right": 385.453125,
+      "width": 368.90625,
+      "x": 16.546875,
+      "y": 376.640625
+    },
+    "carLoaded": true,
+    "cards": {
+      "bottom": 884.015625,
+      "height": 288.375,
+      "right": 384,
+      "width": 366,
+      "x": 18,
+      "y": 595.640625
+    },
+    "hero": {
+      "bottom": 1371,
+      "height": 1315,
+      "right": 402,
+      "width": 402,
+      "x": 0,
+      "y": 56
+    },
+    "location": {
+      "bottom": 1287.609375,
+      "height": 132.78125,
+      "right": 384,
+      "width": 366,
+      "x": 18,
+      "y": 1154.828125
+    },
+    "logo": {
+      "bottom": 231.453125,
+      "height": 151.453125,
+      "right": 384,
+      "width": 366,
+      "x": 18,
+      "y": 80
+    },
+    "scrollWidth": 402,
+    "serviceCount": 4,
+    "theme": "dark",
+    "width": 412
+  },
+  {
+    "caption": {
+      "bottom": 956.828125,
+      "height": 63.6875,
+      "right": 402,
+      "width": 384,
+      "x": 18,
+      "y": 893.140625
+    },
+    "car": {
+      "bottom": 568.359375,
+      "height": 185,
+      "right": 403.515625,
+      "width": 387.046875,
+      "x": 16.46875,
+      "y": 383.359375
+    },
+    "carLoaded": true,
+    "cards": {
+      "bottom": 875.140625,
+      "height": 272.78125,
+      "right": 402,
+      "width": 384,
+      "x": 18,
+      "y": 602.359375
+    },
+    "hero": {
+      "bottom": 1364.59375,
+      "height": 1308.59375,
+      "right": 420,
+      "width": 420,
+      "x": 0,
+      "y": 56
+    },
+    "location": {
+      "bottom": 1281.203125,
+      "height": 132.78125,
+      "right": 402,
+      "width": 384,
+      "x": 18,
+      "y": 1148.421875
+    },
+    "logo": {
+      "bottom": 235.734375,
+      "height": 155.734375,
+      "right": 402,
+      "width": 384,
+      "x": 18,
+      "y": 80
+    },
+    "scrollWidth": 420,
+    "serviceCount": 4,
+    "theme": "dark",
+    "width": 430
+  },
+  {
+    "caption": {
+      "bottom": 867.484375,
+      "height": 26.875,
+      "right": 728,
+      "width": 698,
+      "x": 30,
+      "y": 840.609375
+    },
+    "car": {
+      "bottom": 643.421875,
+      "height": 280,
+      "right": 741.953125,
+      "width": 725.90625,
+      "x": 16.046875,
+      "y": 363.421875
+    },
+    "carLoaded": true,
+    "cards": {
+      "bottom": 818.609375,
+      "height": 161.1875,
+      "right": 728,
+      "width": 698,
+      "x": 30,
+      "y": 657.421875
+    },
+    "hero": {
+      "bottom": 1148.484375,
+      "height": 1084.484375,
+      "right": 758,
+      "width": 758,
+      "x": 0,
+      "y": 64
+    },
+    "location": {
+      "bottom": 1085.484375,
+      "height": 76,
+      "right": 728,
+      "width": 698,
+      "x": 30,
+      "y": 1009.484375
+    },
+    "logo": {
+      "bottom": 279.421875,
+      "height": 191.421875,
+      "right": 639,
+      "width": 520,
+      "x": 119,
+      "y": 88
+    },
+    "scrollWidth": 758,
+    "serviceCount": 4,
+    "theme": "dark",
+    "width": 768
+  },
+  {
+    "caption": {
+      "bottom": 879.890625,
+      "height": 28.65625,
+      "right": 938,
+      "width": 862,
+      "x": 76,
+      "y": 851.234375
+    },
+    "car": {
+      "bottom": 664.046875,
+      "height": 280,
+      "right": 955.234375,
+      "width": 896.46875,
+      "x": 58.765625,
+      "y": 384.046875
+    },
+    "carLoaded": true,
+    "cards": {
+      "bottom": 829.234375,
+      "height": 151.1875,
+      "right": 938,
+      "width": 862,
+      "x": 76,
+      "y": 678.046875
+    },
+    "hero": {
+      "bottom": 1160.890625,
+      "height": 1096.890625,
+      "right": 1014,
+      "width": 1014,
+      "x": 0,
+      "y": 64
+    },
+    "location": {
+      "bottom": 1097.890625,
+      "height": 76,
+      "right": 938,
+      "width": 862,
+      "x": 76,
+      "y": 1021.890625
+    },
+    "logo": {
+      "bottom": 296.09375,
+      "height": 204.09375,
+      "right": 787,
+      "width": 560,
+      "x": 227,
+      "y": 92
+    },
+    "scrollWidth": 1014,
+    "serviceCount": 4,
+    "theme": "dark",
+    "width": 1024
+  },
+  {
+    "caption": {
+      "bottom": 912.015625,
+      "height": 35.828125,
+      "right": 1180.40625,
+      "width": 1090.8125,
+      "x": 89.59375,
+      "y": 876.1875
+    },
+    "car": {
+      "bottom": 703.296875,
+      "height": 307.1875,
+      "right": 1202.21875,
+      "width": 1134.4375,
+      "x": 67.78125,
+      "y": 396.109375
+    },
+    "carLoaded": true,
+    "cards": {
+      "bottom": 854.1875,
+      "height": 136.890625,
+      "right": 1180.40625,
+      "width": 1090.8125,
+      "x": 89.59375,
+      "y": 717.296875
+    },
+    "hero": {
+      "bottom": 1193.015625,
+      "height": 1129.015625,
+      "right": 1270,
+      "width": 1270,
+      "x": 0,
+      "y": 64
+    },
+    "location": {
+      "bottom": 1130.015625,
+      "height": 76,
+      "right": 1180.40625,
+      "width": 1090.8125,
+      "x": 89.59375,
+      "y": 1054.015625
+    },
+    "logo": {
+      "bottom": 300.40625,
+      "height": 208.40625,
+      "right": 915,
+      "width": 560,
+      "x": 355,
+      "y": 92
+    },
+    "scrollWidth": 1270,
+    "serviceCount": 4,
+    "theme": "dark",
+    "width": 1280
+  },
+  {
+    "caption": {
+      "bottom": 964.140625,
+      "height": 40.3125,
+      "right": 1329.203125,
+      "width": 1228.40625,
+      "x": 100.796875,
+      "y": 923.828125
+    },
+    "car": {
+      "bottom": 748.828125,
+      "height": 345.59375,
+      "right": 1353.765625,
+      "width": 1277.53125,
+      "x": 76.234375,
+      "y": 403.234375
+    },
+    "carLoaded": true,
+    "cards": {
+      "bottom": 901.828125,
+      "height": 139,
+      "right": 1329.203125,
+      "width": 1228.40625,
+      "x": 100.796875,
+      "y": 762.828125
+    },
+    "hero": {
+      "bottom": 1245.140625,
+      "height": 1181.140625,
+      "right": 1430,
+      "width": 1430,
+      "x": 0,
+      "y": 64
+    },
+    "location": {
+      "bottom": 1182.140625,
+      "height": 76,
+      "right": 1329.203125,
+      "width": 1228.40625,
+      "x": 100.796875,
+      "y": 1106.140625
+    },
+    "logo": {
+      "bottom": 302.703125,
+      "height": 210.703125,
+      "right": 995,
+      "width": 560,
+      "x": 435,
+      "y": 92
+    },
+    "scrollWidth": 1430,
+    "serviceCount": 4,
+    "theme": "dark",
+    "width": 1440
+  },
+  {
+    "caption": {
+      "bottom": 1091.515625,
+      "height": 49.265625,
+      "right": 1695,
+      "width": 1480,
+      "x": 215,
+      "y": 1042.25
+    },
+    "car": {
+      "bottom": 865.859375,
+      "height": 460.796875,
+      "right": 1724.59375,
+      "width": 1539.1875,
+      "x": 185.40625,
+      "y": 405.0625
+    },
+    "carLoaded": true,
+    "cards": {
+      "bottom": 1020.25,
+      "height": 140.390625,
+      "right": 1695,
+      "width": 1480,
+      "x": 215,
+      "y": 879.859375
+    },
+    "hero": {
+      "bottom": 1372.515625,
+      "height": 1308.515625,
+      "right": 1910,
+      "width": 1910,
+      "x": 0,
+      "y": 64
+    },
+    "location": {
+      "bottom": 1309.515625,
+      "height": 76,
+      "right": 1695,
+      "width": 1480,
+      "x": 215,
+      "y": 1233.515625
+    },
+    "logo": {
+      "bottom": 302.703125,
+      "height": 210.703125,
+      "right": 1235,
+      "width": 560,
+      "x": 675,
+      "y": 92
+    },
+    "scrollWidth": 1910,
+    "serviceCount": 4,
+    "theme": "dark",
+    "width": 1920
+  },
+  {
+    "caption": {
+      "bottom": 964.125,
+      "height": 57.75,
+      "right": 292,
+      "width": 274,
+      "x": 18,
+      "y": 906.375
+    },
+    "car": {
+      "bottom": 536.40625,
+      "height": 185,
+      "right": 293.09375,
+      "width": 276.1875,
+      "x": 16.90625,
+      "y": 351.40625
+    },
+    "carLoaded": true,
+    "cards": {
+      "bottom": 888.375,
+      "height": 317.96875,
+      "right": 292,
+      "width": 274,
+      "x": 18,
+      "y": 570.40625
+    },
+    "hero": {
+      "bottom": 1367.890625,
+      "height": 1311.890625,
+      "right": 310,
+      "width": 310,
+      "x": 0,
+      "y": 56
+    },
+    "location": {
+      "bottom": 1284.5,
+      "height": 132.78125,
+      "right": 292,
+      "width": 274,
+      "x": 18,
+      "y": 1151.71875
+    },
+    "logo": {
+      "bottom": 209.625,
+      "height": 129.625,
+      "right": 292,
+      "width": 274,
+      "x": 18,
+      "y": 80
+    },
+    "scrollWidth": 310,
+    "serviceCount": 4,
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "caption": {
+      "bottom": 958.015625,
+      "height": 57.75,
+      "right": 332,
+      "width": 314,
+      "x": 18,
+      "y": 900.265625
+    },
+    "car": {
+      "bottom": 545.890625,
+      "height": 185,
+      "right": 333.25,
+      "width": 316.5,
+      "x": 16.75,
+      "y": 360.890625
+    },
+    "carLoaded": true,
+    "cards": {
+      "bottom": 882.265625,
+      "height": 302.375,
+      "right": 332,
+      "width": 314,
+      "x": 18,
+      "y": 579.890625
+    },
+    "hero": {
+      "bottom": 1365.78125,
+      "height": 1309.78125,
+      "right": 350,
+      "width": 350,
+      "x": 0,
+      "y": 56
+    },
+    "location": {
+      "bottom": 1282.390625,
+      "height": 132.78125,
+      "right": 332,
+      "width": 314,
+      "x": 18,
+      "y": 1149.609375
+    },
+    "logo": {
+      "bottom": 219.109375,
+      "height": 139.109375,
+      "right": 332,
+      "width": 314,
+      "x": 18,
+      "y": 80
+    },
+    "scrollWidth": 350,
+    "serviceCount": 4,
+    "theme": "light",
+    "width": 360
+  },
+  {
+    "caption": {
+      "bottom": 965.953125,
+      "height": 58.15625,
+      "right": 362,
+      "width": 344,
+      "x": 18,
+      "y": 907.796875
+    },
+    "car": {
+      "bottom": 553.421875,
+      "height": 185,
+      "right": 363.359375,
+      "width": 346.734375,
+      "x": 16.625,
+      "y": 368.421875
+    },
+    "carLoaded": true,
+    "cards": {
+      "bottom": 889.796875,
+      "height": 302.375,
+      "right": 362,
+      "width": 344,
+      "x": 18,
+      "y": 587.421875
+    },
+    "hero": {
+      "bottom": 1373.71875,
+      "height": 1317.71875,
+      "right": 380,
+      "width": 380,
+      "x": 0,
+      "y": 56
+    },
+    "location": {
+      "bottom": 1290.328125,
+      "height": 132.78125,
+      "right": 362,
+      "width": 344,
+      "x": 18,
+      "y": 1157.546875
+    },
+    "logo": {
+      "bottom": 226.234375,
+      "height": 146.234375,
+      "right": 362,
+      "width": 344,
+      "x": 18,
+      "y": 80
+    },
+    "scrollWidth": 380,
+    "serviceCount": 4,
+    "theme": "light",
+    "width": 390
+  },
+  {
+    "caption": {
+      "bottom": 963.234375,
+      "height": 61.21875,
+      "right": 384,
+      "width": 366,
+      "x": 18,
+      "y": 902.015625
+    },
+    "car": {
+      "bottom": 561.640625,
+      "height": 185,
+      "right": 385.453125,
+      "width": 368.90625,
+      "x": 16.546875,
+      "y": 376.640625
+    },
+    "carLoaded": true,
+    "cards": {
+      "bottom": 884.015625,
+      "height": 288.375,
+      "right": 384,
+      "width": 366,
+      "x": 18,
+      "y": 595.640625
+    },
+    "hero": {
+      "bottom": 1371,
+      "height": 1315,
+      "right": 402,
+      "width": 402,
+      "x": 0,
+      "y": 56
+    },
+    "location": {
+      "bottom": 1287.609375,
+      "height": 132.78125,
+      "right": 384,
+      "width": 366,
+      "x": 18,
+      "y": 1154.828125
+    },
+    "logo": {
+      "bottom": 231.453125,
+      "height": 151.453125,
+      "right": 384,
+      "width": 366,
+      "x": 18,
+      "y": 80
+    },
+    "scrollWidth": 402,
+    "serviceCount": 4,
+    "theme": "light",
+    "width": 412
+  },
+  {
+    "caption": {
+      "bottom": 956.828125,
+      "height": 63.6875,
+      "right": 402,
+      "width": 384,
+      "x": 18,
+      "y": 893.140625
+    },
+    "car": {
+      "bottom": 568.359375,
+      "height": 185,
+      "right": 403.515625,
+      "width": 387.046875,
+      "x": 16.46875,
+      "y": 383.359375
+    },
+    "carLoaded": true,
+    "cards": {
+      "bottom": 875.140625,
+      "height": 272.78125,
+      "right": 402,
+      "width": 384,
+      "x": 18,
+      "y": 602.359375
+    },
+    "hero": {
+      "bottom": 1364.59375,
+      "height": 1308.59375,
+      "right": 420,
+      "width": 420,
+      "x": 0,
+      "y": 56
+    },
+    "location": {
+      "bottom": 1281.203125,
+      "height": 132.78125,
+      "right": 402,
+      "width": 384,
+      "x": 18,
+      "y": 1148.421875
+    },
+    "logo": {
+      "bottom": 235.734375,
+      "height": 155.734375,
+      "right": 402,
+      "width": 384,
+      "x": 18,
+      "y": 80
+    },
+    "scrollWidth": 420,
+    "serviceCount": 4,
+    "theme": "light",
+    "width": 430
+  },
+  {
+    "caption": {
+      "bottom": 867.484375,
+      "height": 26.875,
+      "right": 728,
+      "width": 698,
+      "x": 30,
+      "y": 840.609375
+    },
+    "car": {
+      "bottom": 643.421875,
+      "height": 280,
+      "right": 741.953125,
+      "width": 725.90625,
+      "x": 16.046875,
+      "y": 363.421875
+    },
+    "carLoaded": true,
+    "cards": {
+      "bottom": 818.609375,
+      "height": 161.1875,
+      "right": 728,
+      "width": 698,
+      "x": 30,
+      "y": 657.421875
+    },
+    "hero": {
+      "bottom": 1148.484375,
+      "height": 1084.484375,
+      "right": 758,
+      "width": 758,
+      "x": 0,
+      "y": 64
+    },
+    "location": {
+      "bottom": 1085.484375,
+      "height": 76,
+      "right": 728,
+      "width": 698,
+      "x": 30,
+      "y": 1009.484375
+    },
+    "logo": {
+      "bottom": 279.421875,
+      "height": 191.421875,
+      "right": 639,
+      "width": 520,
+      "x": 119,
+      "y": 88
+    },
+    "scrollWidth": 758,
+    "serviceCount": 4,
+    "theme": "light",
+    "width": 768
+  },
+  {
+    "caption": {
+      "bottom": 879.890625,
+      "height": 28.65625,
+      "right": 938,
+      "width": 862,
+      "x": 76,
+      "y": 851.234375
+    },
+    "car": {
+      "bottom": 664.046875,
+      "height": 280,
+      "right": 955.234375,
+      "width": 896.46875,
+      "x": 58.765625,
+      "y": 384.046875
+    },
+    "carLoaded": true,
+    "cards": {
+      "bottom": 829.234375,
+      "height": 151.1875,
+      "right": 938,
+      "width": 862,
+      "x": 76,
+      "y": 678.046875
+    },
+    "hero": {
+      "bottom": 1160.890625,
+      "height": 1096.890625,
+      "right": 1014,
+      "width": 1014,
+      "x": 0,
+      "y": 64
+    },
+    "location": {
+      "bottom": 1097.890625,
+      "height": 76,
+      "right": 938,
+      "width": 862,
+      "x": 76,
+      "y": 1021.890625
+    },
+    "logo": {
+      "bottom": 296.09375,
+      "height": 204.09375,
+      "right": 787,
+      "width": 560,
+      "x": 227,
+      "y": 92
+    },
+    "scrollWidth": 1014,
+    "serviceCount": 4,
+    "theme": "light",
+    "width": 1024
+  },
+  {
+    "caption": {
+      "bottom": 912.015625,
+      "height": 35.828125,
+      "right": 1180.40625,
+      "width": 1090.8125,
+      "x": 89.59375,
+      "y": 876.1875
+    },
+    "car": {
+      "bottom": 703.296875,
+      "height": 307.1875,
+      "right": 1202.21875,
+      "width": 1134.4375,
+      "x": 67.78125,
+      "y": 396.109375
+    },
+    "carLoaded": true,
+    "cards": {
+      "bottom": 854.1875,
+      "height": 136.890625,
+      "right": 1180.40625,
+      "width": 1090.8125,
+      "x": 89.59375,
+      "y": 717.296875
+    },
+    "hero": {
+      "bottom": 1193.015625,
+      "height": 1129.015625,
+      "right": 1270,
+      "width": 1270,
+      "x": 0,
+      "y": 64
+    },
+    "location": {
+      "bottom": 1130.015625,
+      "height": 76,
+      "right": 1180.40625,
+      "width": 1090.8125,
+      "x": 89.59375,
+      "y": 1054.015625
+    },
+    "logo": {
+      "bottom": 300.40625,
+      "height": 208.40625,
+      "right": 915,
+      "width": 560,
+      "x": 355,
+      "y": 92
+    },
+    "scrollWidth": 1270,
+    "serviceCount": 4,
+    "theme": "light",
+    "width": 1280
+  },
+  {
+    "caption": {
+      "bottom": 964.140625,
+      "height": 40.3125,
+      "right": 1329.203125,
+      "width": 1228.40625,
+      "x": 100.796875,
+      "y": 923.828125
+    },
+    "car": {
+      "bottom": 748.828125,
+      "height": 345.59375,
+      "right": 1353.765625,
+      "width": 1277.53125,
+      "x": 76.234375,
+      "y": 403.234375
+    },
+    "carLoaded": true,
+    "cards": {
+      "bottom": 901.828125,
+      "height": 139,
+      "right": 1329.203125,
+      "width": 1228.40625,
+      "x": 100.796875,
+      "y": 762.828125
+    },
+    "hero": {
+      "bottom": 1245.140625,
+      "height": 1181.140625,
+      "right": 1430,
+      "width": 1430,
+      "x": 0,
+      "y": 64
+    },
+    "location": {
+      "bottom": 1182.140625,
+      "height": 76,
+      "right": 1329.203125,
+      "width": 1228.40625,
+      "x": 100.796875,
+      "y": 1106.140625
+    },
+    "logo": {
+      "bottom": 302.703125,
+      "height": 210.703125,
+      "right": 995,
+      "width": 560,
+      "x": 435,
+      "y": 92
+    },
+    "scrollWidth": 1430,
+    "serviceCount": 4,
+    "theme": "light",
+    "width": 1440
+  },
+  {
+    "caption": {
+      "bottom": 1091.515625,
+      "height": 49.265625,
+      "right": 1695,
+      "width": 1480,
+      "x": 215,
+      "y": 1042.25
+    },
+    "car": {
+      "bottom": 865.859375,
+      "height": 460.796875,
+      "right": 1724.59375,
+      "width": 1539.1875,
+      "x": 185.40625,
+      "y": 405.0625
+    },
+    "carLoaded": true,
+    "cards": {
+      "bottom": 1020.25,
+      "height": 140.390625,
+      "right": 1695,
+      "width": 1480,
+      "x": 215,
+      "y": 879.859375
+    },
+    "hero": {
+      "bottom": 1372.515625,
+      "height": 1308.515625,
+      "right": 1910,
+      "width": 1910,
+      "x": 0,
+      "y": 64
+    },
+    "location": {
+      "bottom": 1309.515625,
+      "height": 76,
+      "right": 1695,
+      "width": 1480,
+      "x": 215,
+      "y": 1233.515625
+    },
+    "logo": {
+      "bottom": 302.703125,
+      "height": 210.703125,
+      "right": 1235,
+      "width": 560,
+      "x": 675,
+      "y": 92
+    },
+    "scrollWidth": 1910,
+    "serviceCount": 4,
+    "theme": "light",
+    "width": 1920
+  }
+]

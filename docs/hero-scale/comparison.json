@@ -1,0 +1,45 @@
+[
+  {
+    "width": 320,
+    "vehicleRatio": 0.8999947777951851,
+    "heroHeightUnchanged": true,
+    "overflow": false
+  },
+  {
+    "width": 360,
+    "vehicleRatio": 0.8999726576740795,
+    "heroHeightUnchanged": true,
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "vehicleRatio": 0.900002079823631,
+    "heroHeightUnchanged": true,
+    "overflow": false
+  },
+  {
+    "width": 430,
+    "vehicleRatio": 0.8999832311676697,
+    "heroHeightUnchanged": true,
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "vehicleRatio": 0.875,
+    "heroHeightUnchanged": true,
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "vehicleRatio": 0.875015899666743,
+    "heroHeightUnchanged": true,
+    "overflow": false
+  },
+  {
+    "width": 1920,
+    "vehicleRatio": 0.875,
+    "logoRatio": 0.9090909090909091,
+    "heroHeightUnchanged": true,
+    "overflow": false
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "newAssetRawBytes": 12222,
+  "newAssetGzipBytes": 1860,
+  "additionalImageAssets": 1,
+  "additionalRenderer": false,
+  "additionalJavascript": false,
+  "newAnimation": false,
+  "realWorkshopPhotoBytesUnchanged": 95996,
+  "note": "Gzip is a local size estimate, not a measured transfer. Browser timing APIs unavailable; no LCP/FPS benchmark claimed."
+}

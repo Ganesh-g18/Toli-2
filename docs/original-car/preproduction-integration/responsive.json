@@ -1,0 +1,98 @@
+[
+  {
+    "viewportWidth": 1920,
+    "canvas": true,
+    "model": "toli-atelier-r7",
+    "overflow": false,
+    "stageHeight": 400,
+    "stageWidth": 1030.671875
+  },
+  {
+    "viewportWidth": 1600,
+    "canvas": true,
+    "model": "toli-atelier-r7",
+    "overflow": false,
+    "stageHeight": 400,
+    "stageWidth": 849.703125
+  },
+  {
+    "viewportWidth": 1440,
+    "canvas": true,
+    "model": "toli-atelier-r7",
+    "overflow": false,
+    "stageHeight": 370.796875,
+    "stageWidth": 761.59375
+  },
+  {
+    "viewportWidth": 1366,
+    "canvas": true,
+    "model": "toli-atelier-r7",
+    "overflow": false,
+    "stageHeight": 350,
+    "stageWidth": 720.84375
+  },
+  {
+    "viewportWidth": 1280,
+    "canvas": true,
+    "model": "toli-atelier-r7",
+    "overflow": false,
+    "stageHeight": 350,
+    "stageWidth": 673.46875
+  },
+  {
+    "viewportWidth": 1024,
+    "canvas": true,
+    "model": "toli-atelier-r7",
+    "overflow": false,
+    "stageHeight": 350,
+    "stageWidth": 548.109375
+  },
+  {
+    "viewportWidth": 768,
+    "canvas": true,
+    "model": "toli-atelier-r7",
+    "overflow": false,
+    "stageHeight": 350,
+    "stageWidth": 432.6875
+  },
+  {
+    "viewportWidth": 430,
+    "canvas": true,
+    "model": "toli-atelier-r7",
+    "overflow": false,
+    "stageHeight": 210,
+    "stageWidth": 438.46875
+  },
+  {
+    "viewportWidth": 412,
+    "canvas": true,
+    "model": "toli-atelier-r7",
+    "overflow": false,
+    "stageHeight": 210,
+    "stageWidth": 417.59375
+  },
+  {
+    "viewportWidth": 390,
+    "canvas": true,
+    "model": "toli-atelier-r7",
+    "overflow": false,
+    "stageHeight": 210,
+    "stageWidth": 392.0625
+  },
+  {
+    "viewportWidth": 360,
+    "canvas": true,
+    "model": "toli-atelier-r7",
+    "overflow": false,
+    "stageHeight": 210,
+    "stageWidth": 357.25
+  },
+  {
+    "viewportWidth": 320,
+    "canvas": true,
+    "model": "toli-atelier-r7",
+    "overflow": false,
+    "stageHeight": 210,
+    "stageWidth": 310.875
+  }
+]

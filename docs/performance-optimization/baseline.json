@@ -1,0 +1,176 @@
+{
+  "bundles": [
+    {
+      "file": "JourneyDock-COyzrbwt.js",
+      "bytes": 5642,
+      "gzip": 1954
+    },
+    {
+      "file": "OffersStrip-B9xGKh_-.js",
+      "bytes": 11013,
+      "gzip": 3823
+    },
+    {
+      "file": "Reveal-CRz0d7PP.js",
+      "bytes": 1288,
+      "gzip": 683
+    },
+    {
+      "file": "ComponentExperience-DEClltNu.css",
+      "bytes": 153,
+      "gzip": 138
+    },
+    {
+      "file": "Services-1qvy_l97.js",
+      "bytes": 3711,
+      "gzip": 1573
+    },
+    {
+      "file": "animejs-BTYJEqWo.js",
+      "bytes": 36845,
+      "gzip": 14314
+    },
+    {
+      "file": "mail-C2PrW0Bl.js",
+      "bytes": 384,
+      "gzip": 300
+    },
+    {
+      "file": "markdown-COVgXzZc.js",
+      "bytes": 919,
+      "gzip": 581
+    },
+    {
+      "file": "Footer-BUzkV4cN.js",
+      "bytes": 6769,
+      "gzip": 2272
+    },
+    {
+      "file": "use-section-entrance-Dit7-rvy.js",
+      "bytes": 1490,
+      "gzip": 807
+    },
+    {
+      "file": "WhyUs-B7wvehBf.js",
+      "bytes": 3810,
+      "gzip": 1672
+    },
+    {
+      "file": "index-BVGSC0Z-.js",
+      "bytes": 296102,
+      "gzip": 95100
+    },
+    {
+      "file": "About-HT2ySOsG.js",
+      "bytes": 1785,
+      "gzip": 877
+    },
+    {
+      "file": "star-CRIbeW1L.js",
+      "bytes": 641,
+      "gzip": 403
+    },
+    {
+      "file": "map-pin-Bx9t0HoK.js",
+      "bytes": 427,
+      "gzip": 326
+    },
+    {
+      "file": "ComponentExperience-B4qxv9Y4.js",
+      "bytes": 815,
+      "gzip": 473
+    },
+    {
+      "file": "ToliAIPanel-CxFgOf_4.js",
+      "bytes": 7436,
+      "gzip": 3482
+    },
+    {
+      "file": "Testimonials-Ci4s6yvT.js",
+      "bytes": 5757,
+      "gzip": 2382
+    },
+    {
+      "file": "index-SNACWks8.css",
+      "bytes": 287310,
+      "gzip": 48944
+    },
+    {
+      "file": "BeforeAfter-BLvmTGiC.js",
+      "bytes": 5930,
+      "gzip": 2807
+    },
+    {
+      "file": "BrandPartners-C69WbTsR.js",
+      "bytes": 4110,
+      "gzip": 1916
+    },
+    {
+      "file": "vehicle-motion-EsjgDAPT.js",
+      "bytes": 168,
+      "gzip": 158
+    },
+    {
+      "file": "HowItWorks-DP3WnWZ4.js",
+      "bytes": 2378,
+      "gzip": 1072
+    },
+    {
+      "file": "Stats-LoBazIGy.js",
+      "bytes": 2395,
+      "gzip": 1286
+    },
+    {
+      "file": "Contact-C9eKDcIz.js",
+      "bytes": 6608,
+      "gzip": 2395
+    },
+    {
+      "file": "CtaBanner-DgSKiJ15.js",
+      "bytes": 1709,
+      "gzip": 812
+    },
+    {
+      "file": "VehicleComponentView-CDppvivN.js",
+      "bytes": 1668,
+      "gzip": 772
+    },
+    {
+      "file": "ServiceArea-CXHqD0Ru.js",
+      "bytes": 4952,
+      "gzip": 1889
+    },
+    {
+      "file": "WhatsAppSender-CyA8kqDC.js",
+      "bytes": 4795,
+      "gzip": 2056
+    },
+    {
+      "file": "vehicle-scene-DSQJg7zf.js",
+      "bytes": 646840,
+      "gzip": 171293
+    },
+    {
+      "file": "vendor-B9B04VyU.js",
+      "bytes": 141283,
+      "gzip": 45340
+    },
+    {
+      "file": "JourneyTrim-BMRM1MfN.js",
+      "bytes": 755,
+      "gzip": 404
+    }
+  ],
+  "glb": {
+    "bytes": 4268888,
+    "meshes": 58,
+    "materials": 12,
+    "textures": 0,
+    "vertices": 125334,
+    "triangles": 191805
+  },
+  "protected": {
+    "src/components/Hero.tsx": "e95d35ab6dc29b8dc4e9a42c4f83d06b8d6c00aaa7d05970cd4797ec0212bcc0",
+    "src/components/journey/ExperienceNavigation.tsx": "360737b65f905d781d6b50263fa56ea3669c62788ee3986e8b5ad728abb36fda"
+  }
+}

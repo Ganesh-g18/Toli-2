@@ -1,0 +1,23 @@
+{
+  "toli-static-website": {
+    "baselineFiles": 649,
+    "changed": [
+      "src/main.tsx",
+      "src/components/journey/navbar-brand.css"
+    ],
+    "added": [
+      "docs/large-hero-caption/tests.log",
+      "docs/large-hero-caption/types.log",
+      "docs/large-hero-caption/lint.log",
+      "docs/large-hero-caption/build.log",
+      "src/components/journey/hero-caption.css"
+    ],
+    "removed": []
+  },
+  "toli-3d-website": {
+    "baselineFiles": 1573,
+    "changed": [],
+    "added": [],
+    "removed": []
+  }
+}

@@ -1,0 +1,49 @@
+/* Consistent brand surface in both themes; dimensions stay with the existing layout. */
+html[data-theme] .journey-root .experience-navigation {
+ background:radial-gradient(ellipse at 46% 0%,#ffffff1c,transparent 60%),linear-gradient(180deg,#ffffff09,transparent 48%,#29050c26),linear-gradient(100deg,#921824 0%,#D91F31 38%,#F5253B 65%,#d91f31 82%,#921824 100%);
+ border-bottom:1px solid #f5253b70;
+ box-shadow:inset 0 1px 0 #ffffff25,0 5px 18px -12px #21060c80;
+ color:#fff;
+}
+html[data-theme] .journey-root .experience-navigation .nav-actions button {
+ color:#fff;--focus-ring:#fff;
+}
+html[data-theme] .journey-root .experience-navigation .nav-actions > button,
+html[data-theme] .journey-root .experience-navigation .nav-actions > .nav-support > button {
+ border:1px solid #ffffff45;border-radius:4px;background:#3a091466;padding-inline:8px;
+}
+html[data-theme] .journey-root .experience-navigation .nav-actions button:hover {
+ background:#420b19;color:#fff;
+}
+html[data-theme] .journey-root .experience-navigation .nav-actions .nav-book {
+ background:linear-gradient(180deg,#fafbfc,#dce0e5);color:#64131b;border:1px solid #fff8;
+ box-shadow:inset 0 1px 0 #fff,0 2px 5px #39061030;
+}
+html[data-theme] .journey-root .experience-navigation .nav-actions .nav-book:hover {
+ background:#fff;color:#64131b;
+}
+html[data-theme] .journey-root .experience-navigation .nav-actions :is(button,a):focus-visible {
+ outline:2px solid #fff;outline-offset:3px;
+}
+.journey-root .phase9-experience .hero-brand.hero-location {
+ font-size:11px;font-weight:600;line-height:1.5;letter-spacing:.11em;color:var(--text-primary);
+}
+@media(max-width:767px){
+ .journey-root .phase9-experience .hero-brand.hero-location {font-size:9px;letter-spacing:.08em;}
+ html[data-theme] .journey-root .experience-navigation .nav-actions > button {padding-inline:5px;}
+}
+
+/* The caption follows the heading in DOM order and shares the visual row's clear upper-left area.
+   It does not change track sizes, vehicle transforms, or Hero height. */
+.journey-root .phase9-experience .hero-location {align-items:flex-start;flex-direction:column;gap:4px;}
+.journey-root .phase9-experience .hero-location-text {margin:0;}
+@media(max-width:1279px){
+ /* Preserve the former eyebrow group's geometry while moving its caption below the heading. */
+ .journey-root .phase9-experience .hero-location {min-height:37px;}
+}
+@media(max-width:767px){
+ .journey-root .phase9-experience .hero-location {min-height:34px;}
+}
+/* Reference CTA finish; original navbar geometry and animated artwork are retained. */
+html[data-theme] .journey-root .experience-navigation .nav-actions .nav-book {background:linear-gradient(110deg,#f5253b,#d91f31);color:#fff;border-color:#ff3045;box-shadow:inset 0 1px #ffffff30,0 3px 8px #39061040;}
+html[data-theme] .journey-root .experience-navigation .nav-actions .nav-book:hover {background:#f5253b;color:#fff;}

@@ -1,0 +1,38 @@
+[
+  {
+    "control": "Enquire about Insurance claim enquiries",
+    "dialog": true
+  },
+  {
+    "control": "Enquire about Denting & Painting",
+    "dialog": true
+  },
+  {
+    "control": "Enquire about Complete Vehicle Inspection",
+    "dialog": true
+  },
+  {
+    "control": "02 Services",
+    "clicked": true
+  },
+  {
+    "control": "03 Journey",
+    "clicked": true
+  },
+  {
+    "control": "04 Toli Motors",
+    "clicked": true
+  },
+  {
+    "control": "05 Request",
+    "clicked": true
+  },
+  {
+    "control": "06 Contact",
+    "clicked": true
+  },
+  {
+    "control": "01 Entry",
+    "clicked": true
+  }
+]

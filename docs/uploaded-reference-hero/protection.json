@@ -1,0 +1,33 @@
+{
+  "toli-static-website": {
+    "baselineFiles": 858,
+    "changed": [
+      "src/components/Hero.tsx",
+      "src/components/journey/hero-caption.css",
+      "src/components/journey/navbar-brand.css",
+      "src/components/journey/BrandCaption.tsx",
+      "src/test/navbar-motion.test.tsx",
+      "src/test/hero-reference.test.tsx",
+      "src/test/fixtures/separation-protected.json"
+    ],
+    "addedImplementation": [
+      "src/assets/hero/garage-service-photos-1200.webp",
+      "src/assets/hero/garage-reference-portrait-640.webp",
+      "src/assets/hero/garage-reference-wide-960.webp",
+      "src/assets/hero/garage-reference-wide-1600.webp"
+    ],
+    "removed": []
+  },
+  "toli-3d-website": {
+    "baselineFiles": 1573,
+    "changed": [],
+    "addedImplementation": [],
+    "removed": []
+  },
+  "tolimotors-main": {
+    "baselineFiles": 3128,
+    "changed": [],
+    "addedImplementation": [],
+    "removed": []
+  }
+}

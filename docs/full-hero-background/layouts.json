@@ -1,0 +1,1120 @@
+[
+  {
+    "background": {
+      "bottom": 1367.890625,
+      "height": 1311.890625,
+      "width": 310,
+      "x": 0,
+      "y": 56
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth-mobile.svg\")",
+    "car": {
+      "bottom": 536.40625,
+      "height": 185,
+      "width": 276.1875,
+      "x": 16.90625,
+      "y": 351.40625
+    },
+    "cards": {
+      "bottom": 888.375,
+      "height": 317.96875,
+      "width": 274,
+      "x": 18,
+      "y": 570.40625
+    },
+    "heading": {
+      "bottom": 302.40625,
+      "height": 52.78125,
+      "width": 274,
+      "x": 18,
+      "y": 249.625
+    },
+    "height": 900,
+    "hero": {
+      "bottom": 1367.890625,
+      "height": 1311.890625,
+      "width": 310,
+      "x": 0,
+      "y": 56
+    },
+    "loaded": true,
+    "scrollWidth": 310,
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "background": {
+      "bottom": 1365.78125,
+      "height": 1309.78125,
+      "width": 350,
+      "x": 0,
+      "y": 56
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth-mobile.svg\")",
+    "car": {
+      "bottom": 545.890625,
+      "height": 185,
+      "width": 316.5,
+      "x": 16.75,
+      "y": 360.890625
+    },
+    "cards": {
+      "bottom": 882.265625,
+      "height": 302.375,
+      "width": 314,
+      "x": 18,
+      "y": 579.890625
+    },
+    "heading": {
+      "bottom": 311.890625,
+      "height": 52.78125,
+      "width": 314,
+      "x": 18,
+      "y": 259.109375
+    },
+    "height": 900,
+    "hero": {
+      "bottom": 1365.78125,
+      "height": 1309.78125,
+      "width": 350,
+      "x": 0,
+      "y": 56
+    },
+    "loaded": true,
+    "scrollWidth": 350,
+    "theme": "dark",
+    "width": 360
+  },
+  {
+    "background": {
+      "bottom": 1373.71875,
+      "height": 1317.71875,
+      "width": 380,
+      "x": 0,
+      "y": 56
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth-mobile.svg\")",
+    "car": {
+      "bottom": 553.421875,
+      "height": 185,
+      "width": 346.734375,
+      "x": 16.625,
+      "y": 368.421875
+    },
+    "cards": {
+      "bottom": 889.796875,
+      "height": 302.375,
+      "width": 344,
+      "x": 18,
+      "y": 587.421875
+    },
+    "heading": {
+      "bottom": 319.421875,
+      "height": 53.1875,
+      "width": 344,
+      "x": 18,
+      "y": 266.234375
+    },
+    "height": 900,
+    "hero": {
+      "bottom": 1373.71875,
+      "height": 1317.71875,
+      "width": 380,
+      "x": 0,
+      "y": 56
+    },
+    "loaded": true,
+    "scrollWidth": 380,
+    "theme": "dark",
+    "width": 390
+  },
+  {
+    "background": {
+      "bottom": 1371,
+      "height": 1315,
+      "width": 402,
+      "x": 0,
+      "y": 56
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth-mobile.svg\")",
+    "car": {
+      "bottom": 561.640625,
+      "height": 185,
+      "width": 368.90625,
+      "x": 16.546875,
+      "y": 376.640625
+    },
+    "cards": {
+      "bottom": 884.015625,
+      "height": 288.375,
+      "width": 366,
+      "x": 18,
+      "y": 595.640625
+    },
+    "heading": {
+      "bottom": 327.640625,
+      "height": 56.1875,
+      "width": 366,
+      "x": 18,
+      "y": 271.453125
+    },
+    "height": 900,
+    "hero": {
+      "bottom": 1371,
+      "height": 1315,
+      "width": 402,
+      "x": 0,
+      "y": 56
+    },
+    "loaded": true,
+    "scrollWidth": 402,
+    "theme": "dark",
+    "width": 412
+  },
+  {
+    "background": {
+      "bottom": 1364.59375,
+      "height": 1308.59375,
+      "width": 420,
+      "x": 0,
+      "y": 56
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth-mobile.svg\")",
+    "car": {
+      "bottom": 568.359375,
+      "height": 185,
+      "width": 387.046875,
+      "x": 16.46875,
+      "y": 383.359375
+    },
+    "cards": {
+      "bottom": 875.140625,
+      "height": 272.78125,
+      "width": 384,
+      "x": 18,
+      "y": 602.359375
+    },
+    "heading": {
+      "bottom": 334.359375,
+      "height": 58.625,
+      "width": 384,
+      "x": 18,
+      "y": 275.734375
+    },
+    "height": 900,
+    "hero": {
+      "bottom": 1364.59375,
+      "height": 1308.59375,
+      "width": 420,
+      "x": 0,
+      "y": 56
+    },
+    "loaded": true,
+    "scrollWidth": 420,
+    "theme": "dark",
+    "width": 430
+  },
+  {
+    "background": {
+      "bottom": 1148.484375,
+      "height": 1084.484375,
+      "width": 758,
+      "x": 0,
+      "y": 64
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth.svg\")",
+    "car": {
+      "bottom": 643.421875,
+      "height": 280,
+      "width": 725.90625,
+      "x": 16.046875,
+      "y": 363.421875
+    },
+    "cards": {
+      "bottom": 818.609375,
+      "height": 161.1875,
+      "width": 698,
+      "x": 30,
+      "y": 657.421875
+    },
+    "heading": {
+      "bottom": 349.421875,
+      "height": 27,
+      "width": 698,
+      "x": 30,
+      "y": 322.421875
+    },
+    "height": 1024,
+    "hero": {
+      "bottom": 1148.484375,
+      "height": 1084.484375,
+      "width": 758,
+      "x": 0,
+      "y": 64
+    },
+    "loaded": true,
+    "scrollWidth": 758,
+    "theme": "dark",
+    "width": 768
+  },
+  {
+    "background": {
+      "bottom": 1160.890625,
+      "height": 1096.890625,
+      "width": 1014,
+      "x": 0,
+      "y": 64
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth.svg\")",
+    "car": {
+      "bottom": 664.046875,
+      "height": 280,
+      "width": 896.46875,
+      "x": 58.765625,
+      "y": 384.046875
+    },
+    "cards": {
+      "bottom": 829.234375,
+      "height": 151.1875,
+      "width": 862,
+      "x": 76,
+      "y": 678.046875
+    },
+    "heading": {
+      "bottom": 370.046875,
+      "height": 30.953125,
+      "width": 862,
+      "x": 76,
+      "y": 339.09375
+    },
+    "height": 768,
+    "hero": {
+      "bottom": 1160.890625,
+      "height": 1096.890625,
+      "width": 1014,
+      "x": 0,
+      "y": 64
+    },
+    "loaded": true,
+    "scrollWidth": 1014,
+    "theme": "dark",
+    "width": 1024
+  },
+  {
+    "background": {
+      "bottom": 1221.25,
+      "height": 1157.25,
+      "width": 1356,
+      "x": 0,
+      "y": 64
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth.svg\")",
+    "car": {
+      "bottom": 727.96875,
+      "height": 327.828125,
+      "width": 1211.34375,
+      "x": 72.328125,
+      "y": 400.140625
+    },
+    "cards": {
+      "bottom": 880,
+      "height": 138.03125,
+      "width": 1164.78125,
+      "x": 95.609375,
+      "y": 741.96875
+    },
+    "heading": {
+      "bottom": 386.140625,
+      "height": 41.296875,
+      "width": 1164.78125,
+      "x": 95.609375,
+      "y": 344.84375
+    },
+    "height": 768,
+    "hero": {
+      "bottom": 1221.25,
+      "height": 1157.25,
+      "width": 1356,
+      "x": 0,
+      "y": 64
+    },
+    "loaded": true,
+    "scrollWidth": 1356,
+    "theme": "dark",
+    "width": 1366
+  },
+  {
+    "background": {
+      "bottom": 1245.140625,
+      "height": 1181.140625,
+      "width": 1430,
+      "x": 0,
+      "y": 64
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth.svg\")",
+    "car": {
+      "bottom": 748.828125,
+      "height": 345.59375,
+      "width": 1277.53125,
+      "x": 76.234375,
+      "y": 403.234375
+    },
+    "cards": {
+      "bottom": 901.828125,
+      "height": 139,
+      "width": 1228.40625,
+      "x": 100.796875,
+      "y": 762.828125
+    },
+    "heading": {
+      "bottom": 389.234375,
+      "height": 43.53125,
+      "width": 1228.40625,
+      "x": 100.796875,
+      "y": 345.703125
+    },
+    "height": 900,
+    "hero": {
+      "bottom": 1245.140625,
+      "height": 1181.140625,
+      "width": 1430,
+      "x": 0,
+      "y": 64
+    },
+    "loaded": true,
+    "scrollWidth": 1430,
+    "theme": "dark",
+    "width": 1440
+  },
+  {
+    "background": {
+      "bottom": 1372.515625,
+      "height": 1308.515625,
+      "width": 1910,
+      "x": 0,
+      "y": 64
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth.svg\")",
+    "car": {
+      "bottom": 865.859375,
+      "height": 460.796875,
+      "width": 1539.1875,
+      "x": 185.40625,
+      "y": 405.0625
+    },
+    "cards": {
+      "bottom": 1020.25,
+      "height": 140.390625,
+      "width": 1480,
+      "x": 215,
+      "y": 879.859375
+    },
+    "heading": {
+      "bottom": 391.0625,
+      "height": 45.359375,
+      "width": 1480,
+      "x": 215,
+      "y": 345.703125
+    },
+    "height": 1080,
+    "hero": {
+      "bottom": 1372.515625,
+      "height": 1308.515625,
+      "width": 1910,
+      "x": 0,
+      "y": 64
+    },
+    "loaded": true,
+    "scrollWidth": 1910,
+    "theme": "dark",
+    "width": 1920
+  },
+  {
+    "background": {
+      "bottom": 1526.109375,
+      "height": 1462.109375,
+      "width": 2550,
+      "x": 0,
+      "y": 64
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth.svg\")",
+    "car": {
+      "bottom": 1019.453125,
+      "height": 614.390625,
+      "width": 1539.1875,
+      "x": 505.40625,
+      "y": 405.0625
+    },
+    "cards": {
+      "bottom": 1173.84375,
+      "height": 140.390625,
+      "width": 1480,
+      "x": 535,
+      "y": 1033.453125
+    },
+    "heading": {
+      "bottom": 391.0625,
+      "height": 45.359375,
+      "width": 1480,
+      "x": 535,
+      "y": 345.703125
+    },
+    "height": 1440,
+    "hero": {
+      "bottom": 1526.109375,
+      "height": 1462.109375,
+      "width": 2550,
+      "x": 0,
+      "y": 64
+    },
+    "loaded": true,
+    "scrollWidth": 2550,
+    "theme": "dark",
+    "width": 2560
+  },
+  {
+    "background": {
+      "bottom": 1737.3125,
+      "height": 1673.3125,
+      "width": 3430,
+      "x": 0,
+      "y": 64
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth.svg\")",
+    "car": {
+      "bottom": 1230.65625,
+      "height": 825.59375,
+      "width": 1539.1875,
+      "x": 945.40625,
+      "y": 405.0625
+    },
+    "cards": {
+      "bottom": 1385.046875,
+      "height": 140.390625,
+      "width": 1480,
+      "x": 975,
+      "y": 1244.65625
+    },
+    "heading": {
+      "bottom": 391.0625,
+      "height": 45.359375,
+      "width": 1480,
+      "x": 975,
+      "y": 345.703125
+    },
+    "height": 1440,
+    "hero": {
+      "bottom": 1737.3125,
+      "height": 1673.3125,
+      "width": 3430,
+      "x": 0,
+      "y": 64
+    },
+    "loaded": true,
+    "scrollWidth": 3430,
+    "theme": "dark",
+    "width": 3440
+  },
+  {
+    "background": {
+      "bottom": 1134.65625,
+      "height": 1070.65625,
+      "width": 834,
+      "x": 0,
+      "y": 64
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth.svg\")",
+    "car": {
+      "bottom": 643.59375,
+      "height": 280,
+      "width": 804.9375,
+      "x": 14.53125,
+      "y": 363.59375
+    },
+    "cards": {
+      "bottom": 804.78125,
+      "height": 147.1875,
+      "width": 774,
+      "x": 30,
+      "y": 657.59375
+    },
+    "heading": {
+      "bottom": 349.59375,
+      "height": 27,
+      "width": 774,
+      "x": 30,
+      "y": 322.59375
+    },
+    "height": 390,
+    "hero": {
+      "bottom": 1134.65625,
+      "height": 1070.65625,
+      "width": 834,
+      "x": 0,
+      "y": 64
+    },
+    "loaded": true,
+    "scrollWidth": 834,
+    "theme": "dark",
+    "width": 844
+  },
+  {
+    "background": {
+      "bottom": 1367.890625,
+      "height": 1311.890625,
+      "width": 310,
+      "x": 0,
+      "y": 56
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth-mobile.svg\")",
+    "car": {
+      "bottom": 536.40625,
+      "height": 185,
+      "width": 276.1875,
+      "x": 16.90625,
+      "y": 351.40625
+    },
+    "cards": {
+      "bottom": 888.375,
+      "height": 317.96875,
+      "width": 274,
+      "x": 18,
+      "y": 570.40625
+    },
+    "heading": {
+      "bottom": 302.40625,
+      "height": 52.78125,
+      "width": 274,
+      "x": 18,
+      "y": 249.625
+    },
+    "height": 900,
+    "hero": {
+      "bottom": 1367.890625,
+      "height": 1311.890625,
+      "width": 310,
+      "x": 0,
+      "y": 56
+    },
+    "loaded": true,
+    "scrollWidth": 310,
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "background": {
+      "bottom": 1365.78125,
+      "height": 1309.78125,
+      "width": 350,
+      "x": 0,
+      "y": 56
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth-mobile.svg\")",
+    "car": {
+      "bottom": 545.890625,
+      "height": 185,
+      "width": 316.5,
+      "x": 16.75,
+      "y": 360.890625
+    },
+    "cards": {
+      "bottom": 882.265625,
+      "height": 302.375,
+      "width": 314,
+      "x": 18,
+      "y": 579.890625
+    },
+    "heading": {
+      "bottom": 311.890625,
+      "height": 52.78125,
+      "width": 314,
+      "x": 18,
+      "y": 259.109375
+    },
+    "height": 900,
+    "hero": {
+      "bottom": 1365.78125,
+      "height": 1309.78125,
+      "width": 350,
+      "x": 0,
+      "y": 56
+    },
+    "loaded": true,
+    "scrollWidth": 350,
+    "theme": "light",
+    "width": 360
+  },
+  {
+    "background": {
+      "bottom": 1373.71875,
+      "height": 1317.71875,
+      "width": 380,
+      "x": 0,
+      "y": 56
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth-mobile.svg\")",
+    "car": {
+      "bottom": 553.421875,
+      "height": 185,
+      "width": 346.734375,
+      "x": 16.625,
+      "y": 368.421875
+    },
+    "cards": {
+      "bottom": 889.796875,
+      "height": 302.375,
+      "width": 344,
+      "x": 18,
+      "y": 587.421875
+    },
+    "heading": {
+      "bottom": 319.421875,
+      "height": 53.1875,
+      "width": 344,
+      "x": 18,
+      "y": 266.234375
+    },
+    "height": 900,
+    "hero": {
+      "bottom": 1373.71875,
+      "height": 1317.71875,
+      "width": 380,
+      "x": 0,
+      "y": 56
+    },
+    "loaded": true,
+    "scrollWidth": 380,
+    "theme": "light",
+    "width": 390
+  },
+  {
+    "background": {
+      "bottom": 1371,
+      "height": 1315,
+      "width": 402,
+      "x": 0,
+      "y": 56
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth-mobile.svg\")",
+    "car": {
+      "bottom": 561.640625,
+      "height": 185,
+      "width": 368.90625,
+      "x": 16.546875,
+      "y": 376.640625
+    },
+    "cards": {
+      "bottom": 884.015625,
+      "height": 288.375,
+      "width": 366,
+      "x": 18,
+      "y": 595.640625
+    },
+    "heading": {
+      "bottom": 327.640625,
+      "height": 56.1875,
+      "width": 366,
+      "x": 18,
+      "y": 271.453125
+    },
+    "height": 900,
+    "hero": {
+      "bottom": 1371,
+      "height": 1315,
+      "width": 402,
+      "x": 0,
+      "y": 56
+    },
+    "loaded": true,
+    "scrollWidth": 402,
+    "theme": "light",
+    "width": 412
+  },
+  {
+    "background": {
+      "bottom": 1364.59375,
+      "height": 1308.59375,
+      "width": 420,
+      "x": 0,
+      "y": 56
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth-mobile.svg\")",
+    "car": {
+      "bottom": 568.359375,
+      "height": 185,
+      "width": 387.046875,
+      "x": 16.46875,
+      "y": 383.359375
+    },
+    "cards": {
+      "bottom": 875.140625,
+      "height": 272.78125,
+      "width": 384,
+      "x": 18,
+      "y": 602.359375
+    },
+    "heading": {
+      "bottom": 334.359375,
+      "height": 58.625,
+      "width": 384,
+      "x": 18,
+      "y": 275.734375
+    },
+    "height": 900,
+    "hero": {
+      "bottom": 1364.59375,
+      "height": 1308.59375,
+      "width": 420,
+      "x": 0,
+      "y": 56
+    },
+    "loaded": true,
+    "scrollWidth": 420,
+    "theme": "light",
+    "width": 430
+  },
+  {
+    "background": {
+      "bottom": 1148.484375,
+      "height": 1084.484375,
+      "width": 758,
+      "x": 0,
+      "y": 64
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth.svg\")",
+    "car": {
+      "bottom": 643.421875,
+      "height": 280,
+      "width": 725.90625,
+      "x": 16.046875,
+      "y": 363.421875
+    },
+    "cards": {
+      "bottom": 818.609375,
+      "height": 161.1875,
+      "width": 698,
+      "x": 30,
+      "y": 657.421875
+    },
+    "heading": {
+      "bottom": 349.421875,
+      "height": 27,
+      "width": 698,
+      "x": 30,
+      "y": 322.421875
+    },
+    "height": 1024,
+    "hero": {
+      "bottom": 1148.484375,
+      "height": 1084.484375,
+      "width": 758,
+      "x": 0,
+      "y": 64
+    },
+    "loaded": true,
+    "scrollWidth": 758,
+    "theme": "light",
+    "width": 768
+  },
+  {
+    "background": {
+      "bottom": 1160.890625,
+      "height": 1096.890625,
+      "width": 1014,
+      "x": 0,
+      "y": 64
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth.svg\")",
+    "car": {
+      "bottom": 664.046875,
+      "height": 280,
+      "width": 896.46875,
+      "x": 58.765625,
+      "y": 384.046875
+    },
+    "cards": {
+      "bottom": 829.234375,
+      "height": 151.1875,
+      "width": 862,
+      "x": 76,
+      "y": 678.046875
+    },
+    "heading": {
+      "bottom": 370.046875,
+      "height": 30.953125,
+      "width": 862,
+      "x": 76,
+      "y": 339.09375
+    },
+    "height": 768,
+    "hero": {
+      "bottom": 1160.890625,
+      "height": 1096.890625,
+      "width": 1014,
+      "x": 0,
+      "y": 64
+    },
+    "loaded": true,
+    "scrollWidth": 1014,
+    "theme": "light",
+    "width": 1024
+  },
+  {
+    "background": {
+      "bottom": 1221.25,
+      "height": 1157.25,
+      "width": 1356,
+      "x": 0,
+      "y": 64
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth.svg\")",
+    "car": {
+      "bottom": 727.96875,
+      "height": 327.828125,
+      "width": 1211.34375,
+      "x": 72.328125,
+      "y": 400.140625
+    },
+    "cards": {
+      "bottom": 880,
+      "height": 138.03125,
+      "width": 1164.78125,
+      "x": 95.609375,
+      "y": 741.96875
+    },
+    "heading": {
+      "bottom": 386.140625,
+      "height": 41.296875,
+      "width": 1164.78125,
+      "x": 95.609375,
+      "y": 344.84375
+    },
+    "height": 768,
+    "hero": {
+      "bottom": 1221.25,
+      "height": 1157.25,
+      "width": 1356,
+      "x": 0,
+      "y": 64
+    },
+    "loaded": true,
+    "scrollWidth": 1356,
+    "theme": "light",
+    "width": 1366
+  },
+  {
+    "background": {
+      "bottom": 1245.140625,
+      "height": 1181.140625,
+      "width": 1430,
+      "x": 0,
+      "y": 64
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth.svg\")",
+    "car": {
+      "bottom": 748.828125,
+      "height": 345.59375,
+      "width": 1277.53125,
+      "x": 76.234375,
+      "y": 403.234375
+    },
+    "cards": {
+      "bottom": 901.828125,
+      "height": 139,
+      "width": 1228.40625,
+      "x": 100.796875,
+      "y": 762.828125
+    },
+    "heading": {
+      "bottom": 389.234375,
+      "height": 43.53125,
+      "width": 1228.40625,
+      "x": 100.796875,
+      "y": 345.703125
+    },
+    "height": 900,
+    "hero": {
+      "bottom": 1245.140625,
+      "height": 1181.140625,
+      "width": 1430,
+      "x": 0,
+      "y": 64
+    },
+    "loaded": true,
+    "scrollWidth": 1430,
+    "theme": "light",
+    "width": 1440
+  },
+  {
+    "background": {
+      "bottom": 1372.515625,
+      "height": 1308.515625,
+      "width": 1910,
+      "x": 0,
+      "y": 64
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth.svg\")",
+    "car": {
+      "bottom": 865.859375,
+      "height": 460.796875,
+      "width": 1539.1875,
+      "x": 185.40625,
+      "y": 405.0625
+    },
+    "cards": {
+      "bottom": 1020.25,
+      "height": 140.390625,
+      "width": 1480,
+      "x": 215,
+      "y": 879.859375
+    },
+    "heading": {
+      "bottom": 391.0625,
+      "height": 45.359375,
+      "width": 1480,
+      "x": 215,
+      "y": 345.703125
+    },
+    "height": 1080,
+    "hero": {
+      "bottom": 1372.515625,
+      "height": 1308.515625,
+      "width": 1910,
+      "x": 0,
+      "y": 64
+    },
+    "loaded": true,
+    "scrollWidth": 1910,
+    "theme": "light",
+    "width": 1920
+  },
+  {
+    "background": {
+      "bottom": 1526.109375,
+      "height": 1462.109375,
+      "width": 2550,
+      "x": 0,
+      "y": 64
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth.svg\")",
+    "car": {
+      "bottom": 1019.453125,
+      "height": 614.390625,
+      "width": 1539.1875,
+      "x": 505.40625,
+      "y": 405.0625
+    },
+    "cards": {
+      "bottom": 1173.84375,
+      "height": 140.390625,
+      "width": 1480,
+      "x": 535,
+      "y": 1033.453125
+    },
+    "heading": {
+      "bottom": 391.0625,
+      "height": 45.359375,
+      "width": 1480,
+      "x": 535,
+      "y": 345.703125
+    },
+    "height": 1440,
+    "hero": {
+      "bottom": 1526.109375,
+      "height": 1462.109375,
+      "width": 2550,
+      "x": 0,
+      "y": 64
+    },
+    "loaded": true,
+    "scrollWidth": 2550,
+    "theme": "light",
+    "width": 2560
+  },
+  {
+    "background": {
+      "bottom": 1737.3125,
+      "height": 1673.3125,
+      "width": 3430,
+      "x": 0,
+      "y": 64
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth.svg\")",
+    "car": {
+      "bottom": 1230.65625,
+      "height": 825.59375,
+      "width": 1539.1875,
+      "x": 945.40625,
+      "y": 405.0625
+    },
+    "cards": {
+      "bottom": 1385.046875,
+      "height": 140.390625,
+      "width": 1480,
+      "x": 975,
+      "y": 1244.65625
+    },
+    "heading": {
+      "bottom": 391.0625,
+      "height": 45.359375,
+      "width": 1480,
+      "x": 975,
+      "y": 345.703125
+    },
+    "height": 1440,
+    "hero": {
+      "bottom": 1737.3125,
+      "height": 1673.3125,
+      "width": 3430,
+      "x": 0,
+      "y": 64
+    },
+    "loaded": true,
+    "scrollWidth": 3430,
+    "theme": "light",
+    "width": 3440
+  },
+  {
+    "background": {
+      "bottom": 1134.65625,
+      "height": 1070.65625,
+      "width": 834,
+      "x": 0,
+      "y": 64
+    },
+    "backgroundImage": "url(\"http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth.svg\")",
+    "car": {
+      "bottom": 643.59375,
+      "height": 280,
+      "width": 804.9375,
+      "x": 14.53125,
+      "y": 363.59375
+    },
+    "cards": {
+      "bottom": 804.78125,
+      "height": 147.1875,
+      "width": 774,
+      "x": 30,
+      "y": 657.59375
+    },
+    "heading": {
+      "bottom": 349.59375,
+      "height": 27,
+      "width": 774,
+      "x": 30,
+      "y": 322.59375
+    },
+    "height": 390,
+    "hero": {
+      "bottom": 1134.65625,
+      "height": 1070.65625,
+      "width": 834,
+      "x": 0,
+      "y": 64
+    },
+    "loaded": true,
+    "scrollWidth": 834,
+    "theme": "light",
+    "width": 844
+  }
+]

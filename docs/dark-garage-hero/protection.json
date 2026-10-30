@@ -1,0 +1,25 @@
+{
+  "toli-static-website": {
+    "baselineFiles": 809,
+    "changed": [
+      "src/components/journey/hero-caption.css"
+    ],
+    "addedImplementation": [
+      "src/assets/hero/workshop-depth-dark.svg",
+      "src/assets/hero/workshop-depth-mobile-dark.svg"
+    ],
+    "removed": []
+  },
+  "toli-3d-website": {
+    "baselineFiles": 1573,
+    "changed": [],
+    "addedImplementation": [],
+    "removed": []
+  },
+  "tolimotors-main": {
+    "baselineFiles": 3128,
+    "changed": [],
+    "addedImplementation": [],
+    "removed": []
+  }
+}

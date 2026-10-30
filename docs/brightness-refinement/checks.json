@@ -1,0 +1,16 @@
+{
+  "typecheck": "PASS",
+  "lint": "PASS",
+  "relevantTests": 19,
+  "fullTests": {
+    "passed": 382,
+    "files": 53,
+    "seconds": 145.66
+  },
+  "build": {
+    "status": "PASS",
+    "seconds": 22.05
+  },
+  "responsiveCases": 18,
+  "productionConsoleErrors": 0
+}

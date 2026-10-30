@@ -1,0 +1,312 @@
+{
+  "before": [
+    {
+      "id": "cab64e34cc92ca92",
+      "kind": "image",
+      "name": "big-transparent-Bp_eezos.png",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "img"
+        },
+        {
+          "kind": "attribute",
+          "nodeId": 9518,
+          "property": "src"
+        },
+        {
+          "kind": "attribute",
+          "nodeId": 9595,
+          "property": "src"
+        },
+        {
+          "kind": "attribute",
+          "nodeId": 10761,
+          "property": "src"
+        },
+        {
+          "kind": "attribute",
+          "nodeId": 10827,
+          "property": "src"
+        }
+      ],
+      "url": "http://127.0.0.1:8200/Toli-2/assets/big-transparent-Bp_eezos.png"
+    },
+    {
+      "id": "5ac8d9a4c029ea3e",
+      "kind": "image",
+      "name": "gallery-2.webp.960-CVD93vtd.webp",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "img"
+        },
+        {
+          "kind": "attribute",
+          "nodeId": 9626,
+          "property": "src"
+        }
+      ],
+      "url": "http://127.0.0.1:8200/Toli-2/assets/gallery-2.webp.960-CVD93vtd.webp"
+    },
+    {
+      "id": "1f067a330a8f8b6e",
+      "kind": "image",
+      "name": "toli-sports-campaign-1440-B1mrHanK.webp",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "img"
+        },
+        {
+          "kind": "resource",
+          "property": "img"
+        },
+        {
+          "kind": "resource",
+          "property": "img"
+        },
+        {
+          "kind": "resource",
+          "property": "img"
+        },
+        {
+          "kind": "attribute",
+          "nodeId": 9629,
+          "property": "srcset"
+        }
+      ],
+      "url": "http://127.0.0.1:8200/Toli-2/assets/toli-sports-campaign-1440-B1mrHanK.webp"
+    },
+    {
+      "id": "63e4a87d3fa6ce21",
+      "kind": "image",
+      "name": "toli-sports-campaign-960-CNdIqmap.webp",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "img"
+        },
+        {
+          "kind": "resource",
+          "property": "img"
+        },
+        {
+          "kind": "resource",
+          "property": "img"
+        },
+        {
+          "kind": "attribute",
+          "nodeId": 9629,
+          "property": "srcset"
+        },
+        {
+          "kind": "attribute",
+          "nodeId": 9630,
+          "property": "src"
+        }
+      ],
+      "url": "http://127.0.0.1:8200/Toli-2/assets/toli-sports-campaign-960-CNdIqmap.webp"
+    }
+  ],
+  "after": [
+    {
+      "id": "a586ba1a798f1607",
+      "kind": "image",
+      "name": "big-transparent.png",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "script"
+        }
+      ],
+      "url": "http://127.0.0.1:8190/Toli-2/src/assets/big-transparent.png?import"
+    },
+    {
+      "id": "d86b1544f7e1c5ab",
+      "kind": "image",
+      "name": "toli-sports-campaign-960.webp",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "script"
+        }
+      ],
+      "url": "http://127.0.0.1:8190/Toli-2/src/assets/hero/toli-sports-campaign-960.webp?import"
+    },
+    {
+      "id": "7d937d31e351d864",
+      "kind": "image",
+      "name": "toli-sports-campaign-1440.webp",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "script"
+        }
+      ],
+      "url": "http://127.0.0.1:8190/Toli-2/src/assets/hero/toli-sports-campaign-1440.webp?import"
+    },
+    {
+      "id": "0863f023ee2e6e71",
+      "kind": "image",
+      "name": "gallery-2.webp.960.webp",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "script"
+        }
+      ],
+      "url": "http://127.0.0.1:8190/Toli-2/src/assets/gallery-responsive/gallery-2.webp.960.webp?import"
+    },
+    {
+      "id": "ef5390855d92e46d",
+      "kind": "image",
+      "name": "gallery-2.webp.480.webp",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "script"
+        }
+      ],
+      "url": "http://127.0.0.1:8190/Toli-2/src/assets/gallery-responsive/gallery-2.webp.480.webp?import&url"
+    },
+    {
+      "id": "b094f87c968d31c0",
+      "kind": "image",
+      "name": "gallery-2.webp.960.webp",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "script"
+        }
+      ],
+      "url": "http://127.0.0.1:8190/Toli-2/src/assets/gallery-responsive/gallery-2.webp.960.webp?import&url"
+    },
+    {
+      "id": "41c623a5abbe4d6f",
+      "kind": "image",
+      "name": "gallery-2.webp",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "script"
+        }
+      ],
+      "url": "http://127.0.0.1:8190/Toli-2/src/assets/gallery/gallery-2.webp?import&url"
+    },
+    {
+      "id": "cf8d846d1d232f37",
+      "kind": "image",
+      "name": "big-transparent.png",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "img"
+        },
+        {
+          "kind": "attribute",
+          "nodeId": 35548,
+          "property": "src"
+        },
+        {
+          "kind": "attribute",
+          "nodeId": 35625,
+          "property": "src"
+        },
+        {
+          "kind": "attribute",
+          "nodeId": 36947,
+          "property": "src"
+        },
+        {
+          "kind": "attribute",
+          "nodeId": 37013,
+          "property": "src"
+        }
+      ],
+      "url": "http://127.0.0.1:8190/Toli-2/src/assets/big-transparent.png"
+    },
+    {
+      "id": "77b7ff472dce3086",
+      "kind": "image",
+      "name": "gallery-2.webp.960.webp",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "img"
+        },
+        {
+          "kind": "attribute",
+          "nodeId": 35656,
+          "property": "src"
+        }
+      ],
+      "url": "http://127.0.0.1:8190/Toli-2/src/assets/gallery-responsive/gallery-2.webp.960.webp"
+    },
+    {
+      "id": "3d235cf8a1b81257",
+      "kind": "image",
+      "name": "toli-sports-campaign-1440.webp",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "img"
+        },
+        {
+          "kind": "resource",
+          "property": "img"
+        },
+        {
+          "kind": "attribute",
+          "nodeId": 35659,
+          "property": "srcset"
+        }
+      ],
+      "url": "http://127.0.0.1:8190/Toli-2/src/assets/hero/toli-sports-campaign-1440.webp"
+    },
+    {
+      "id": "fe2c855c9568c9c9",
+      "kind": "image",
+      "name": "toli-sports-campaign-960.webp",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "img"
+        },
+        {
+          "kind": "attribute",
+          "nodeId": 35659,
+          "property": "srcset"
+        },
+        {
+          "kind": "attribute",
+          "nodeId": 35660,
+          "property": "src"
+        }
+      ],
+      "url": "http://127.0.0.1:8190/Toli-2/src/assets/hero/toli-sports-campaign-960.webp"
+    },
+    {
+      "id": "fa97cdd3cf67f523",
+      "kind": "image",
+      "name": "workshop-depth.svg",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "css"
+        },
+        {
+          "kind": "computedStyle",
+          "nodeId": 38179,
+          "property": "background-image"
+        },
+        {
+          "kind": "computedStyle",
+          "nodeId": 38179,
+          "property": "background-image"
+        }
+      ],
+      "url": "http://127.0.0.1:8190/Toli-2/src/assets/hero/workshop-depth.svg"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "initialBefore": {
+    "bytes": 475149,
+    "gzip": 155335
+  },
+  "initialAfter": {
+    "bytes": 436367,
+    "gzip": 142310
+  },
+  "initialChunks": [
+    "index-C0rKKe5E.js",
+    "vendor-B9B04VyU.js",
+    "markdown-COVgXzZc.js",
+    "animejs-BTYJEqWo.js"
+  ],
+  "bundles": [
+    {
+      "file": "ServiceArea-DLJfN9DL.js",
+      "bytes": 4952,
+      "gzip": 1887
+    },
+    {
+      "file": "ComponentExperience-DEClltNu.css",
+      "bytes": 153,
+      "gzip": 138
+    },
+    {
+      "file": "animejs-BTYJEqWo.js",
+      "bytes": 36845,
+      "gzip": 14314
+    },
+    {
+      "file": "Testimonials-CzgasQQJ.js",
+      "bytes": 5752,
+      "gzip": 2379
+    },
+    {
+      "file": "CookiePolicy-4SksbKhG.js",
+      "bytes": 3627,
+      "gzip": 1495
+    },
+    {
+      "file": "markdown-COVgXzZc.js",
+      "bytes": 919,
+      "gzip": 581
+    },
+    {
+      "file": "use-section-entrance-Dit7-rvy.js",
+      "bytes": 1490,
+      "gzip": 807
+    },
+    {
+      "file": "star-D2Mogm8o.js",
+      "bytes": 641,
+      "gzip": 400
+    },
+    {
+      "file": "mail-CzpjKVTt.js",
+      "bytes": 384,
+      "gzip": 298
+    },
+    {
+      "file": "ServiceRequest-CENZRiqe.js",
+      "bytes": 1355,
+      "gzip": 692
+    },
+    {
+      "file": "Stats-B1vS6bm3.js",
+      "bytes": 2395,
+      "gzip": 1284
+    },
+    {
+      "file": "Reveal-Bzlc2eB0.js",
+      "bytes": 1288,
+      "gzip": 684
+    },
+    {
+      "file": "About-HT2ySOsG.js",
+      "bytes": 1785,
+      "gzip": 877
+    },
+    {
+      "file": "ComponentExperience-BACbWjeW.js",
+      "bytes": 815,
+      "gzip": 474
+    },
+    {
+      "file": "ToliAIPanel-BItFNlCJ.js",
+      "bytes": 7436,
+      "gzip": 3481
+    },
+    {
+      "file": "TermsAndConditions-CaXlRcGH.js",
+      "bytes": 4928,
+      "gzip": 2065
+    },
+    {
+      "file": "CtaBanner-CL2uZJfe.js",
+      "bytes": 1709,
+      "gzip": 813
+    },
+    {
+      "file": "textarea-DLgrX0gv.js",
+      "bytes": 1559,
+      "gzip": 670
+    },
+    {
+      "file": "HowItWorks-KOGqocxp.js",
+      "bytes": 2378,
+      "gzip": 1072
+    },
+    {
+      "file": "OffersStrip-C57rdGqy.js",
+      "bytes": 11013,
+      "gzip": 3821
+    },
+    {
+      "file": "Services-C8oh_pkW.js",
+      "bytes": 3711,
+      "gzip": 1576
+    },
+    {
+      "file": "BeforeAfter-D6HwAEPj.js",
+      "bytes": 5930,
+      "gzip": 2806
+    },
+    {
+      "file": "index-emkN4rap.css",
+      "bytes": 287328,
+      "gzip": 48949
+    },
+    {
+      "file": "Footer-CfGKgRzs.js",
+      "bytes": 6774,
+      "gzip": 2273
+    },
+    {
+      "file": "Contact-BNfFSI-I.js",
+      "bytes": 6608,
+      "gzip": 2394
+    },
+    {
+      "file": "WhyUs-kpSmsWMP.js",
+      "bytes": 3810,
+      "gzip": 1671
+    },
+    {
+      "file": "ServiceRequestSteps-CgH1W707.js",
+      "bytes": 25713,
+      "gzip": 9975
+    },
+    {
+      "file": "vehicle-motion-EsjgDAPT.js",
+      "bytes": 168,
+      "gzip": 158
+    },
+    {
+      "file": "LegalPageShell-DFuuOAfs.js",
+      "bytes": 2586,
+      "gzip": 1034
+    },
+    {
+      "file": "map-pin-Dd7eqcba.js",
+      "bytes": 427,
+      "gzip": 323
+    },
+    {
+      "file": "index-C0rKKe5E.js",
+      "bytes": 257320,
+      "gzip": 82075
+    },
+    {
+      "file": "vehicle-scene-BJ9QvKX4.js",
+      "bytes": 647041,
+      "gzip": 171362
+    },
+    {
+      "file": "PrivacyPolicy-FPsX8TjM.js",
+      "bytes": 6572,
+      "gzip": 2507
+    },
+    {
+      "file": "BrandPartners-DpWyPqtj.js",
+      "bytes": 4110,
+      "gzip": 1915
+    },
+    {
+      "file": "VehicleComponentView-HsclkQFX.js",
+      "bytes": 1668,
+      "gzip": 777
+    },
+    {
+      "file": "WhatsAppSender-sjnHZ-8M.js",
+      "bytes": 4831,
+      "gzip": 2071
+    },
+    {
+      "file": "JourneyDock-mHf0IwFr.js",
+      "bytes": 5642,
+      "gzip": 1954
+    },
+    {
+      "file": "vendor-B9B04VyU.js",
+      "bytes": 141283,
+      "gzip": 45340
+    },
+    {
+      "file": "JourneyTrim-BMRM1MfN.js",
+      "bytes": 755,
+      "gzip": 404
+    }
+  ],
+  "galleryOriginalBytes": 2998789,
+  "gallery480Bytes": 602934,
+  "galleryCount": 16,
+  "cssBefore": 287463,
+  "cssAfter": 287481,
+  "protectedManifestChangedFiles": [
+    "src/lib/gallery-images.ts",
+    "src/components/ServiceRequestDialog.tsx",
+    "src/components/Gallery.tsx",
+    "src/test/gallery-editorial.test.tsx",
+    "src/test/hero.test.tsx"
+  ],
+  "heroNavigationSourceUnchanged": true,
+  "vehicleSHA256": "48d75e3d6643100001fec28def90c96dc4ffe0d120bb7696fc83a1c6903c554c"
+}

@@ -1,0 +1,232 @@
+/* Reference-inspired Hero only. The navigation, car artwork and its motion rules stay intact. */
+html[data-theme] .journey-root main.phase9-experience>section.reference-hero {
+ --text-primary:#17181c;--text-secondary:#50545b;--border-subtle:#96999f;--focus-ring:#921824;
+ min-height:0;padding:22px clamp(76px,7vw,140px) 20px;color:#17181c;
+ background:linear-gradient(135deg,#d8dadf66 0%,transparent 26% 75%,#d8dadf77),#f5f4f2;
+}
+html[data-theme] .reference-hero::after {content:"";position:absolute;inset:120px 0 auto;height:180px;background:linear-gradient(135deg,#921824 0 2%,#d91f31 2% 2.6%,transparent 2.6%),linear-gradient(225deg,#17181c 0 2%,#d91f31 2% 2.6%,transparent 2.6%);pointer-events:none;z-index:0;}
+html[data-theme] .reference-hero::before {
+ opacity:1;background:linear-gradient(135deg,transparent 0 12%,#ffffff9c 12% 12.2%,transparent 12.2% 15%,#d8dadf44 15% 15.4%,transparent 15.4%),linear-gradient(225deg,transparent 70%,#ffffffa6 70% 70.4%,transparent 70.4%);pointer-events:none;
+}
+.journey-root .phase9-experience .reference-hero .entry-composition {
+ display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto auto minmax(260px,22vw) auto auto auto auto auto;
+ min-height:0;max-width:1480px;gap:10px 24px;isolation:isolate;
+}
+.hero-reference-brand {grid-column:1/-1;grid-row:1;text-align:center;justify-self:center;width:min(420px,70%);}
+/* Reuse the navbar capsule material unchanged; only Hero geometry scales. */
+.hero-reference-brand>.toli-logo-pill-hero {display:flex;width:100%;aspect-ratio:1483/352;padding:clamp(3px,.6vw,8px) clamp(12px,2vw,28px);}
+.hero-reference-brand>.toli-logo-pill-hero img {width:100%;height:100%;min-width:0;object-fit:contain;}
+.hero-workshop-subtitle {display:flex;align-items:center;gap:14px;justify-content:center;margin:8px 0 0;font:700 clamp(10px,.96vw,14px)/1.4 Inter,sans-serif;letter-spacing:.22em;color:#17181c;}
+.hero-brand-phones {display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:10px;margin-top:6px;font:600 12px/1.3 Inter,sans-serif;color:#921824;}
+.hero-brand-phones a {display:inline-flex;align-items:center;min-height:32px;}
+.hero-workshop-subtitle::before,.hero-workshop-subtitle::after {content:'';width:38px;height:3px;background:#d91f31;flex-shrink:0;}
+.journey-root .phase9-experience .reference-hero .entry-index {position:absolute;right:0;top:0;left:auto;color:#50545b;font-size:9px;}
+.journey-root .phase9-experience .reference-hero .hero-brand.hero-location {grid-row:2;align-items:center;min-height:0;color:#50545b;justify-self:center;font-size:10px;}
+.journey-root .phase9-experience .reference-hero h1 {grid-column:1/-1;grid-row:3;position:relative;padding:0;margin:0;text-align:center;font:600 clamp(25px,2.24vw,34px)/1.08 Inter,sans-serif;letter-spacing:-.045em;color:#17181c;z-index:2;}
+.journey-root .phase9-experience .reference-hero h1 span {color:#50545b;}
+.journey-root .phase9-experience .reference-hero h1 br {display:none;}
+.hero-workshop-atmosphere {grid-row:4;grid-column:1/-1;align-self:stretch;position:relative;overflow:hidden;z-index:0;border-bottom:2px solid #d91f31;pointer-events:none;}
+.hero-workshop-atmosphere img {width:100%;height:100%;object-fit:cover;object-position:center 55%;opacity:.35;filter:saturate(.55);}
+.hero-workshop-atmosphere::after {content:'';position:absolute;inset:0;background:linear-gradient(#f5f4f2,transparent 28% 65%,#f5f4f2),linear-gradient(90deg,#f5f4f2,transparent 15% 85%,#f5f4f2);}
+.journey-root .phase9-experience .reference-hero .hero-visual.journey-dock {grid-row:4;grid-column:1/-1;height:100%;min-height:260px;align-self:stretch;}
+.hero-reference-services {grid-column:1/-1;grid-row:5;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;position:relative;z-index:3;}
+.hero-reference-service {display:flex;flex-direction:column;overflow:hidden;border:1px solid #b51b29;border-radius:14px;background:#fff;text-align:left;box-shadow:0 4px 12px #17181c0c;transition:transform 180ms ease,box-shadow 180ms ease;min-width:0;}
+.hero-service-illustration {display:flex;align-items:center;justify-content:space-between;padding:14px 20px;min-height:74px;background:repeating-linear-gradient(135deg,transparent 0 18px,#d8dadf30 18px 19px),linear-gradient(140deg,#fff,#e6e7e9);color:#921824;}
+.hero-service-illustration>svg:last-child {color:#50545b;}
+.hero-service-label {display:block;flex:1;padding:12px 16px;background:linear-gradient(110deg,#921824,#d91f31);color:white;font:700 clamp(13px,1.1vw,17px)/1.2 Inter,sans-serif;}
+.hero-service-label small {display:block;font-size:10px;font-weight:400;line-height:1.4;margin-top:6px;color:#fff;}
+.hero-reference-service:hover {transform:translateY(-2px);box-shadow:0 7px 18px #92182420;}
+.journey-root .phase9-experience .reference-hero .hero-brand-caption {grid-column:1/-1;grid-row:6;position:static;justify-self:center;align-self:center;left:auto;transform:none;z-index:3;width:100%;max-width:none;margin:8px 0;padding:0;text-align:center;pointer-events:none;font:650 clamp(24px,2.5vw,44px)/1.12 Inter,sans-serif;letter-spacing:-.04em;color:#17181c;text-shadow:none;}
+.journey-root .phase9-experience .reference-hero .hero-brand-caption strong {display:inline;font-weight:750;color:#b51b29;}
+.journey-root .phase9-experience .reference-hero .hero-description {grid-row:7;grid-column:1;align-self:center;max-width:500px;font-size:13px;color:#50545b;}
+.journey-root .phase9-experience .reference-hero .hero-primary-actions {grid-row:7;grid-column:2;align-self:center;}
+.journey-root .phase9-experience .reference-hero .hero-explore {background:#17181c;color:#fff;border-color:#17181c;}
+.journey-root .phase9-experience .reference-hero .hero-contact-actions {grid-row:8;grid-column:1/-1;justify-content:center;align-self:center;margin:0;gap:24px;}
+.journey-root .phase9-experience .reference-hero .hero-contact-actions :is(a,button) {color:#2d2f35;}
+.hero-reference-location {grid-row:9;grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:18px;background:linear-gradient(110deg,#921824,#d91f31);color:#fff;padding:16px 24px;border-radius:4px;}
+.hero-reference-location p {margin:0;font-size:12px;line-height:1.6;}.hero-reference-location strong {display:block;font-weight:700;letter-spacing:.08em;}
+.hero-reference-location>a {display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;white-space:nowrap;min-height:44px;}
+.journey-root .phase9-experience .reference-hero .hero-journey-link {grid-row:10;grid-column:1/-1;margin:0;padding-top:12px;color:#50545b;border-color:#d8dadf;}
+.journey-root .phase9-experience .reference-hero :is(a,button):focus-visible {outline:3px solid #17181c;outline-offset:4px;}
+.journey-root .phase9-experience .reference-hero .hero-reference-location a:focus-visible {outline-color:#fff;}
+.chapter-navigation button[aria-current] {position:relative;z-index:1;}
+@media(max-width:900px){
+ html[data-theme] .journey-root main.phase9-experience>section.reference-hero {padding:20px 30px 20px;}
+ .hero-reference-brand {width:min(416px,85%);}.hero-reference-services {gap:10px;}.hero-service-label {padding:10px;font-size:13px;}.hero-service-illustration {padding:12px;}
+ .hero-reference-location {flex-wrap:wrap;gap:8px 16px;}.hero-reference-location p {flex:1;}
+}
+@media(max-width:767px){
+ html[data-theme] .journey-root main.phase9-experience>section.reference-hero {padding:22px 18px 18px;}
+ .journey-root .phase9-experience .reference-hero .entry-composition {grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto 228px auto auto auto auto auto auto auto;gap:12px;}
+ .hero-reference-brand {width:92%;max-width:396px;}.hero-workshop-subtitle {font-size:9px;letter-spacing:.18em;gap:8px;margin-top:10px;}.hero-workshop-subtitle::before,.hero-workshop-subtitle::after {width:22px;height:2px;}
+ .journey-root .phase9-experience .reference-hero .entry-index {position:static;grid-row:11;grid-column:1;justify-self:start;margin:0;}
+ .journey-root .phase9-experience .reference-hero .hero-brand.hero-location {font-size:8px;letter-spacing:.08em;text-align:center;}
+ .journey-root .phase9-experience .reference-hero h1 {font-size:clamp(24px,6.2vw,32px);line-height:1.1;}.journey-root .phase9-experience .reference-hero h1 br {display:block;}
+ .journey-root .phase9-experience .reference-hero .hero-visual.journey-dock {height:228px;min-height:0;width:84%;justify-self:center;}
+ .hero-reference-services {grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}.hero-service-label {padding:11px 10px;font-size:13px;}.hero-service-label small {font-size:10px;}.hero-service-illustration {min-height:64px;padding:10px 14px;}.hero-service-illustration>svg:first-child {width:32px;height:32px;}
+ .journey-root .phase9-experience .reference-hero .hero-brand-caption {font-size:clamp(24px,6.2vw,30px);margin:4px 0;line-height:1.12;}.journey-root .phase9-experience .reference-hero .hero-brand-caption strong {display:block;margin-top:4px;}
+ .journey-root .phase9-experience .reference-hero .hero-description {grid-row:7;grid-column:1;font-size:12px;text-align:center;justify-self:center;}
+ .journey-root .phase9-experience .reference-hero .hero-primary-actions {grid-row:8;grid-column:1;width:100%;}.journey-root .phase9-experience .reference-hero .hero-contact-actions {grid-row:9;grid-column:1;gap:14px;justify-content:center;}
+ .hero-reference-location {grid-row:10;padding:14px;align-items:flex-start;gap:8px;}.hero-reference-location p {flex-basis:calc(100% - 32px);font-size:11px;}.hero-reference-location>a {margin:auto;}
+ .journey-root .phase9-experience .reference-hero .hero-journey-link {grid-row:12;padding-top:10px;}
+}
+@media(prefers-reduced-motion:reduce){.hero-reference-service {transition:none;}.hero-reference-service:hover {transform:none;}}
+
+/* A single environment is anchored to the section, not its content grid. */
+html[data-theme] .journey-root main.phase9-experience>section.reference-hero {position:relative;background:#e9ebeb;}
+html[data-theme] .reference-hero::before,html[data-theme] .reference-hero::after {content:none;}
+.journey-root .reference-hero>.hero-workshop-atmosphere {
+ position:absolute;inset:0;width:100%;height:100%;border:0;isolation:isolate;z-index:0;pointer-events:none;
+ background:#e9ebeb url('../../assets/hero/workshop-depth.svg') center top/cover no-repeat;
+}
+.journey-root .reference-hero>.hero-workshop-atmosphere>img {
+ position:absolute;inset:clamp(280px,24vw,420px) auto auto 50%;transform:translateX(-50%);
+ width:min(960px,100%);height:clamp(280px,24vw,460px);object-fit:cover;object-position:center 14%;opacity:.18;filter:none;
+ mask-image:radial-gradient(ellipse at center,#000 35%,transparent 74%);
+}
+.journey-root .reference-hero>.hero-workshop-atmosphere::before {
+ content:'';position:absolute;inset:0;z-index:1;
+ background:radial-gradient(ellipse at 50% 12%,#f5f4f2b0,transparent 48%),radial-gradient(ellipse at 50% 74%,#f5f4f270,transparent 62%);pointer-events:none;
+}
+.journey-root .reference-hero>.hero-workshop-atmosphere::after {
+ content:'ILLUSTRATIVE WORKSHOP SETTING';position:absolute;inset:auto 12px 8px auto;z-index:2;
+ padding:0;background:none;font:500 7px/1 Inter,sans-serif;letter-spacing:.12em;color:#50545b;pointer-events:none;
+}
+@media(max-width:767px){
+ .journey-root .reference-hero>.hero-workshop-atmosphere {background-image:url('../../assets/hero/workshop-depth-mobile.svg');background-position:center top;background-size:cover;}
+ .journey-root .reference-hero>.hero-workshop-atmosphere>img {top:300px;height:260px;opacity:.16;object-position:center 18%;}
+ .journey-root .reference-hero>.hero-workshop-atmosphere::after {font-size:6px;letter-spacing:.08em;right:6px;bottom:5px;}
+}
+
+/* Dark Garage: the existing room geometry is retained with theme-specific materials. */
+html[data-theme=dark] .journey-root main.phase9-experience>section.reference-hero {
+ --text-primary:#f4f3f2;--text-secondary:#c6c8cd;--border-subtle:#555860;--focus-ring:#f4f3f2;
+ background:#17181c;color:#f4f3f2;
+}
+html[data-theme=dark] .journey-root .reference-hero>.hero-workshop-atmosphere {
+ background-color:#17181c;background-image:url('../../assets/hero/workshop-depth-dark.svg');
+}
+html[data-theme=dark] .journey-root .reference-hero>.hero-workshop-atmosphere>img {top:0;width:min(960px,100%);height:640px;object-position:center top;opacity:.38;mask-image:radial-gradient(ellipse at 50% 30%,#000 38%,transparent 75%);}
+html[data-theme=dark] .journey-root .reference-hero>.hero-workshop-atmosphere::before {
+ background:radial-gradient(ellipse at 50% 40%,#96999f20,transparent 55%),radial-gradient(ellipse at 8% 72%,#b51b290d,transparent 40%),radial-gradient(ellipse at 92% 72%,#92182410,transparent 40%);
+}
+html[data-theme=dark] .journey-root .reference-hero>.hero-workshop-atmosphere::after {color:#c6c8cd;}
+
+html[data-theme=dark] .reference-hero .hero-workshop-subtitle {color:#f4f3f2;text-shadow:0 1px 4px #000;}
+html[data-theme=dark] .reference-hero .hero-workshop-subtitle::before,
+html[data-theme=dark] .reference-hero .hero-workshop-subtitle::after {background:#f5253b;}
+html[data-theme=dark] .reference-hero .hero-brand-phones {color:#f4f3f2;}
+html[data-theme=dark] .reference-hero .hero-brand-phones>svg {color:#ff3045;}
+html[data-theme=dark] .journey-root .phase9-experience .reference-hero .hero-brand.hero-location,
+html[data-theme=dark] .journey-root .phase9-experience .reference-hero .entry-index {color:#c6c8cd;}
+html[data-theme=dark] .journey-root .phase9-experience .reference-hero h1 {color:#f4f3f2;text-shadow:0 2px 8px #0008;}
+html[data-theme=dark] .journey-root .phase9-experience .reference-hero h1 span {color:#d8dadf;}
+html[data-theme=dark] .reference-hero .hero-reference-service {
+ background:#222329;border-color:#b51b29;box-shadow:0 5px 18px #0005,0 1px 0 #ffffff0d inset;
+}
+html[data-theme=dark] .reference-hero .hero-service-illustration {
+ background:repeating-linear-gradient(135deg,transparent 0 18px,#96999f08 18px 19px),linear-gradient(140deg,#3b3e45,#222329);
+ color:#ff3045;
+}
+html[data-theme=dark] .reference-hero .hero-service-illustration>svg:last-child {color:#c6c8cd;}
+html[data-theme=dark] .reference-hero .hero-service-label {background:linear-gradient(110deg,#2d2f35,#17181c);color:#f4f3f2;}
+html[data-theme=dark] .reference-hero .hero-service-label small {color:#c6c8cd;}
+html[data-theme=dark] .reference-hero .hero-reference-service:hover {box-shadow:0 6px 22px #0008,0 0 0 1px #f5253b;}
+html[data-theme=dark] .journey-root .phase9-experience .reference-hero .hero-brand-caption {
+ color:#f4f3f2;text-shadow:0 2px 8px #0008;
+}
+html[data-theme=dark] .journey-root .phase9-experience .reference-hero .hero-brand-caption strong {color:#ff3045;}
+html[data-theme=dark] .journey-root .phase9-experience .reference-hero .hero-description {color:#c6c8cd;}
+html[data-theme=dark] .journey-root .phase9-experience .reference-hero .hero-explore {
+ background:linear-gradient(110deg,#b51b29,#921824);border-color:#f5253b;color:#fff;
+}
+html[data-theme=dark] .journey-root .phase9-experience .reference-hero .hero-contact-actions :is(a,button) {color:#f4f3f2;}
+html[data-theme=dark] .reference-hero .hero-reference-location {
+ background:linear-gradient(110deg,#222329,#17181c);box-shadow:inset 0 1px #d91f31,inset 0 -1px #921824;color:#f4f3f2;
+}
+html[data-theme=dark] .reference-hero .hero-reference-location>svg {color:#ff3045;}
+html[data-theme=dark] .journey-root .phase9-experience .reference-hero .hero-journey-link {color:#c6c8cd;border-color:#555860;}
+html[data-theme=dark] .journey-root .phase9-experience .reference-hero :is(a,button):focus-visible {outline-color:#f4f3f2;}
+@media(max-width:767px){
+ html[data-theme=dark] .journey-root .reference-hero>.hero-workshop-atmosphere {background-image:url('../../assets/hero/workshop-depth-mobile-dark.svg');}
+ html[data-theme=dark] .journey-root .reference-hero>.hero-workshop-atmosphere>img {top:0;height:440px;opacity:.34;}
+}
+
+/* Uploaded reference recreation: photographic environment and independent service images. */
+html[data-theme=dark] .journey-root .reference-hero>.hero-workshop-atmosphere>img {opacity:0;}
+html[data-theme=dark] .journey-root .reference-hero>.hero-workshop-atmosphere::before {
+ inset:-380px 0 0;opacity:1;
+ background:linear-gradient(180deg,#17181c18,#17181c24 65%,#17181c50),url('../../assets/hero/garage-reference-wide-1600.webp?reference=1') center bottom/cover no-repeat;
+}
+.hero-service-photo {display:block;flex-shrink:0;width:100%;aspect-ratio:2/1;background-image:url('../../assets/hero/garage-service-photos-1200.webp?reference=1');background-size:200% auto;background-repeat:no-repeat;background-color:#222329;}
+.hero-service-photo-0 {background-position:0 10%;}.hero-service-photo-1 {background-position:100% 10%;}.hero-service-photo-2 {background-position:0 90%;}.hero-service-photo-3 {background-position:100% 90%;}
+.hero-reference-service {position:relative;}
+.hero-service-label {display:flex;align-items:center;gap:12px;width:100%;text-transform:uppercase;min-height:76px;}
+.hero-service-label>svg {flex-shrink:0;color:#ff3045;}.hero-service-label>span {min-width:0;}.hero-service-label small {text-transform:none;}
+.hero-service-arrow {position:absolute;right:8px;top:8px;color:#fff;filter:drop-shadow(0 1px 2px #000);}
+.journey-root .phase9-experience .reference-hero .hero-brand-caption {font-size:clamp(24px,2.35vw,42px);}
+.hero-reference-location::before,.hero-reference-location::after {content:'';width:44px;height:5px;flex-shrink:0;background:repeating-linear-gradient(130deg,#d91f31 0 8px,transparent 8px 12px);}
+html[data-theme=dark] .journey-root .phase9-experience .reference-hero .hero-reference-location {box-shadow:inset 0 2px #d91f31,inset 0 -1px #921824,0 -8px 30px #0005;}
+
+@media(min-width:768px) and (max-width:1100px){html[data-theme=dark] .journey-root .reference-hero>.hero-workshop-atmosphere::before {background-image:linear-gradient(180deg,#17181c18,#17181c24 65%,#17181c50),url('../../assets/hero/garage-reference-wide-960.webp?reference=1');}}
+@media(max-width:767px){
+ html[data-theme=dark] .journey-root .reference-hero>.hero-workshop-atmosphere::before {inset:-400px 0 0;background-image:linear-gradient(180deg,#17181c20,#17181c18 65%,#17181c60),url('../../assets/hero/garage-reference-portrait-640.webp?reference=1');}
+ .hero-service-label {min-height:86px;padding:10px 9px;gap:7px;font-size:11px;}.hero-service-label>svg {width:21px;height:21px;}.hero-service-label small {font-size:9px;line-height:1.35;}
+ .hero-reference-location::before,.hero-reference-location::after {display:none;}
+ .journey-root .phase9-experience .reference-hero .hero-brand-caption {font-size:clamp(22px,5.8vw,28px);}
+}
+/* Keep the reflective floor visible while supporting small contact copy. */
+html[data-theme=dark] .reference-hero .hero-workshop-atmosphere::after {background:linear-gradient(180deg,transparent 55%,#17181c18 70%,#17181c88);}
+html[data-theme=dark] .journey-root .phase9-experience .reference-hero .hero-description {color:#f4f3f2;text-shadow:0 1px 4px #000;}
+@media(prefers-reduced-motion:reduce){.hero-reference-service {transition:none;}}
+
+/* Corner information shares the top grid row; the approved desktop vehicle track stays fixed. */
+.hero-corner-info {display:contents;}
+.journey-root .reference-hero .hero-reference-brand {padding-bottom:calc(53px - 1.12 * clamp(18px,1.35vw,24px));}
+.journey-root .phase9-experience .reference-hero .hero-brand.hero-location {grid-row:1;grid-column:1;justify-self:start;align-self:start;align-items:flex-start;margin:0;z-index:2;}
+.reference-hero .hero-location-text {display:flex;flex-direction:column;gap:4px;margin:0;line-height:1.3;letter-spacing:.05em;}
+.reference-hero .hero-location-text strong {font-size:clamp(24px,1.6vw,30px);font-weight:750;color:#b51b29;letter-spacing:.015em;}
+.reference-hero .hero-location-text span {font-size:clamp(14px,.9vw,17px);font-weight:500;color:#50545b;}
+.reference-hero .hero-brand-phones {grid-row:1;grid-column:2;justify-self:end;align-self:start;display:grid;grid-template-columns:18px auto;gap:0 10px;margin:0;font-size:clamp(15px,1.1vw,18px);text-align:right;z-index:2;}
+.reference-hero .hero-brand-phones>svg {grid-column:1;grid-row:1/3;align-self:start;margin-top:8px;color:#d91f31;}
+.reference-hero .hero-brand-phones>a {grid-column:2;justify-content:flex-end;}
+.reference-hero .hero-brand-phones>span {display:none;}
+.journey-root .phase9-experience .reference-hero h1 {grid-row:2;}
+.journey-root .phase9-experience .reference-hero .hero-brand-caption {grid-row:3;margin:0;font-size:clamp(21.6px,1.62vw,28.8px);font-weight:700;line-height:calc(1.12 * clamp(18px,1.35vw,24px));}
+.journey-root .phase9-experience .reference-hero .entry-index {top:80px;}
+html[data-theme=dark] .reference-hero .hero-location-text strong {color:#ff3045;text-shadow:0 1px 4px #17181c;}
+html[data-theme=dark] .reference-hero .hero-location-text span {color:#d6d8dc;text-shadow:0 1px 4px #17181c;}
+html[data-theme=dark] .reference-hero .hero-brand-phones {text-shadow:0 1px 4px #17181c,0 0 8px #17181c;}
+@media(min-width:901px) and (max-width:1100px){
+ .reference-hero .hero-location-text strong {font-size:22px;}.reference-hero .hero-location-text span {font-size:12px;letter-spacing:.02em;}
+ .reference-hero .hero-brand-phones {font-size:15px;gap:0 6px;}
+}
+@media(max-width:900px){
+ .journey-root .phase9-experience .reference-hero .entry-composition {grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto auto minmax(260px,22vw) auto auto auto auto auto auto auto;}
+ .hero-corner-info {display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;grid-row:1;grid-column:1/-1;align-items:start;}
+ .journey-root .reference-hero .hero-reference-brand {grid-row:2;padding-bottom:0;}
+ .journey-root .phase9-experience .reference-hero h1 {grid-row:3;}
+ .journey-root .phase9-experience .reference-hero .hero-brand-caption {grid-row:4;font-size:clamp(20.4px,3vw,24px);line-height:calc(1.12 * clamp(17px,2.5vw,22px));}
+ .journey-root .phase9-experience .reference-hero .hero-visual.journey-dock {grid-row:5;}
+ .reference-hero .hero-reference-services {grid-row:6;}
+ .journey-root .phase9-experience .reference-hero .hero-description {grid-row:7;grid-column:1;justify-self:center;text-align:center;}
+ .journey-root .phase9-experience .reference-hero .hero-primary-actions {grid-row:8;grid-column:1;justify-self:center;}
+ .journey-root .phase9-experience .reference-hero .hero-contact-actions {grid-row:9;grid-column:1;}
+ .reference-hero .hero-reference-location {grid-row:10;grid-column:1;}
+ .journey-root .phase9-experience .reference-hero .entry-index {position:static;grid-row:11;grid-column:1;}
+ .journey-root .phase9-experience .reference-hero .hero-journey-link {grid-row:12;grid-column:1;}
+}
+@media(max-width:767px){
+ .journey-root .phase9-experience .reference-hero .entry-composition {grid-template-rows:auto auto auto auto 228px auto auto auto auto auto auto auto;}
+ .reference-hero .hero-location-text {gap:3px;letter-spacing:0;}
+ .reference-hero .hero-location-text strong {font-size:18px;}
+ .reference-hero .hero-location-text span {font-size:10px;letter-spacing:0;}
+ .reference-hero .hero-brand-phones {font-size:13px;grid-template-columns:14px auto;gap:0 5px;}
+ .reference-hero .hero-brand-phones>svg {width:14px;height:14px;}
+ .journey-root .phase9-experience .reference-hero .hero-brand-caption {font-size:clamp(20.4px,5.52vw,24px);line-height:calc(1.12 * clamp(17px,4.6vw,20px));}
+ .journey-root .phase9-experience .reference-hero .hero-brand-caption strong {margin:0;}
+}
+@media(min-width:901px){
+ /* Removing the old lower slogan shortens content; retain the approved image plane's height/crop. */
+ html[data-theme=dark] .journey-root .reference-hero>.hero-workshop-atmosphere::before {bottom:calc(-16px - 1.12 * clamp(24px,2.35vw,42px));}
+}

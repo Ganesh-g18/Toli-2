@@ -1,0 +1,10 @@
+{
+  "name": "TOLI Atelier Sportback",
+  "status": "candidate-not-approved",
+  "productionEnabled": false,
+  "visualQuality": "FAIL",
+  "reason": "Retained revision 7 remains inactive. Final focused revision 8 failed the body/fascia and neutral-reflection gates; stop small revisions of this surface-projection method and move to an authored shared control-cage/subdivision workflow.",
+  "revision": "quality-refinement-7",
+  "latestStudy": "final-body-r8-rejected",
+  "qualityCeilingReached": true
+}

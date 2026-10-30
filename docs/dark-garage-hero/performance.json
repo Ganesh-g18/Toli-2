@@ -1,0 +1,16 @@
+{
+  "workshop-depth-dark.svg": {
+    "rawBytes": 16692,
+    "gzipEstimateBytes": 1967
+  },
+  "workshop-depth-mobile-dark.svg": {
+    "rawBytes": 10892,
+    "gzipEstimateBytes": 1524
+  },
+  "notes": [
+    "Dark assets replace the matching light environment resource; switching themes can load another cached variant.",
+    "The existing workshop photo and car image assets are reused unchanged.",
+    "No additional renderer, model, JavaScript, library, video or continuous animation.",
+    "Gzip is a local estimate; LCP and FPS were not benchmarked."
+  ]
+}

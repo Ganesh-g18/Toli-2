@@ -1,0 +1,30 @@
+[
+  {
+    "theme": "dark",
+    "tokens": {
+      "--caption-accent": "#ffd0d6",
+      "--charcoal": "220 10% 17%",
+      "--graphite": "220 9% 22%",
+      "--panel": "220 8% 27%",
+      "--panel-hover": "220 8% 33%",
+      "--raised": "220 8% 30%",
+      "--silver": "20 12% 96%",
+      "--silver-muted": "350 10% 85%",
+      "--silver-secondary": "15 7% 89%"
+    }
+  },
+  {
+    "theme": "light",
+    "tokens": {
+      "--caption-accent": "#b4142d",
+      "--charcoal": "120 8% 97%",
+      "--graphite": "210 18% 94%",
+      "--panel": "0 0% 100%",
+      "--panel-hover": "210 14% 92%",
+      "--raised": "210 14% 96%",
+      "--silver": "220 12% 13%",
+      "--silver-muted": "215 10% 37%",
+      "--silver-secondary": "214 9% 31%"
+    }
+  }
+]

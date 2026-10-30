@@ -1,0 +1,27 @@
+{
+  "background": "url(\"http://127.0.0.1:8200/Toli-2/assets/workshop-depth-dark-DxJElWm6.svg\")",
+  "canvases": 0,
+  "carLoaded": true,
+  "theme": "dark",
+  "booking": true,
+  "console": [],
+  "assets": [
+    {
+      "id": "6208c1f7a4fd87a9",
+      "kind": "image",
+      "name": "workshop-depth-dark-DxJElWm6.svg",
+      "sources": [
+        {
+          "kind": "resource",
+          "property": "css"
+        },
+        {
+          "kind": "computedStyle",
+          "nodeId": 17312,
+          "property": "background-image"
+        }
+      ],
+      "url": "http://127.0.0.1:8200/Toli-2/assets/workshop-depth-dark-DxJElWm6.svg"
+    }
+  ]
+}

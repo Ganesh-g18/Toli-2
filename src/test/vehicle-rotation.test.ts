@@ -1,0 +1,7 @@
+import {brandRed3D} from '@/lib/brand-palette';
+import { expect,it } from 'vitest';
+import { createVehicleRotation,rotationChapter,rotationDegrees } from '@/lib/vehicle-rotation';
+import { vehicleTheme } from '@/lib/vehicle-theme';
+it('responds in both directions without clamping at a full revolution',()=>{const r=createVehicleRotation();r.begin();r.drag(1200,500);expect(r.read().yaw).toBeGreaterThan(Math.PI*2);const before=r.read().yaw;r.drag(-300,100);expect(r.read().yaw).toBeLessThan(before);expect(rotationDegrees(Math.PI*2+.1)).toBeCloseTo(rotationDegrees(.1));r.drag(-2400,500);expect(r.read().yaw).toBeLessThan(-Math.PI*2);});
+it('uses bounded, frame-independent inertia and stops for cancellation or reduced motion',()=>{const a=createVehicleRotation(),b=createVehicleRotation();for(const r of [a,b]){r.begin();r.drag(40,16);r.end();}a.advance(32);b.advance(16);b.advance(16);expect(a.read().yaw).toBeCloseTo(b.read().yaw);a.cancel();const yaw=a.read().yaw;a.advance(64);expect(a.read().yaw).toBe(yaw);b.end(true);const reduced=b.read().yaw;b.advance(64,true);expect(b.read().yaw).toBe(reduced);});
+it('limits inspection to settled hero and inspection chapters and retains controlled light colors',()=>{expect(rotationChapter('hero')).toBe(false);expect(rotationChapter('parts')).toBe(true);expect(rotationChapter('completion')).toBe(true);expect(rotationChapter('service')).toBe(false);expect(vehicleTheme.body).toBe(0x62656c);expect(vehicleTheme.headlight).toBe(0xeff2f7);expect(vehicleTheme.caliper).toBe(brandRed3D);});

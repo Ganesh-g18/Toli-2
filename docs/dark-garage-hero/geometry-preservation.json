@@ -1,0 +1,18 @@
+[
+  {
+    "width": 390,
+    "car": true,
+    "hero": true,
+    "heading": true,
+    "cards": true,
+    "nav": true
+  },
+  {
+    "width": 1440,
+    "car": true,
+    "hero": true,
+    "heading": true,
+    "cards": true,
+    "nav": true
+  }
+]

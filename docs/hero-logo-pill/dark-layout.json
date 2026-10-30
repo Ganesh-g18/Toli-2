@@ -1,0 +1,314 @@
+[
+  {
+    "borderMatches": true,
+    "brand": {
+      "bottom": 209.625,
+      "height": 129.625,
+      "left": 18,
+      "right": 292,
+      "top": 80,
+      "width": 274,
+      "x": 18,
+      "y": 80
+    },
+    "car": {
+      "bottom": 556.40625,
+      "height": 240,
+      "left": -144.203125,
+      "right": 454.203125,
+      "top": 316.40625,
+      "width": 598.40625,
+      "x": -144.203125,
+      "y": 316.40625
+    },
+    "gradientMatches": true,
+    "imageLoaded": true,
+    "nav": {
+      "bottom": 45.265625,
+      "height": 35.53125,
+      "left": 12,
+      "right": 144,
+      "top": 9.734375,
+      "width": 132,
+      "x": 12,
+      "y": 9.734375
+    },
+    "overflow": false,
+    "radiusMatches": true,
+    "shadowMatches": true,
+    "width": 320
+  },
+  {
+    "borderMatches": true,
+    "brand": {
+      "bottom": 219.109375,
+      "height": 139.109375,
+      "left": 18,
+      "right": 332,
+      "top": 80,
+      "width": 314,
+      "x": 18,
+      "y": 80
+    },
+    "car": {
+      "bottom": 565.890625,
+      "height": 240,
+      "left": -167.875,
+      "right": 517.875,
+      "top": 325.890625,
+      "width": 685.75,
+      "x": -167.875,
+      "y": 325.890625
+    },
+    "gradientMatches": true,
+    "imageLoaded": true,
+    "nav": {
+      "bottom": 48.34375,
+      "height": 41.703125,
+      "left": 12,
+      "right": 170,
+      "top": 6.640625,
+      "width": 158,
+      "x": 12,
+      "y": 6.640625
+    },
+    "overflow": false,
+    "radiusMatches": true,
+    "shadowMatches": true,
+    "width": 360
+  },
+  {
+    "borderMatches": true,
+    "brand": {
+      "bottom": 226.234375,
+      "height": 146.234375,
+      "left": 18,
+      "right": 362,
+      "top": 80,
+      "width": 344,
+      "x": 18,
+      "y": 80
+    },
+    "car": {
+      "bottom": 573.421875,
+      "height": 240,
+      "left": -185.640625,
+      "right": 565.625,
+      "top": 333.421875,
+      "width": 751.265625,
+      "x": -185.640625,
+      "y": 333.421875
+    },
+    "gradientMatches": true,
+    "imageLoaded": true,
+    "nav": {
+      "bottom": 48.34375,
+      "height": 41.703125,
+      "left": 12,
+      "right": 170,
+      "top": 6.640625,
+      "width": 158,
+      "x": 12,
+      "y": 6.640625
+    },
+    "overflow": false,
+    "radiusMatches": true,
+    "shadowMatches": true,
+    "width": 390
+  },
+  {
+    "borderMatches": true,
+    "brand": {
+      "bottom": 231.453125,
+      "height": 151.453125,
+      "left": 18,
+      "right": 384,
+      "top": 80,
+      "width": 366,
+      "x": 18,
+      "y": 80
+    },
+    "car": {
+      "bottom": 581.640625,
+      "height": 240,
+      "left": -198.65625,
+      "right": 600.65625,
+      "top": 341.640625,
+      "width": 799.3125,
+      "x": -198.65625,
+      "y": 341.640625
+    },
+    "gradientMatches": true,
+    "imageLoaded": true,
+    "nav": {
+      "bottom": 48.34375,
+      "height": 41.703125,
+      "left": 12,
+      "right": 170,
+      "top": 6.640625,
+      "width": 158,
+      "x": 12,
+      "y": 6.640625
+    },
+    "overflow": false,
+    "radiusMatches": true,
+    "shadowMatches": true,
+    "width": 412
+  },
+  {
+    "borderMatches": true,
+    "brand": {
+      "bottom": 235.734375,
+      "height": 155.734375,
+      "left": 18,
+      "right": 402,
+      "top": 80,
+      "width": 384,
+      "x": 18,
+      "y": 80
+    },
+    "car": {
+      "bottom": 588.359375,
+      "height": 240,
+      "left": -209.3125,
+      "right": 629.296875,
+      "top": 348.359375,
+      "width": 838.609375,
+      "x": -209.3125,
+      "y": 348.359375
+    },
+    "gradientMatches": true,
+    "imageLoaded": true,
+    "nav": {
+      "bottom": 48.34375,
+      "height": 41.703125,
+      "left": 12,
+      "right": 170,
+      "top": 6.640625,
+      "width": 158,
+      "x": 12,
+      "y": 6.640625
+    },
+    "overflow": false,
+    "radiusMatches": true,
+    "shadowMatches": true,
+    "width": 430
+  },
+  {
+    "borderMatches": true,
+    "brand": {
+      "bottom": 279.421875,
+      "height": 191.421875,
+      "left": 119,
+      "right": 639,
+      "top": 88,
+      "width": 520,
+      "x": 119,
+      "y": 88
+    },
+    "car": {
+      "bottom": 643.421875,
+      "height": 280,
+      "left": 30,
+      "right": 728,
+      "top": 363.421875,
+      "width": 698,
+      "x": 30,
+      "y": 363.421875
+    },
+    "gradientMatches": true,
+    "imageLoaded": true,
+    "nav": {
+      "bottom": 61.546875,
+      "height": 60.109375,
+      "left": 32,
+      "right": 286,
+      "top": 1.4375,
+      "width": 254,
+      "x": 32,
+      "y": 1.4375
+    },
+    "overflow": false,
+    "radiusMatches": true,
+    "shadowMatches": true,
+    "width": 768
+  },
+  {
+    "borderMatches": true,
+    "brand": {
+      "bottom": 296.09375,
+      "height": 204.09375,
+      "left": 227,
+      "right": 787,
+      "top": 92,
+      "width": 560,
+      "x": 227,
+      "y": 92
+    },
+    "car": {
+      "bottom": 664.046875,
+      "height": 280,
+      "left": 76,
+      "right": 938,
+      "top": 384.046875,
+      "width": 862,
+      "x": 76,
+      "y": 384.046875
+    },
+    "gradientMatches": true,
+    "imageLoaded": true,
+    "nav": {
+      "bottom": 61.546875,
+      "height": 60.109375,
+      "left": 32,
+      "right": 286,
+      "top": 1.4375,
+      "width": 254,
+      "x": 32,
+      "y": 1.4375
+    },
+    "overflow": false,
+    "radiusMatches": true,
+    "shadowMatches": true,
+    "width": 1024
+  },
+  {
+    "borderMatches": true,
+    "brand": {
+      "bottom": 302.703125,
+      "height": 210.703125,
+      "left": 551,
+      "right": 1111,
+      "top": 92,
+      "width": 560,
+      "x": 551,
+      "y": 92
+    },
+    "car": {
+      "bottom": 806.328125,
+      "height": 401.265625,
+      "left": 117.03125,
+      "right": 1544.96875,
+      "top": 405.0625,
+      "width": 1427.9375,
+      "x": 117.03125,
+      "y": 405.0625
+    },
+    "gradientMatches": true,
+    "imageLoaded": true,
+    "nav": {
+      "bottom": 61.546875,
+      "height": 60.109375,
+      "left": 32,
+      "right": 286,
+      "top": 1.4375,
+      "width": 254,
+      "x": 32,
+      "y": 1.4375
+    },
+    "overflow": false,
+    "radiusMatches": true,
+    "shadowMatches": true,
+    "width": 1672
+  }
+]

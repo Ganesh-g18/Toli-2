@@ -1,0 +1,34 @@
+{
+  "toli-static-website": {
+    "checkedOriginalFiles": 599,
+    "changed": [
+      "src/dark-system.css",
+      "src/themes.css",
+      "src/brand-environments.css",
+      "src/components/Hero.tsx",
+      "src/components/journey/navbar-brand.css",
+      "src/components/journey/BrandCaption.tsx",
+      "src/components/journey/ExperienceNavigation.tsx",
+      "src/test/navbar-motion.test.tsx",
+      "src/test/fixtures/separation-protected.json"
+    ],
+    "added": [
+      "docs/brightness-refinement/build-final.log",
+      "docs/brightness-refinement/build.log",
+      "docs/brightness-refinement/lint.log",
+      "docs/brightness-refinement/protection.json",
+      "docs/brightness-refinement/relevant-tests.log",
+      "docs/brightness-refinement/tests-final.log",
+      "docs/brightness-refinement/tests.log",
+      "docs/brightness-refinement/types.log"
+    ],
+    "removed": [],
+    "assetMismatches": []
+  },
+  "toli-3d-website": {
+    "checkedOriginalFiles": 1573,
+    "changed": [],
+    "added": [],
+    "removed": []
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "asset": {
+    "id": "be6d51d00919342c",
+    "kind": "image",
+    "name": "workshop-depth-CkLNqcaM.svg",
+    "sources": [
+      {
+        "kind": "resource",
+        "property": "css"
+      },
+      {
+        "kind": "computedStyle",
+        "nodeId": 14078,
+        "property": "background-image"
+      },
+      {
+        "kind": "computedStyle",
+        "nodeId": 14078,
+        "property": "background-image"
+      }
+    ],
+    "url": "http://127.0.0.1:8200/Toli-2/assets/workshop-depth-CkLNqcaM.svg"
+  },
+  "bundle": {
+    "assets": [
+      {
+        "contentType": "image/svg+xml",
+        "id": "be6d51d00919342c",
+        "kind": "image",
+        "name": "workshop-depth-CkLNqcaM.svg",
+        "path": "/tmp/browser-use/assets/d4539244-3e17-4c50-9594-3a3e65208cbc/be6d51d00919342c.svg",
+        "url": "http://127.0.0.1:8200/Toli-2/assets/workshop-depth-CkLNqcaM.svg"
+      }
+    ],
+    "directoryPath": "/tmp/browser-use/assets/d4539244-3e17-4c50-9594-3a3e65208cbc",
+    "failures": [],
+    "manifestPath": "/tmp/browser-use/assets/d4539244-3e17-4c50-9594-3a3e65208cbc/manifest.json",
+    "summary": {
+      "downloadedCount": 1,
+      "elapsedMs": 451669.494146999,
+      "failedCount": 0,
+      "requestedCount": 1
+    }
+  }
+}

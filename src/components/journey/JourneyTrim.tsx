@@ -1,0 +1,3 @@
+export default function JourneyTrim({number,label,motif='ring'}:{number:string;label:string;motif?:string}) {
+  return <div className="journey-trim" aria-hidden="true"><span className="journey-chapter-mark"><b>{number}</b> / {label}</span><div className={`journey-ornament journey-ornament-${motif}`}><svg viewBox="0 0 260 260" fill="none"><circle cx="130" cy="130" r="104"/><circle cx="130" cy="130" r="88" strokeDasharray="2 12"/><circle cx="130" cy="130" r="64"/><path d="M26 130H67M193 130H234M130 26V67M130 193V234M56 56L80 80M180 180L204 204"/><path className="journey-trace" d="M26 130A104 104 0 0 1 130 26"/></svg><span/></div></div>;
+}

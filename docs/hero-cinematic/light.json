@@ -1,0 +1,27 @@
+[
+  {
+    "overflow": false,
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "theme": "light",
+    "width": 390
+  },
+  {
+    "overflow": false,
+    "theme": "light",
+    "width": 768
+  },
+  {
+    "overflow": false,
+    "theme": "light",
+    "width": 1440
+  },
+  {
+    "overflow": false,
+    "theme": "light",
+    "width": 1920
+  }
+]

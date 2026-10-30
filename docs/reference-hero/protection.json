@@ -1,0 +1,28 @@
+{
+  "toli-static-website": {
+    "baselineFiles": 681,
+    "changed": [
+      "src/components/Hero.tsx",
+      "src/components/journey/hero-caption.css",
+      "src/test/hero.test.tsx",
+      "src/test/fixtures/separation-protected.json"
+    ],
+    "added": [
+      "docs/reference-hero/tests.log",
+      "docs/reference-hero/types.log",
+      "docs/reference-hero/lint.log",
+      "docs/reference-hero/hero-tests.log",
+      "src/test/hero-reference.test.tsx"
+    ],
+    "removed": [],
+    "addedImplementationFiles": [
+      "src/test/hero-reference.test.tsx"
+    ]
+  },
+  "toli-3d-website": {
+    "baselineFiles": 1573,
+    "changed": [],
+    "added": [],
+    "removed": []
+  }
+}

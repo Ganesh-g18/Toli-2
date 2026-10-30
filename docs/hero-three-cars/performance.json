@@ -1,0 +1,14 @@
+{
+  "assetBytes": {
+    "960": 61512,
+    "1600": 134894
+  },
+  "oldAssetBytes": {
+    "960": 90322,
+    "1440": 175648
+  },
+  "newRenderer": false,
+  "newDependency": false,
+  "newContinuousAnimation": false,
+  "physicalDeviceBenchmark": false
+}

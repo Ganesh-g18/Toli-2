@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "experience": "3d-staging",
+  "workshop": {
+    "path": "models/staging/toli-workshop-detailing.966a399bad66c0003f7b196052c92382188629db16c1ec47c86c3175fcf5f9bd.glb",
+    "bytes": 4594732,
+    "sha256": "966a399bad66c0003f7b196052c92382188629db16c1ec47c86c3175fcf5f9bd"
+  },
+  "logo": {
+    "width": 1483,
+    "height": 352,
+    "sha256": "4809ffd3bde9be888071d5b4c3e90a0f58e627cc2a07f20c49e625a38b1cf590"
+  }
+}

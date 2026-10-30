@@ -1,0 +1,3 @@
+.stage-chunk-failure{padding:1.5rem;max-width:40rem;color:var(--text-primary,#e9ebee)}
+.stage-chunk-failure button,.stage-chunk-failure a{display:inline-flex;align-items:center;min-height:44px;padding:.6rem .8rem;border:1px solid #777;border-radius:4px;margin:.3rem .3rem .3rem 0}
+.stage-chunk-failure :focus-visible{outline:2px solid #e3343f;outline-offset:4px}

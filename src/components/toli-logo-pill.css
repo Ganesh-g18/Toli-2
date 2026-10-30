@@ -1,0 +1,35 @@
+/* Geometry and dark material extracted from the approved navigation badge. */
+:root {
+ --logo-metal-center:#a5a7ab;--logo-metal-upper:#96999e;--logo-metal-edge:#74777d;
+ --logo-metal-border:#c3c5ca30;--logo-metal-highlight:#e4e6eb45;
+ --logo-badge-depth:inset 0 1px 0 #e5e7ec30,inset 0 -2px 3px #292b3038,0 2px 3px #0007,0 7px 15px -5px #0008;
+}
+:root[data-theme=light] {
+ --logo-metal-center:#faf7f0;--logo-metal-upper:#eae5dc;--logo-metal-edge:#c7c2b9;
+ --logo-metal-border:#918a7d50;--logo-metal-highlight:#ffffffc0;
+ --logo-badge-depth:inset 0 1px 0 #ffffffe0,inset 0 -2px 3px #8a817438,0 2px 3px #51443118,0 7px 15px -5px #51443130;
+}
+.toli-logo-pill {
+ --logo-width:172px;position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;
+ padding:2px 12px;border:1px solid var(--logo-metal-border);border-radius:999px;max-width:100%;
+ background:radial-gradient(ellipse at 43% 36%,var(--logo-metal-center),transparent 76%),linear-gradient(180deg,var(--logo-metal-upper),var(--logo-metal-edge));
+ box-shadow:var(--logo-badge-depth);overflow:visible;transition:transform .18s ease,box-shadow .25s;
+}
+.toli-logo-pill::before {content:'';position:absolute;inset:0 22% auto 14%;height:1px;border-radius:50%;background:linear-gradient(90deg,transparent,var(--logo-metal-highlight),transparent);pointer-events:none;}
+.toli-logo-pill::after {content:'';position:absolute;z-index:-1;left:17%;right:17%;bottom:-5px;height:9px;border-radius:50%;background:var(--brand-red);filter:blur(7px);opacity:.24;pointer-events:none;transition:opacity .18s;}
+.toli-logo-pill img {position:relative;display:block;z-index:1;width:var(--logo-width);height:auto;max-width:100%;object-fit:contain;filter:none!important;}
+.toli-logo-pill-navigation {--logo-width:228px;}
+.toli-logo-pill-compact {--logo-width:128px;}
+.request-dialog-header .toli-logo-pill,.journey-footer .toli-logo-pill {margin-bottom:10px;}
+@media(hover:hover){a:hover>.toli-logo-pill {transform:translateY(-1px);}a:hover>.toli-logo-pill::after {opacity:.36;}}
+a:has(>.toli-logo-pill):focus-visible {outline:none;}
+a:focus-visible>.toli-logo-pill {outline:2px solid var(--focus-ring);outline-offset:3px;}
+@media(max-width:767px){
+ .toli-logo-pill {padding:3px 7px;box-shadow:inset 0 1px 0 var(--logo-metal-highlight),0 2px 3px #0003,0 4px 8px -4px #0004;}
+ .toli-logo-pill::after {height:5px;bottom:-3px;filter:blur(5px);opacity:.2;}
+ .toli-logo-pill-navigation {--logo-width:142px;}
+ .toli-logo-pill-standard {--logo-width:154px;}
+ .toli-logo-pill-compact {--logo-width:116px;}
+}
+@media(max-width:359px){.toli-logo-pill-navigation {--logo-width:116px;}}
+@media(prefers-reduced-motion:reduce){.toli-logo-pill,.toli-logo-pill::after {transition:none;transform:none!important;}}

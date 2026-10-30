@@ -1,0 +1,33 @@
+{
+  "protectedFiles": 77,
+  "changedProtectedFiles": [],
+  "vehicleSHA256": "48d75e3d6643100001fec28def90c96dc4ffe0d120bb7696fc83a1c6903c554c",
+  "browser": {
+    "url": "http://127.0.0.1:8120/Toli-2/",
+    "viewports": [
+      "1024x900",
+      "768x1024",
+      "390x844"
+    ],
+    "themes": [
+      "dark",
+      "light"
+    ],
+    "servicesDefault": "01 Automobile Services",
+    "journeyDefault": "01 Choose a service",
+    "serviceSwitching": [
+      "05 Vehicle Inspection",
+      "03 Battery Services"
+    ],
+    "journeySwitching": [
+      "02 Prepare your request",
+      "03 Send in WhatsApp"
+    ],
+    "scrollPersistence": "PASS",
+    "normalRefresh": "PASS",
+    "hardRefresh": "PASS",
+    "directJourneyEntry": "PASS",
+    "horizontalOverflow": false,
+    "consoleErrorsAndWarnings": []
+  }
+}

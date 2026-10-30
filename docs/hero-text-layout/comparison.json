@@ -1,0 +1,90 @@
+[
+  {
+    "width": 320,
+    "overflow": false,
+    "logoLocationOverlap": false,
+    "logoPhoneOverlap": false,
+    "cornerOverlap": false,
+    "headlineGap": 12,
+    "carWidthChange": 0,
+    "carHeightChange": 0,
+    "carYChange": 64.0625
+  },
+  {
+    "width": 360,
+    "overflow": false,
+    "logoLocationOverlap": false,
+    "logoPhoneOverlap": false,
+    "cornerOverlap": false,
+    "headlineGap": 12,
+    "carWidthChange": 0,
+    "carHeightChange": 0,
+    "carYChange": 64.0625
+  },
+  {
+    "width": 390,
+    "overflow": false,
+    "logoLocationOverlap": false,
+    "logoPhoneOverlap": false,
+    "cornerOverlap": false,
+    "headlineGap": 12,
+    "carWidthChange": 0,
+    "carHeightChange": 0,
+    "carYChange": 66.15625
+  },
+  {
+    "width": 430,
+    "overflow": false,
+    "logoLocationOverlap": false,
+    "logoPhoneOverlap": false,
+    "cornerOverlap": false,
+    "headlineGap": 12,
+    "carWidthChange": 0,
+    "carHeightChange": 0,
+    "carYChange": 70.28125
+  },
+  {
+    "width": 768,
+    "overflow": false,
+    "logoLocationOverlap": false,
+    "logoPhoneOverlap": false,
+    "cornerOverlap": false,
+    "headlineGap": 10,
+    "carWidthChange": 0,
+    "carHeightChange": 0,
+    "carYChange": 42.5
+  },
+  {
+    "width": 1024,
+    "overflow": false,
+    "logoLocationOverlap": false,
+    "logoPhoneOverlap": false,
+    "cornerOverlap": false,
+    "headlineGap": 10,
+    "carWidthChange": 0,
+    "carHeightChange": 0,
+    "carYChange": -0.015625
+  },
+  {
+    "width": 1440,
+    "overflow": false,
+    "logoLocationOverlap": false,
+    "logoPhoneOverlap": false,
+    "cornerOverlap": false,
+    "headlineGap": 10,
+    "carWidthChange": 0,
+    "carHeightChange": 0,
+    "carYChange": -0.015625
+  },
+  {
+    "width": 1920,
+    "overflow": false,
+    "logoLocationOverlap": false,
+    "logoPhoneOverlap": false,
+    "cornerOverlap": false,
+    "headlineGap": 10,
+    "carWidthChange": 0,
+    "carHeightChange": 0,
+    "carYChange": -0.015625
+  }
+]

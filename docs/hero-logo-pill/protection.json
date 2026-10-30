@@ -1,0 +1,26 @@
+{
+  "toli-static-website": {
+    "baselineFiles": 921,
+    "changed": [
+      "src/components/ToliLogoPill.tsx",
+      "src/components/Hero.tsx",
+      "src/components/journey/hero-caption.css",
+      "src/test/logo-system.test.tsx",
+      "src/test/fixtures/separation-protected.json"
+    ],
+    "addedImplementation": [],
+    "removed": []
+  },
+  "toli-3d-website": {
+    "baselineFiles": 1573,
+    "changed": [],
+    "addedImplementation": [],
+    "removed": []
+  },
+  "tolimotors-main": {
+    "baselineFiles": 3128,
+    "changed": [],
+    "addedImplementation": [],
+    "removed": []
+  }
+}

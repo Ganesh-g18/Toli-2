@@ -1,0 +1,132 @@
+[
+  {
+    "caption": "YOUR CAR, OUR CARE — DRIVE WITH CONFIDENCE.",
+    "car": {
+      "height": 185,
+      "width": 276.1875,
+      "x": 16.90625,
+      "y": 351.40625
+    },
+    "cards": 4,
+    "heroHeight": 1313.109375,
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "caption": "YOUR CAR, OUR CARE — DRIVE WITH CONFIDENCE.",
+    "car": {
+      "height": 185,
+      "width": 316.5,
+      "x": 16.75,
+      "y": 360.890625
+    },
+    "cards": 4,
+    "heroHeight": 1338.90625,
+    "overflow": false,
+    "width": 360
+  },
+  {
+    "caption": "YOUR CAR, OUR CARE — DRIVE WITH CONFIDENCE.",
+    "car": {
+      "height": 185,
+      "width": 346.734375,
+      "x": 16.625,
+      "y": 368.421875
+    },
+    "cards": 4,
+    "heroHeight": 1362.84375,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "caption": "YOUR CAR, OUR CARE — DRIVE WITH CONFIDENCE.",
+    "car": {
+      "height": 185,
+      "width": 368.90625,
+      "x": 16.546875,
+      "y": 376.640625
+    },
+    "cards": 4,
+    "heroHeight": 1384.90625,
+    "overflow": false,
+    "width": 412
+  },
+  {
+    "caption": "YOUR CAR, OUR CARE — DRIVE WITH CONFIDENCE.",
+    "car": {
+      "height": 185,
+      "width": 387.046875,
+      "x": 16.46875,
+      "y": 383.359375
+    },
+    "cards": 4,
+    "heroHeight": 1402.96875,
+    "overflow": false,
+    "width": 430
+  },
+  {
+    "caption": "YOUR CAR, OUR CARE — DRIVE WITH CONFIDENCE.",
+    "car": {
+      "height": 280,
+      "width": 725.90625,
+      "x": 16.046875,
+      "y": 363.421875
+    },
+    "cards": 4,
+    "heroHeight": 1122.140625,
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "caption": "YOUR CAR, OUR CARE — DRIVE WITH CONFIDENCE.",
+    "car": {
+      "height": 280,
+      "width": 896.46875,
+      "x": 58.765625,
+      "y": 384.046875
+    },
+    "cards": 4,
+    "heroHeight": 1136.671875,
+    "overflow": false,
+    "width": 1024
+  },
+  {
+    "caption": "YOUR CAR, OUR CARE — DRIVE WITH CONFIDENCE.",
+    "car": {
+      "height": 327.828125,
+      "width": 1211.34375,
+      "x": 72.328125,
+      "y": 400.140625
+    },
+    "cards": 4,
+    "heroHeight": 1238.3125,
+    "overflow": false,
+    "width": 1366
+  },
+  {
+    "caption": "YOUR CAR, OUR CARE — DRIVE WITH CONFIDENCE.",
+    "car": {
+      "height": 345.59375,
+      "width": 1277.53125,
+      "x": 76.234375,
+      "y": 403.234375
+    },
+    "cards": 4,
+    "heroHeight": 1271.015625,
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "caption": "YOUR CAR, OUR CARE — DRIVE WITH CONFIDENCE.",
+    "car": {
+      "height": 460.796875,
+      "width": 1539.1875,
+      "x": 185.40625,
+      "y": 405.0625
+    },
+    "cards": 4,
+    "heroHeight": 1422.640625,
+    "overflow": false,
+    "width": 1920
+  }
+]

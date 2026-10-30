@@ -1,0 +1,14 @@
+{
+  "failure": {
+    "canvases": 0,
+    "fallback": 1,
+    "state": "fallback"
+  },
+  "reduced": {
+    "canvases": 1,
+    "model": "toli-atelier-r7",
+    "rendering": "idle",
+    "state": "ready"
+  },
+  "method": "Temporary HTTP QA fixture: controlled 404; JS matchMedia reduced-motion signal; production files unmodified."
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "height": 1024,
+    "heroBottom": 1148.484375,
+    "scrollWidth": 758,
+    "width": 768
+  },
+  {
+    "height": 768,
+    "heroBottom": 1160.890625,
+    "scrollWidth": 1014,
+    "width": 1024
+  },
+  {
+    "height": 390,
+    "heroBottom": 1134.65625,
+    "scrollWidth": 834,
+    "width": 844
+  }
+]

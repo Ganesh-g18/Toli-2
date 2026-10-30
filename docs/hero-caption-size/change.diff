@@ -1,0 +1,29 @@
+--- before/hero-caption.css
++++ after/hero-caption.css
+@@ -192,7 +192,7 @@
+ .reference-hero .hero-brand-phones>a {grid-column:2;justify-content:flex-end;}
+ .reference-hero .hero-brand-phones>span {display:none;}
+ .journey-root .phase9-experience .reference-hero h1 {grid-row:2;}
+-.journey-root .phase9-experience .reference-hero .hero-brand-caption {grid-row:3;margin:0;font-size:clamp(18px,1.35vw,24px);line-height:1.12;}
++.journey-root .phase9-experience .reference-hero .hero-brand-caption {grid-row:3;margin:0;font-size:clamp(21.6px,1.62vw,28.8px);font-weight:700;line-height:calc(1.12 * clamp(18px,1.35vw,24px));}
+ .journey-root .phase9-experience .reference-hero .entry-index {top:80px;}
+ html[data-theme=dark] .reference-hero .hero-location-text strong {color:#ff3045;text-shadow:0 1px 4px #17181c;}
+ html[data-theme=dark] .reference-hero .hero-location-text span {color:#d6d8dc;text-shadow:0 1px 4px #17181c;}
+@@ -206,7 +206,7 @@
+  .hero-corner-info {display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;grid-row:1;grid-column:1/-1;align-items:start;}
+  .journey-root .reference-hero .hero-reference-brand {grid-row:2;padding-bottom:0;}
+  .journey-root .phase9-experience .reference-hero h1 {grid-row:3;}
+- .journey-root .phase9-experience .reference-hero .hero-brand-caption {grid-row:4;font-size:clamp(17px,2.5vw,22px);}
++ .journey-root .phase9-experience .reference-hero .hero-brand-caption {grid-row:4;font-size:clamp(20.4px,3vw,24px);line-height:calc(1.12 * clamp(17px,2.5vw,22px));}
+  .journey-root .phase9-experience .reference-hero .hero-visual.journey-dock {grid-row:5;}
+  .reference-hero .hero-reference-services {grid-row:6;}
+  .journey-root .phase9-experience .reference-hero .hero-description {grid-row:7;grid-column:1;justify-self:center;text-align:center;}
+@@ -223,7 +223,7 @@
+  .reference-hero .hero-location-text span {font-size:10px;letter-spacing:0;}
+  .reference-hero .hero-brand-phones {font-size:13px;grid-template-columns:14px auto;gap:0 5px;}
+  .reference-hero .hero-brand-phones>svg {width:14px;height:14px;}
+- .journey-root .phase9-experience .reference-hero .hero-brand-caption {font-size:clamp(17px,4.6vw,20px);}
++ .journey-root .phase9-experience .reference-hero .hero-brand-caption {font-size:clamp(20.4px,5.52vw,24px);line-height:calc(1.12 * clamp(17px,4.6vw,20px));}
+  .journey-root .phase9-experience .reference-hero .hero-brand-caption strong {margin:0;}
+ }
+ @media(min-width:901px){

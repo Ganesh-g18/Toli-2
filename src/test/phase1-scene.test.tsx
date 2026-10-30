@@ -1,0 +1,22 @@
+import {render,act,waitFor,cleanup} from '@testing-library/react';
+import {it,expect,vi,afterEach} from 'vitest';
+import {JourneyProvider} from '@/components/journey/JourneyProvider';
+import type {JourneyFrame} from '@/lib/journey-timeline';
+const state=vi.hoisted(()=>({update:undefined as undefined|((frame:JourneyFrame)=>void),near:undefined as undefined|IntersectionObserverCallback}));
+const scene=vi.hoisted(()=>({select:vi.fn(),focus:vi.fn(),pause:vi.fn(),present:vi.fn(),technical:vi.fn(),dispose:vi.fn()}));
+const create=vi.hoisted(()=>vi.fn(()=>scene));
+const loader=vi.hoisted(()=>vi.fn(async()=>({createVehicleScene:create})));
+vi.mock('@/lib/load-vehicle-scene',()=>({loadVehicleScene:loader}));
+vi.mock('@/lib/journey-timeline',()=>({observeJourney:(_root:HTMLElement,update:(frame:JourneyFrame)=>void)=>{state.update=update;return ()=>{};}}));
+afterEach(()=>{cleanup();vi.unstubAllGlobals();});
+it('waits for visible service content, then reuses and pauses the same scene on hero return',async()=>{
+ vi.stubGlobal('innerWidth',1440);vi.stubGlobal('IntersectionObserver',class{constructor(cb:IntersectionObserverCallback){state.near=cb;}observe(){}disconnect(){}});
+ const {container}=render(<JourneyProvider><section data-journey-section="hero"><div className="journey-dock"><div data-scene-dock="hero"/></div></section><section data-journey-section="services"><div className="journey-dock"><div data-scene-dock="services"/></div></section></JourneyProvider>);
+ const hero=container.querySelector<HTMLElement>('[data-scene-dock=hero]')!,service=container.querySelector<HTMLElement>('[data-scene-dock=services]')!;
+ const frame=(host:HTMLElement,mode:'hero'|'services'):JourneyFrame=>({host,surface:host.closest('section')!,mode,chapter:mode==='hero'?'hero':'parts',progress:.5});
+ act(()=>{state.update!(frame(hero,'hero'));state.near!([{isIntersecting:true} as IntersectionObserverEntry],{} as IntersectionObserver);});
+ await act(async()=>{await new Promise(resolve=>setTimeout(resolve,220));});expect(loader).not.toHaveBeenCalled();
+ act(()=>state.update!(frame(service,'services')));await waitFor(()=>expect(create).toHaveBeenCalledOnce());expect(scene.present).toHaveBeenCalledWith(service,service.closest('section'),'parts',.5);
+ act(()=>state.update!(frame(hero,'hero')));expect(scene.pause).toHaveBeenCalled();
+ act(()=>state.update!(frame(service,'services')));expect(create).toHaveBeenCalledOnce();
+});
